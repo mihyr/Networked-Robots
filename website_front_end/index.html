@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+]
+
+  </head>
+
+
+  <body>
+    <canvas id="scene"></canvas>
+
+    <script src="sketch.js"></script>
+    <p id="demo"> log </p>
+    <!--<p id="demo2" style="margin-top:100px" > log2 </p>-->
+    <script type="text/javascript" type="text/javascript">
+        // Connecting to ROS
+        // -----------------
+
+        var ros = new ROSLIB.Ros({
+            url : 'ws://mihy.tech:10101'
+        });
+
+        ros.on('connection', function() {
+            console.log('Connected to websocket server.');
+        });
+
+        ros.on('error', function(error) {
+            console.log('Error connecting to websocket server: ', error);
+        });
+
+        ros.on('close', function() {
+            console.log('Connection to websocket server closed.');
+        });
+
+
+        var ros2 = new ROSLIB.Ros({
+            url : 'ws://zetabot.codes:9090'
+        });
+
+        ros2.on('connection', function() {
+            console.log('Connected to websocket server.');
+        });
+
+        ros2.on('error', function(error) {
+            console.log('Error connecting to websocket server: ', error);
+        });
+
+        ros2.on('close', function() {
+            console.log('Connection to websocket server closed.');
+        });
+
+        // Publishing a Topic
+        // ------------------
+        
+
+        
+        const demo = document
+        
+
+        //demo.addEventListener("keypress", cmd_vel_publish)
+        
+        
+        
+
+        
+            
+        var cmdVel = new ROSLIB.Topic({
+            ros : ros,
+            name : '/cmd_vel',
+            messageType : 'geometry_msgs/Twist'
+        });
+
+        var cmdVel2 = new ROSLIB.Topic({
+            ros : ros2,
+            name : '/cmd_vel',
+            messageType : 'geometry_msgs/Twist'
+        });
+        var current_robot = cmdVel
+
+        demo.addEventListener("keypress", function(event) {
+        if (event.key == "q"){
+            if (current_robot == cmdVel){
+                current_robot = cmdVel2
+                console.log('zetabot');
+            }
+            else {
+                current_robot = cmdVel
+                console.log('alphabot');
+            }
+            
+        }
+        });
+
+        demo.addEventListener("keypress", function(event) {
+        if (event.key == "w"){
+                console.log(event.code );
+                var twist = new ROSLIB.Message({
+                linear : {
+                x : 0.2,
+                y : 0.0,
+                z : 0.0
+                },
+                angular : {
+                x : 0.0,
+                y : 0.0,
+                z : 0.0
+                }
+            
+            });
+            current_robot.publish(twist);
+            document.getElementById("demo").innerHTML = "linear.x = 0.2";
+        }
+        if (event.key == "a"){
+                console.log(event.code );
+                var twist = new ROSLIB.Message({
+                linear : {
+                x : 0.0,
+                y : 0.0,
+                z : 0.0
+                },
+                angular : {
+                x : 0.0,
+                y : 0.0,
+                z : 2
+                }
+            
+            });
+            current_robot.publish(twist);
+            document.getElementById("demo").innerHTML = "angular.x = 2.0";
+        }
+        if (event.key == "s"){
+                console.log(event.code );
+                var twist = new ROSLIB.Message({
+                linear : {
+                x : -0.2,
+                y : 0.0,
+                z : 0.0
+                },
+                angular : {
+                x : 0.0,
+                y : 0.0,
+                z : 0.0
+                }
+            
+            });
+            current_robot.publish(twist);
+            document.getElementById("demo").innerHTML = "linear.x = -0.2";
+        }
+        if (event.key == "d"){
+                console.log(event.code );
+                var twist = new ROSLIB.Message({
+                linear : {
+                x : 0.0,
+                y : 0.0,
+                z : 0.0
+                },
+                angular : {
+                x : 0.0,
+                y : 0.0,
+                z : -2
+                }
+            
+            });
+            current_robot.publish(twist);
+            document.getElementById("demo").innerHTML = "angular.z = - 2.0";
+        }
+        }
+        );
+
+
+           
+            
+        
+            
+
+        // Subscribing to a Topic
+        // ----------------------
+
+        var listener = new ROSLIB.Topic({
+            ros : ros,
+            name : '/listener',
+            messageType : 'std_msgs/String'
+        });
+
+        listener.subscribe(function(message) {
+            console.log('Received message on ' + listener.name + ': ' + message.data);
+            listener.unsubscribe();
+        });
+
+        // Calling a service
+        // -----------------
+        /*
+        var addTwoIntsClient = new ROSLIB.Service({
+            ros : ros,
+            name : '/add_two_ints',
+            serviceType : 'rospy_tutorials/AddTwoInts'
+        });
+
+        var request = new ROSLIB.ServiceRequest({
+            a : 1,
+            b : 2
+        });
+
+        addTwoIntsClient.callService(request, function(result) {
+            console.log('Result for service call on '
+            + addTwoIntsClient.name
+            + ': '
+            + result.sum);
+        });
+
+        // Getting and setting a param value
+        // ---------------------------------
+
+        ros.getParams(function(params) {
+            console.log(params);
+        });
+
+        var maxVelX = new ROSLIB.Param({
+            ros : ros,
+            name : 'max_vel_y'
+        });
+
+        maxVelX.set(0.8);
+        maxVelX.get(function(value) {
+            console.log('MAX VAL: ' + value);
+        });
+        */
+    </script>
+    <!--
+         <script src="ros.js">
+        
+    </script>
+    <form id="frm1"">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        
+    </form> 
+    <input type="button" value="publish onclick= "cmd_vel_publish()" />
+    -->
+    
+    
+  </body>
+</html>
