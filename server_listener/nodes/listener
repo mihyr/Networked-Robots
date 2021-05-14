@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+from __future__ import print_function
+from sys import path
+import rospy
+import roslibpy
+from sensor_msgs.msg import Imu
+
+
+def main():
+    #initialize node
+    rospy.init_node('server_listener')
+    #iteration loop
+
+    client = roslibpy.Ros(host='mihy.tech', port=10101)
+    client.run()
+    a = roslibpy.Ros.get_topics
+    listener = roslibpy.Topic(client, '/imu', 'sensor_msgs/Imu')
+    print('Alphabot connected?', client.is_connected)
+
+    imu_publisher = rospy.Publisher("/alphabot/imu", Imu, queue_size=10)
+    imu_data = Imu()
+    
+
+    def receive_imu_message(msg):
+        data =  msg['orientation']
+        imu_data.header.seq = msg['header']['seq']
+        imu_data.header.frame_id = msg['header']['frame_id']
+        imu_data.orientation.x = msg['orientation']['x']
+        imu_data.orientation.y = msg['orientation']['y']
+        imu_data.orientation.z = msg['orientation']['z']
+        imu_publisher.publish(imu_data)
+        print(data)
+    
+    while not rospy.is_shutdown():
+        listener.subscribe(receive_imu_message)
+        
+
+if __name__ == "__main__":
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass 

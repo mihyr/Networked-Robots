@@ -1,0 +1,20 @@
+<launch>
+  <!--args-->
+  <arg name="rvizconfig" default="$(find arm_move)/rviz/arm.rviz" />
+  <arg name="use_actual" default="false" />
+  <arg name="use_fake" default="false" />
+  <arg name="use_gazebo" default="false" />
+
+  <!--include-->
+
+  
+  <!--load waypoints constants to ROS Parameter Server for mover node-->
+  <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
+    
+  <!--nodes-->
+  <node name="server_listener" pkg="server_listener" type="server_listener" output="screen">
+      <!--private params-->
+      <!--Freq Parameter included in server_params.yaml-->
+  </node>
+  
+</launch>
