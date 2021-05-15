@@ -53,7 +53,7 @@ def main():
         #go to sleep!
         hz.sleep()
 
-    rospy.logerr('{robot_ip} on  port {port} not connected or connection lost')
+    rospy.logerr(f'{robot_ip} on  port {port} not connected or connection lost')
 
 if __name__ == "__main__":
     try:
