@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+<!--include launch file args-->
+    <arg name="server_ip" />
+    <arg name="server_port" />
+    <arg name="test_frequency" default="80" />
+
+    <node pkg="agent_bringup" type="server_latency_test" name="server_latency_test" output="screen">
+        <param name="server_ip" value="$(arg server_ip)"/> 
+        <param name="server_port" value="$(arg server_port)"/> 
+        <param name="test_frequency" value="$(arg test_frequency)"/> 
+    </node>
+</launch>

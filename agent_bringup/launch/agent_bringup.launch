@@ -13,7 +13,7 @@
     <!--groups-->
 
     <group if="$(arg slam)">
-    <!-- stuff that will only be evaluated if launch_slam is true -->
+    <!-- stuff that will only be evaluated if slam is true -->
         <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
         <!-- all vars that included.launch requires must be set -->
             <arg name="open_rviz" value="$(arg open_slam_rviz)" />
@@ -21,7 +21,7 @@
     </group>
 
     <group if="$(arg rosbridge_websockets)">
-        <!-- stuff that will only be evaluated if launch_slam is true -->
+        <!-- stuff that will only be evaluated if rosbridge_websockets is true -->
         <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
         <!-- all vars that included.launch requires must be set -->
             <arg name="port" value="$(arg local_port)" />
@@ -30,7 +30,7 @@
     </group>
 
     <group if="$(arg turtlebot_bringup)">
-        <!-- stuff that will only be evaluated if launch_slam is true -->
+        <!-- stuff that will only be evaluated if turtlebot_bringup is true -->
         <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch">
         <!-- all vars that included.launch requires must be set -->
 

@@ -5,7 +5,7 @@
     <arg name="agent_port" default="9090" />
     <arg name="test_frequency" default="80" />
 
-    <node pkg="server_listener" type="check_latency" name="check_latency" output="screen">
+    <node pkg="server_listener" type="agent_latency_test" name="agent_latency_test" output="screen">
         <param name="agent_ip" value="$(arg agent_ip)"/> 
         <param name="agent_port" value="$(arg agent_port)"/> 
         <param name="test_frequency" value="$(arg test_frequency)"/> 

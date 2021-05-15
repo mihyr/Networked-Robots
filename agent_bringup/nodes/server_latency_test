@@ -1,18 +1,19 @@
 #!/usr/bin/env python
+
 import logging
 import time
 import roslibpy
 import rospy
 
 
-robot_ip = rospy.get_param('/agent_ip') 
-port = rospy.get_param("/agent_port") 
-freq = rospy.get_param("/test_frequency") 
+robot_ip = rospy.get_param('/server_latency_test/server_ip') 
+port = rospy.get_param("/server_latency_test/server_port") 
+freq = rospy.get_param("/server_latency_test/test_frequency") 
 
 
 def main():
     #initialize node
-    rospy.init_node('latency_test')
+    rospy.init_node('server_latency_test')
 
     #define ros frequency
     hz = rospy.Rate(freq)
