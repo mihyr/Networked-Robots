@@ -1,3 +1,8 @@
 #Note: This parameters are meant for listener node
-Fr  : 80   #frequency
+Fr  : 80   #Define listening and local publishing frequency
+
+#Define robot names and its IP below, add robots 
+robots: {[alphabot:mihy.tech:9090}
+robot2: zetabot
+robot_ip: []
 

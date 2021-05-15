@@ -32,7 +32,10 @@ def main():
         print(data)
     
     while not rospy.is_shutdown():
-        listener.subscribe(receive_imu_message)
+        if  client.is_connected:
+            listener.subscribe(receive_imu_message)
+        else:
+            print("client robot not connected or connection lost")
         
 
 if __name__ == "__main__":
