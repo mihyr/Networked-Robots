@@ -1,13 +1,17 @@
 <launch>
-  
-  <!--include launch file args-->
-  <arg name="listener" default="true" />
-  <arg name="test_roundtrip_time" default="false" />
-
   <!--args-->
-  <arg name="use_actual" default="false" />
-  
-
+  <arg name="listener" default="true" />  
+  <arg name="imu" default="false" />
+  <arg name="cmd_vel" default="false" />
+  <arg name="joint_states" default="true" />
+  <arg name="map" default="true" />
+  <arg name="map_metadata" default="false" />
+  <arg name="scan" default="false" />
+  <arg name="odom" default="false" />
+  <arg name="slam_entropy" default="false" />
+  <arg name="tf" default="true" />
+  <arg name="tf_static" default="true" />
+  <arg name="pub_frequency" default="10" />
   
   <!--load waypoints constants to ROS Parameter Server for mover node-->
   <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
@@ -16,15 +20,22 @@
 
   <group if="$(arg listener)">
   <!-- stuff that will only be evaluated if listener is true -->
-    <node name="server_listener" pkg="server_listener" type="server_listener" output="screen">
+    <node name="listener" pkg="server_listener" type="listener" output="screen">
         <!--private params-->
-        <!--Freq Parameter included in server_params.yaml-->
+        <param name="get_imu" value="$(arg imu)"/> 
+        <param name="get_cmd_vel" value="$(arg cmd_vel)"/> 
+        <param name="get_joint_states" value="$(arg joint_states)"/> 
+        <param name="get_map" value="$(arg map)"/> 
+        <param name="get_map_metadata" value="$(arg map_metadata)"/>
+        <param name="get_scan" value="$(arg scan)"/>
+        <param name="get_odom" value="$(arg odom)"/> 
+        <param name="get_slam_entropy" value="$(arg slam_entropy)"/> 
+        <param name="get_tf" value="$(arg tf)"/> 
+        <param name="get_tf_static" value="$(arg tf_static)"/> 
+        <param name="pub_frequency" value="$(arg pub_frequency)"/> 
+        <!--Freq and robot Parameter included in server_params.yaml-->
     </node>
   </group>
-  
-  <group if="$(arg test_roundtrip)">
-    <node name="server_listener" pkg="server_listener" type="server_listener" output="screen">
-    </node>
-  </group>
+
   
 </launch>
