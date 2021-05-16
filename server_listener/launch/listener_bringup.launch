@@ -13,7 +13,7 @@
   <arg name="tf_static" default="true" />
   <arg name="pub_frequency" default="10" />
   
-  <!--load waypoints constants to ROS Parameter Server for mover node-->
+  <!--load Robots IP, Port to ROS Parameter Server for listener node in yaml file-->
   <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
     
   <!--nodes-->

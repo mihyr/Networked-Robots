@@ -245,30 +245,39 @@ def main():
             
             if get_imu:
                 imu_listener_1.subscribe(imu_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/imu')
                 
             if get_cmd_vel:
                 cmd_listener_1.subscribe(cmd_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/cmd_vel')
                 
             if get_joint_states:
                 js_listener_1.subscribe(js_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/joint_states')
                 
             if get_map:
                 map_listener_1.subscribe(map_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/map')
                 
             if get_scan:
                 scan_listener_1.subscribe(scan_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/scan')
 
             if get_odom:
                 odom_listener_1.subscribe(odom_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/odom')
 
             if get_map_metadata:
                 map_meta_listener_1.subscribe(map_meta_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/map_metadata')
 
             if get_tf:
                 tf_listener_1.subscribe(tf_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/tf')
 
             if get_tf_static:
                 tf_static_listener_1.subscribe(tf_static_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/tf_static')
 
         else:
             rospy.logerr_once(f"{bot1_name} connection lost")
@@ -277,30 +286,39 @@ def main():
 
             if get_imu:
                 imu_listener_2.subscribe(imu_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/imu')
                 
             if get_cmd_vel:
                 cmd_listener_2.subscribe(cmd_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/cmd_vel')
                 
             if get_joint_states:
                 js_listener_2.subscribe(js_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/joint_states')
                 
             if get_map:
                 map_listener_2.subscribe(map_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/map')
                 
             if get_scan:
                 scan_listener_2.subscribe(scan_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/scan')
 
             if get_odom:
                 odom_listener_2.subscribe(odom_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/odom')
             
             if get_map_metadata:
                 map_meta_listener_2.subscribe(map_meta_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/map_metadata')
 
             if get_tf:
                 tf_listener_2.subscribe(tf_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/tf')
 
             if get_tf_static:
                 tf_static_listener_2.subscribe(tf_static_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/tf_static')
 
         else:
             rospy.logerr_once(f"{bot2_name} connection lost")
@@ -317,6 +335,7 @@ if __name__ == "__main__":
 
 
 '''
+Turtlebot3 topics
 /battery_state
 /client_count
 /cmd_vel
