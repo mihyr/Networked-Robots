@@ -9,6 +9,7 @@
     <!--required onboard_slam args-->
     <arg name="sync_mode" default="false" />
     <arg name="slam_toolbox" default="true" />
+    <arg name="navigation" default="false" />
 
     <!--required websocket args-->
     <arg name="local_port" default="9090" />
@@ -21,6 +22,7 @@
         <!-- set sync or async mode and slam toolbox option-->
             <arg name="sync_mode" value="$(arg sync_mode)" />
             <arg name="slam_toolbox" value="$(arg slam_toolbox)" />
+            <arg name="navigation" value="$(arg navigation)" />
         </include>
     </group>
 
@@ -35,10 +37,16 @@
 
     <!-- robot bringup -->
     <group if="$(arg turtlebot_bringup)">
-
         <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch">
         </include>
     </group>
 
+    <!-- rebot state publisher bringup -->
+    <group if="$(arg slam_toolbox)">
+        <!-- used for online slam and slam_toolbox not tb3_slam (it has its own)-->
+        <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
+            <arg name="model" value="burger" />
+        </include>
+    </group>
 
 </launch>
