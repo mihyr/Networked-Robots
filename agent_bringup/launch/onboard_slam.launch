@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+    <!--include launch file args-->
+    <arg name="tb3_nav" default="false" />
+    <arg name="slam_toolbox" default="true" />
+    <arg name="open_slam_rviz" default="false" />
+    <arg name="sync_mode" default="false" />
+
+    <!--groups-->
+
+    <!-- preferred slam_toolbox package-->
+    <group if="$(arg slam_toolbox)">
+        <!-- slam_toolbox requires turtlebot3_navigation -->
+        <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+            <arg name="open_rviz" value="$(arg open_slam_rviz)" />
+        </include>
+
+        <!-- online_sync mode-->
+        <group if="$(arg sync_mode)">
+            <include file="$(find slam_toolbox)/online_sync.launch">
+            </include>
+        </group>
+
+        <!-- online_async mode-->
+        <group unless="$(arg sync_mode)">
+            <include file="$(find slam_toolbox)/online_async.launch">
+            </include>
+        </group>
+        
+    </group>
+
+    <group unless="$(arg slam_toolbox)">
+    <!-- turtlebot3 slam package -->
+        <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+        <!-- all vars that included.launch requires must be set -->
+            <arg name="open_rviz" value="$(arg open_slam_rviz)" />
+        </include>
+    </group>
+
+</launch>

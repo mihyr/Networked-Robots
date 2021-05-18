@@ -54,6 +54,8 @@
   <exec_depend>turtlebot3_slam</exec_depend>
   <exec_depend>rosbridge_server</exec_depend>
   <exec_depend>turtlebot3_bringup</exec_depend>
+  <exec_depend>turtlebot3_navigation</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

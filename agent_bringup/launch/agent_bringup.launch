@@ -1,39 +1,42 @@
 <?xml version="1.0"?>
 <launch>
-    <!--include launch file args-->
-    <arg name="slam" default="true" />
+    <!--eval gropus-->
     <arg name="turtlebot_bringup" default="true" />
+    <arg name="onboard_slam" default="false" />
     <arg name="rosbridge_websockets" default="true" />
 
-    <!--required args-->
+
+    <!--required onboard_slam args-->
+    <arg name="sync_mode" default="false" />
+    <arg name="slam_toolbox" default="true" />
+
+    <!--required websocket args-->
     <arg name="local_port" default="9090" />
     <arg name="server_port" default="10101" />
-    <arg name="open_slam_rviz" default="false" />
-
-    <!--groups-->
-
-    <group if="$(arg slam)">
-    <!-- stuff that will only be evaluated if slam is true -->
-        <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
-        <!-- all vars that included.launch requires must be set -->
-            <arg name="open_rviz" value="$(arg open_slam_rviz)" />
+    
+    <!-- Onboard Slam  -->
+    <group if="$(arg onboard_slam)">
+       
+        <include file="$(find agent_bringup)/launch/onboard_slam.launch">
+        <!-- set sync or async mode and slam toolbox option-->
+            <arg name="sync_mode" value="$(arg sync_mode)" />
+            <arg name="slam_toolbox" value="$(arg slam_toolbox)" />
         </include>
     </group>
 
+    <!-- ROSbridge Server -->
     <group if="$(arg rosbridge_websockets)">
-        <!-- stuff that will only be evaluated if rosbridge_websockets is true -->
         <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
-        <!-- all vars that included.launch requires must be set -->
+        <!-- set robot local and external port -->
             <arg name="port" value="$(arg local_port)" />
             <arg name="websocket_external_port" value="$(arg server_port)" />
         </include>
     </group>
 
+    <!-- robot bringup -->
     <group if="$(arg turtlebot_bringup)">
-        <!-- stuff that will only be evaluated if turtlebot_bringup is true -->
-        <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch">
-        <!-- all vars that included.launch requires must be set -->
 
+        <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch">
         </include>
     </group>
 
