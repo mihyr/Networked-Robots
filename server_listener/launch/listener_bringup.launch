@@ -1,12 +1,15 @@
 <launch>
-  <!--args-->
+  
+  <!--eval gropus-->
   <arg name="listener" default="true" />  
+
+  <!--required listener args-->
   <arg name="imu" default="false" />
   <arg name="cmd_vel" default="false" />
-  <arg name="joint_states" default="true" />
-  <arg name="map" default="true" />
+  <arg name="joint_states" default="false" />
+  <arg name="map" default="false" />
   <arg name="map_metadata" default="false" />
-  <arg name="scan" default="false" />
+  <arg name="scan" default="true" />
   <arg name="odom" default="false" />
   <arg name="slam_entropy" default="false" />
   <arg name="tf" default="true" />
@@ -20,6 +23,7 @@
 
   <group if="$(arg listener)">
   <!-- stuff that will only be evaluated if listener is true -->
+
     <node name="listener" pkg="server_listener" type="listener" output="screen">
         <!--private params-->
         <param name="get_imu" value="$(arg imu)"/> 

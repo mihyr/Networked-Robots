@@ -43,7 +43,7 @@ def main():
 
     #define ros frequency
     hz = rospy.Rate(freq)
-
+    
     client_1 = roslibpy.Ros(host=bot1_ip, port=bot1_port)
     client_2 = roslibpy.Ros(host=bot2_ip, port=bot2_port)
     client_1.run()

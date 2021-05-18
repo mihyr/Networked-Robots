@@ -4,10 +4,12 @@
     <arg name="agent_ip" default = "mihy.tech"/>
     <arg name="agent_port"/>
     <arg name="test_frequency" default="80" />
+    <arg name="test_msg" default="string" />
 
     <node pkg="server_listener" type="agent_latency_test" name="agent_latency_test" output="screen">
         <param name="agent_ip" value="$(arg agent_ip)"/> 
         <param name="agent_port" value="$(arg agent_port)"/> 
         <param name="test_frequency" value="$(arg test_frequency)"/> 
+        <param name="test_msg" value="$(arg test_msg)"/> 
     </node>
 </launch>
