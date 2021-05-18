@@ -1,37 +1,70 @@
 <?xml version="1.0"?>
 <launch>
-
-    <arg name="open_slam_rviz" default="false" />
+    
+    <arg name="navigation" default="false" />
     <arg name="robot1_name" default="alphabot" />
     <arg name="robot2_name" default="zetabot" />
-    
-    <include file="$(find server_listener)/launch/listener_bringup.launch" />
+
     <group ns="$(arg robot1_name)">
         
-        <rosparam command="load" file="$(find slam_toolbox)/config/mapper_params_online_async.yaml" />
+        <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+            <arg name="model" value="burger" />
+        </include>
 
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+            <param name="publish_frequency" type="double" value="50.0" />
+            <param name="tf_prefix" value="$(arg robot1_name)"/>
+            <remap from="/tf_static" to="/$(arg robot1_name)/tf_static" />
+            <remap from="/tf" to="/$(arg robot1_name)/tf" />
+        </node>
+        
+        <rosparam command="load" file="$(find slam_toolbox)/config/mapper_params_online_async.yaml" />
         <node pkg="slam_toolbox" type="async_slam_toolbox_node" name="slam_toolbox" output="screen">
             <remap from="/scan" to="/$(arg robot1_name)/scan" />
             <remap from="/tf" to="/$(arg robot1_name)/tf" />
+            <remap from="/tf_static" to="/$(arg robot1_name)/tf_static" />
             <remap from="/map" to="/$(arg robot1_name)/map" />
+            <remap from="/map_metadata" to="/$(arg robot1_name)/map_metadata" />
         </node>
-        <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
-            <arg name="open_rviz" value="$(arg open_slam_rviz)" />
-        </include>
+
+        
+        <group if="$(arg navigation)">
+            <arg name="open_slam_rviz" default="false" />
+            <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+                <arg name="open_rviz" value="$(arg open_slam_rviz)" />
+            </include>
+        </group>
+
     </group>
 
     <group ns="$(arg robot2_name)">
-        
-        <rosparam command="load" file="$(find slam_toolbox)/config/mapper_params_online_async.yaml" />
 
+        <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
+            <arg name="model" value="burger" />
+        </include>
+
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+            <param name="publish_frequency" type="double" value="50.0" />
+            <param name="tf_prefix" value="$(arg robot2_name)"/>
+            <remap from="/tf" to="/$(arg robot2_name)/tf" />
+            <remap from="/tf_static" to="/$(arg robot2_name)/tf_static" />
+        </node>
+
+        <rosparam command="load" file="$(find slam_toolbox)/config/mapper_params_online_async.yaml" />
         <node pkg="slam_toolbox" type="async_slam_toolbox_node" name="slam_toolbox" output="screen">
             <remap from="/scan" to="/$(arg robot2_name)/scan" />
             <remap from="/tf" to="/$(arg robot2_name)/tf" />
+            <remap from="/tf_static" to="/$(arg robot2_name)/tf_static" />
             <remap from="/map" to="/$(arg robot2_name)/map" />
+            <remap from="/map_metadata" to="/$(arg robot2_name)/map_metadata" />
         </node>
-        <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
-            <arg name="open_rviz" value="$(arg open_slam_rviz)" />
-        </include>
+
+        <group if="$(arg navigation)">
+            <arg name="open_slam_rviz" default="false" />
+            <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+                <arg name="open_rviz" value="$(arg open_slam_rviz)" />
+            </include>
+        </group>
     </group>
 
 </launch>
