@@ -61,6 +61,8 @@
   <exec_depend>slam_toolbox</exec_depend>
   <exec_depend>turtlebot3_navigation</exec_depend>
   <exec_depend>server_listener</exec_depend>
+  <exec_depend>turtlebot3_bringup</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

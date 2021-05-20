@@ -19,7 +19,7 @@
   <!--load Robots IP, Port to ROS Parameter Server for listener node in yaml file-->
   <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
     
-  <!--nodes-->
+  <!--groups-->
 
   <group if="$(arg listener)">
   <!-- stuff that will only be evaluated if listener is true -->

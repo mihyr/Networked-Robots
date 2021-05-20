@@ -5,6 +5,17 @@
     <arg name="robot1_name" default="alphabot" />
     <arg name="robot2_name" default="zetabot" />
 
+    <!--listener_bringup-->
+    <group>
+        <include file="$(find server_listener)/launch/listener_bringup.launch">
+            <arg name="joint_states" value="true" />
+            <arg name="tf" value="true" />
+            <arg name="tf_static" value="true" />
+            <arg name="scan" value="true" />
+        </include>
+    </group>
+
+    <!--Slam group 1-->
     <group ns="$(arg robot1_name)">
         
         <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
@@ -37,6 +48,7 @@
 
     </group>
 
+    <!--Slam group 2-->
     <group ns="$(arg robot2_name)">
 
         <include file="$(find turtlebot3_bringup)/launch/includes/description.launch.xml">
