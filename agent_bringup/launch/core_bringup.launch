@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <launch>
     <!--eval gropus-->
-    <arg name="remote_bringup" default="true" />
+    <arg name="remote_bringup" default="false" />
     <arg name="onboard_slam" default="false" />
     <arg name="rosbridge_websockets" default="true" />
-    <arg name="multi_robot_name" default="bot" />
+    <arg name="multi_robot_name" default="" />
 
 
     <!--required onboard_slam args-->
@@ -24,6 +24,7 @@
             <arg name="sync_mode" value="$(arg sync_mode)" />
             <arg name="slam_toolbox" value="$(arg slam_toolbox)" />
             <arg name="navigation" value="$(arg navigation)" />
+            <arg name="multi_robot_name" value="$(arg multi_robot_name)" />
         </include>
     </group>
 
@@ -46,7 +47,7 @@
         </include>
     </group>
 
-    <!-- rebot state publisher bringup -->
+    <!-- rebot state publisher bringup (only for debugging)-->
     <group if="$(arg remote_bringup)">
         <!-- used for online slam and slam_toolbox not tb3_slam or navigation (it has its own)-->
         <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">

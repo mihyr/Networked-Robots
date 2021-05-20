@@ -65,167 +65,177 @@ def main():
     '''
     #IMU
     '''
-    imu_listener_1 = roslibpy.Topic(client_1, '/imu', 'sensor_msgs/Imu')
-    imu_listener_2 = roslibpy.Topic(client_2, '/imu', 'sensor_msgs/Imu')
+    if get_imu:
+        imu_listener_1 = roslibpy.Topic(client_1, '/imu', 'sensor_msgs/Imu')
+        imu_listener_2 = roslibpy.Topic(client_2, '/imu', 'sensor_msgs/Imu')
 
-    imu_publisher_1 = rospy.Publisher(f"/{bot1_name}/imu", Imu, queue_size=10)
-    imu_publisher_2 = rospy.Publisher(f"/{bot2_name}/imu", Imu, queue_size=10)
+        imu_publisher_1 = rospy.Publisher(f"/{bot1_name}/imu", Imu, queue_size=10)
+        imu_publisher_2 = rospy.Publisher(f"/{bot2_name}/imu", Imu, queue_size=10)
 
-    def imu_callback_1(msg):
-        imu_data_1 = rd('sensor_msgs/Imu', msg)
-        imu_publisher_1.publish(imu_data_1)
+        def imu_callback_1(msg):
+            imu_data_1 = rd('sensor_msgs/Imu', msg)
+            imu_publisher_1.publish(imu_data_1)
 
-    def imu_callback_2(msg):
-        imu_data_2 = rd('sensor_msgs/Imu', msg)
-        imu_publisher_2.publish(imu_data_2)
+        def imu_callback_2(msg):
+            imu_data_2 = rd('sensor_msgs/Imu', msg)
+            imu_publisher_2.publish(imu_data_2)
     
     '''
     #cmd_vel
     '''
-    cmd_listener_1 = roslibpy.Topic(client_1, '/cmd_vel', 'geometry_msgs/Twist')
-    cmd_listener_2 = roslibpy.Topic(client_2, '/cmd_vel', 'geometry_msgs/Twist')
+    if get_cmd_vel:
+        cmd_listener_1 = roslibpy.Topic(client_1, '/cmd_vel', 'geometry_msgs/Twist')
+        cmd_listener_2 = roslibpy.Topic(client_2, '/cmd_vel', 'geometry_msgs/Twist')
 
-    cmd_publisher_1 = rospy.Publisher(f"/{bot1_name}/cmd_vel", Twist, queue_size=10)
-    cmd_publisher_2 = rospy.Publisher(f"/{bot2_name}/cmd_vel", Twist, queue_size=10)
+        cmd_publisher_1 = rospy.Publisher(f"/{bot1_name}/cmd_vel", Twist, queue_size=10)
+        cmd_publisher_2 = rospy.Publisher(f"/{bot2_name}/cmd_vel", Twist, queue_size=10)
 
-    def cmd_callback_1(msg):
-        #cmd_data_1 = Twist()
-        #cmd_data_1.linear = Vector3(msg['linear']['x'],msg['linear']['y'],msg['linear']['z'])
-        #md_data_1.angular = Vector3(msg['angular']['x'],msg['angular']['y'],msg['angular']['z'])
-        cmd_data_1 = rd('geometry_msgs/Twist', msg)
-        cmd_publisher_1.publish(cmd_data_1)
+        def cmd_callback_1(msg):
+            #cmd_data_1 = Twist()
+            #cmd_data_1.linear = Vector3(msg['linear']['x'],msg['linear']['y'],msg['linear']['z'])
+            #md_data_1.angular = Vector3(msg['angular']['x'],msg['angular']['y'],msg['angular']['z'])
+            cmd_data_1 = rd('geometry_msgs/Twist', msg)
+            cmd_publisher_1.publish(cmd_data_1)
 
-    def cmd_callback_2(msg):
-        #cmd_data_2 = Twist()
-        #cmd_data_2.linear = Vector3(msg['linear']['x'],msg['linear']['y'],msg['linear']['z'])
-        #cmd_data_2.angular = Vector3(msg['angular']['x'],msg['angular']['y'],msg['angular']['z'])
-        cmd_data_2 = rd('geometry_msgs/Twist', msg)
-        cmd_publisher_2.publish(cmd_data_2)
+        def cmd_callback_2(msg):
+            #cmd_data_2 = Twist()
+            #cmd_data_2.linear = Vector3(msg['linear']['x'],msg['linear']['y'],msg['linear']['z'])
+            #cmd_data_2.angular = Vector3(msg['angular']['x'],msg['angular']['y'],msg['angular']['z'])
+            cmd_data_2 = rd('geometry_msgs/Twist', msg)
+            cmd_publisher_2.publish(cmd_data_2)
     
     '''
     #joint_states
     '''
-    js_listener_1 = roslibpy.Topic(client_1, '/joint_states', 'sensor_msgs/JointState')
-    js_listener_2 = roslibpy.Topic(client_2, '/joint_states', 'sensor_msgs/JointState')
+    if get_joint_states:
+        js_listener_1 = roslibpy.Topic(client_1, '/joint_states', 'sensor_msgs/JointState')
+        js_listener_2 = roslibpy.Topic(client_2, '/joint_states', 'sensor_msgs/JointState')
 
-    js_publisher_1 = rospy.Publisher(f"/{bot1_name}/joint_states", JointState, queue_size=10)
-    js_publisher_2 = rospy.Publisher(f"/{bot2_name}/joint_states", JointState, queue_size=10)
+        js_publisher_1 = rospy.Publisher(f"/{bot1_name}/joint_states", JointState, queue_size=10)
+        js_publisher_2 = rospy.Publisher(f"/{bot2_name}/joint_states", JointState, queue_size=10)
 
-    def js_callback_1(msg):
-        js_data_1 = rd('sensor_msgs/JointState', msg)
-        js_publisher_1.publish(js_data_1)
+        def js_callback_1(msg):
+            js_data_1 = rd('sensor_msgs/JointState', msg)
+            js_publisher_1.publish(js_data_1)
 
-    def js_callback_2(msg):
-        js_data_2 = rd('sensor_msgs/JointState', msg)
-        js_publisher_2.publish(js_data_2)
+        def js_callback_2(msg):
+            js_data_2 = rd('sensor_msgs/JointState', msg)
+            js_publisher_2.publish(js_data_2)
 
     '''
     #map
     '''
-    map_listener_1 = roslibpy.Topic(client_1, '/map', 'nav_msgs/OccupancyGrid')
-    map_listener_2 = roslibpy.Topic(client_2, '/map', 'nav_msgs/OccupancyGrid')
+    if get_map:
+        map_listener_1 = roslibpy.Topic(client_1, '/map', 'nav_msgs/OccupancyGrid')
+        map_listener_2 = roslibpy.Topic(client_2, '/map', 'nav_msgs/OccupancyGrid')
 
-    map_publisher_1 = rospy.Publisher(f"/{bot1_name}/map", OccupancyGrid, queue_size=10)
-    map_publisher_2 = rospy.Publisher(f"/{bot2_name}/map", OccupancyGrid, queue_size=10)
+        map_publisher_1 = rospy.Publisher(f"/{bot1_name}/map", OccupancyGrid, queue_size=10)
+        map_publisher_2 = rospy.Publisher(f"/{bot2_name}/map", OccupancyGrid, queue_size=10)
 
-    def map_callback_1(msg):
-        map_data_1 = rd('nav_msgs/OccupancyGrid', msg)
-        map_publisher_1.publish(map_data_1)
+        def map_callback_1(msg):
+            map_data_1 = rd('nav_msgs/OccupancyGrid', msg)
+            map_publisher_1.publish(map_data_1)
 
-    def map_callback_2(msg):
-        map_data_2 = rd('nav_msgs/OccupancyGrid', msg)
-        map_publisher_2.publish(map_data_2)
+        def map_callback_2(msg):
+            map_data_2 = rd('nav_msgs/OccupancyGrid', msg)
+            map_publisher_2.publish(map_data_2)
 
     '''
     #map_metadata
     '''
-    map_meta_listener_1 = roslibpy.Topic(client_1, '/map_metadata', 'nav_msgs/MapMetaData')
-    map_meta_listener_2 = roslibpy.Topic(client_2, '/map_metadata', 'nav_msgs/MapMetaData')
+    if get_map_metadata:
+        map_meta_listener_1 = roslibpy.Topic(client_1, '/map_metadata', 'nav_msgs/MapMetaData')
+        map_meta_listener_2 = roslibpy.Topic(client_2, '/map_metadata', 'nav_msgs/MapMetaData')
 
-    map_meta_publisher_1 = rospy.Publisher(f"/{bot1_name}/map_metadata", MapMetaData, queue_size=10)
-    map_meta_publisher_2 = rospy.Publisher(f"/{bot2_name}/map_metadata", MapMetaData, queue_size=10)
+        map_meta_publisher_1 = rospy.Publisher(f"/{bot1_name}/map_metadata", MapMetaData, queue_size=10)
+        map_meta_publisher_2 = rospy.Publisher(f"/{bot2_name}/map_metadata", MapMetaData, queue_size=10)
 
-    def map_meta_callback_1(msg):
-        map_meta_data_1 = rd('nav_msgs/MapMetaData', msg)
-        map_meta_publisher_1.publish(map_meta_data_1)
-        
-    def map_meta_callback_2(msg):
-        #print(msg)
-        map_meta_data_2 = rd('nav_msgs/MapMetaData', msg)
-        map_meta_publisher_2.publish(map_meta_data_2)
+        def map_meta_callback_1(msg):
+            map_meta_data_1 = rd('nav_msgs/MapMetaData', msg)
+            map_meta_publisher_1.publish(map_meta_data_1)
+            
+        def map_meta_callback_2(msg):
+            #print(msg)
+            map_meta_data_2 = rd('nav_msgs/MapMetaData', msg)
+            map_meta_publisher_2.publish(map_meta_data_2)
 
     '''
     #scan
     '''
-    scan_listener_1 = roslibpy.Topic(client_1, '/scan', 'sensor_msgs/LaserScan')
-    scan_listener_2 = roslibpy.Topic(client_2, '/scan', 'sensor_msgs/LaserScan')
+    if get_scan:
+        scan_listener_1 = roslibpy.Topic(client_1, '/scan', 'sensor_msgs/LaserScan')
+        scan_listener_2 = roslibpy.Topic(client_2, '/scan', 'sensor_msgs/LaserScan')
 
-    scan_publisher_1 = rospy.Publisher(f"/{bot1_name}/scan", LaserScan, queue_size=10)
-    scan_publisher_2 = rospy.Publisher(f"/{bot2_name}/scan", LaserScan, queue_size=10)
+        scan_publisher_1 = rospy.Publisher(f"/{bot1_name}/scan", LaserScan, queue_size=10)
+        scan_publisher_2 = rospy.Publisher(f"/{bot2_name}/scan", LaserScan, queue_size=10)
 
-    def scan_callback_1(msg):
-        scan_data_1 = rd('sensor_msgs/LaserScan', msg)
-        scan_publisher_1.publish(scan_data_1)
-        
-    def scan_callback_2(msg):
-        #print(msg)
-        scan_data_2 = rd('sensor_msgs/LaserScan', msg)
-        scan_publisher_2.publish(scan_data_2)
+        def scan_callback_1(msg):
+            scan_data_1 = rd('sensor_msgs/LaserScan', msg)
+            scan_publisher_1.publish(scan_data_1)
+            
+        def scan_callback_2(msg):
+            #print(msg)
+            scan_data_2 = rd('sensor_msgs/LaserScan', msg)
+            scan_publisher_2.publish(scan_data_2)
 
     '''
     #odom
     '''
-    odom_listener_1 = roslibpy.Topic(client_1, '/odom', 'nav_msgs/Odometry')
-    odom_listener_2 = roslibpy.Topic(client_2, '/odom', 'nav_msgs/Odometry')
+    if get_odom:
+        odom_listener_1 = roslibpy.Topic(client_1, '/odom', 'nav_msgs/Odometry')
+        odom_listener_2 = roslibpy.Topic(client_2, '/odom', 'nav_msgs/Odometry')
 
-    odom_publisher_1 = rospy.Publisher(f"/{bot1_name}/odom", Odometry, queue_size=10)
-    odom_publisher_2 = rospy.Publisher(f"/{bot2_name}/odom", Odometry, queue_size=10)
+        odom_publisher_1 = rospy.Publisher(f"/{bot1_name}/odom", Odometry, queue_size=10)
+        odom_publisher_2 = rospy.Publisher(f"/{bot2_name}/odom", Odometry, queue_size=10)
 
-    def odom_callback_1(msg):
-        odom_data_1 = rd('nav_msgs/Odometry', msg)
-        odom_publisher_1.publish(odom_data_1)
-        
-    def odom_callback_2(msg):
-        #print(msg)
-        odom_data_2 = rd('nav_msgs/Odometry', msg)
-        odom_publisher_2.publish(odom_data_2)
+        def odom_callback_1(msg):
+            odom_data_1 = rd('nav_msgs/Odometry', msg)
+            odom_publisher_1.publish(odom_data_1)
+            
+        def odom_callback_2(msg):
+            #print(msg)
+            odom_data_2 = rd('nav_msgs/Odometry', msg)
+            odom_publisher_2.publish(odom_data_2)
 
     
 
     '''
     #TF
     '''
-    tf_listener_1 = roslibpy.Topic(client_1, '/tf', 'tf/tfMessage')
-    tf_listener_2 = roslibpy.Topic(client_2, '/tf', 'tf/tfMessage')
+    if get_tf:
+        tf_listener_1 = roslibpy.Topic(client_1, '/tf', 'tf/tfMessage')
+        tf_listener_2 = roslibpy.Topic(client_2, '/tf', 'tf/tfMessage')
 
-    tf_publisher_1 = rospy.Publisher(f"/{bot1_name}/tf", tfMessage, queue_size=10)
-    tf_publisher_2 = rospy.Publisher(f"/{bot2_name}/tf", tfMessage, queue_size=10)
+        tf_publisher_1 = rospy.Publisher(f"/{bot1_name}/tf", tfMessage, queue_size=10)
+        tf_publisher_2 = rospy.Publisher(f"/{bot2_name}/tf", tfMessage, queue_size=10)
 
-    def tf_callback_1(msg):
-        tf_data_1 = rd('tf/tfMessage', msg)
-        tf_publisher_1.publish(tf_data_1)
-        
-    def tf_callback_2(msg):
-        #print(msg)
-        tf_data_2 = rd('tf/tfMessage', msg)
-        tf_publisher_2.publish(tf_data_2)
+        def tf_callback_1(msg):
+            
+            tf_data_1 = rd('tf/tfMessage', msg)
+            tf_publisher_1.publish(tf_data_1)
+            
+        def tf_callback_2(msg):
+            #print(msg)
+            tf_data_2 = rd('tf/tfMessage', msg)
+            tf_publisher_2.publish(tf_data_2)
     '''
     #TF_Static
     '''
-    tf_static_listener_1 = roslibpy.Topic(client_1, '/tf_static', 'tf2_msgs/TFMessage')
-    tf_static_listener_2 = roslibpy.Topic(client_2, '/tf_static', 'tf2_msgs/TFMessage')
+    if get_tf_static:
+        tf_static_listener_1 = roslibpy.Topic(client_1, '/tf_static', 'tf2_msgs/TFMessage')
+        tf_static_listener_2 = roslibpy.Topic(client_2, '/tf_static', 'tf2_msgs/TFMessage')
 
-    tf_static_publisher_1 = rospy.Publisher(f"/{bot1_name}/tf_static", TFMessage, queue_size=10)
-    tf_static_publisher_2 = rospy.Publisher(f"/{bot2_name}/tf_static", TFMessage, queue_size=10)
+        tf_static_publisher_1 = rospy.Publisher(f"/{bot1_name}/tf_static", TFMessage, queue_size=10)
+        tf_static_publisher_2 = rospy.Publisher(f"/{bot2_name}/tf_static", TFMessage, queue_size=10)
 
-    def tf_static_callback_1(msg):
-        tf_static_data_1 = rd('tf2_msgs/TFMessage', msg)
-        tf_static_publisher_1.publish(tf_static_data_1)
-        
-    def tf_static_callback_2(msg):
-        #print(msg)
-        tf_static_data_2 = rd('tf2_msgs/TFMessage', msg)
-        tf_static_publisher_2.publish(tf_static_data_2)
+        def tf_static_callback_1(msg):
+            tf_static_data_1 = rd('tf2_msgs/TFMessage', msg)
+            tf_static_publisher_1.publish(tf_static_data_1)
+            
+        def tf_static_callback_2(msg):
+            #print(msg)
+            tf_static_data_2 = rd('tf2_msgs/TFMessage', msg)
+            tf_static_publisher_2.publish(tf_static_data_2)
     '''
     #slam_entropy
     '''

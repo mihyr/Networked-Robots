@@ -9,11 +9,11 @@
   <arg name="joint_states" default="false" />
   <arg name="map" default="false" />
   <arg name="map_metadata" default="false" />
-  <arg name="scan" default="true" />
+  <arg name="scan" default="false" />
   <arg name="odom" default="false" />
   <arg name="slam_entropy" default="false" />
-  <arg name="tf" default="true" />
-  <arg name="tf_static" default="true" />
+  <arg name="tf" default="false" />
+  <arg name="tf_static" default="false" />
   <arg name="pub_frequency" default="10" />
   
   <!--load Robots IP, Port to ROS Parameter Server for listener node in yaml file-->
