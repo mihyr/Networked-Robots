@@ -5,12 +5,14 @@
     <arg name="onboard_slam" default="false" />
     <arg name="rosbridge_websockets" default="true" />
     <arg name="multi_robot_name" default="" />
+    <arg name="publish_time" default="true" />
 
 
     <!--required onboard_slam args-->
     <arg name="sync_mode" default="false" />
     <arg name="slam_toolbox" default="true" />
     <arg name="navigation" default="false" />
+    
 
     <!--required websocket args-->
     <arg name="local_port" default="9090" />
@@ -57,5 +59,12 @@
             -->
         </include>
     </group>
+    
+    <!-- time publisher only for latency test-->
+    <group if="$(arg publish_time)">
+        <node pkg="agent_bringup" type="time" name="time">
+        </node>
+    </group>
+
 
 </launch>

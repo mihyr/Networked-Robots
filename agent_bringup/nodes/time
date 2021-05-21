@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+import time
+import rospy
+from std_msgs.msg import UInt64
+
+freq = 80
+def main():
+    #initialize node
+    rospy.init_node('time')
+
+    #define ros frequency
+    hz = rospy.Rate(freq)
+    time_publisher = rospy.Publisher("/time", UInt64, queue_size=10)
+
+    #rospy.logerr("This is just a check for check_latency node, ignore me")
+    
+    while not rospy.is_shutdown():
+        current_time = time.time_ns()
+        #print(current_time)
+        #go to sleep!
+        time_publisher.publish(current_time)
+        #hz.sleep()
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass 
