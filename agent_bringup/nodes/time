@@ -19,7 +19,7 @@ def main():
         #print(current_time)
         #go to sleep!
         time_publisher.publish(current_time)
-        #hz.sleep()
+        hz.sleep()
 
 
 if __name__ == "__main__":
