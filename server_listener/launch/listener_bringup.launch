@@ -14,7 +14,8 @@
   <arg name="slam_entropy" default="false" />
   <arg name="tf" default="false" />
   <arg name="tf_static" default="false" />
-  <arg name="pub_frequency" default="10" />
+  <arg name="time" default="true" />
+  <arg name="pub_frequency" default="80" />
   
   <!--load Robots IP, Port to ROS Parameter Server for listener node in yaml file-->
   <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
@@ -35,7 +36,8 @@
         <param name="get_odom" value="$(arg odom)"/> 
         <param name="get_slam_entropy" value="$(arg slam_entropy)"/> 
         <param name="get_tf" value="$(arg tf)"/> 
-        <param name="get_tf_static" value="$(arg tf_static)"/> 
+        <param name="get_tf_static" value="$(arg tf_static)"/>
+        <param name="get_time" value="$(arg time)"/> 
         <param name="pub_frequency" value="$(arg pub_frequency)"/> 
         <!--Freq and robot Parameter included in server_params.yaml-->
     </node>

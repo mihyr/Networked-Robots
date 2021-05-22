@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import print_function
-from sys import path
-
+from sys import path, getsizeof
+import time
 from autobahn.util import public
 from yaml import scan
 import rospy
@@ -9,7 +9,7 @@ import roslibpy
 from rospy.client import get_param
 from sensor_msgs.msg import Imu, JointState, LaserScan
 from geometry_msgs.msg import TwistStamped, Twist, Vector3
-from std_msgs.msg import Float64, Float32,  Header
+from std_msgs.msg import Float64, Float32,  Header, UInt64
 from nav_msgs.msg import OccupancyGrid, Odometry, MapMetaData
 from tf.msg import tfMessage
 from tf2_msgs.msg import TFMessage
@@ -26,6 +26,7 @@ get_odom = rospy.get_param('/listener/get_odom')
 get_slam_entropy = rospy.get_param('/listener/get_slam_entropy')
 get_tf = rospy.get_param('/listener/get_tf')
 get_tf_static = rospy.get_param('/listener/get_tf_static')
+get_time = rospy.get_param('/listener/get_time')
 freq = rospy.get_param("/listener/pub_frequency") 
 
 bot1_ip = bots['robot1'][0]
@@ -36,6 +37,30 @@ bot2_ip = bots['robot2'][0]
 bot2_port = bots['robot2'][1]
 bot2_name = bots['robot2'][2]
 
+#init data_logger
+imu_size_1 = 0
+cmd_vel_size_1 = 0
+joint_states_size_1 = 0
+map_size_1 = 0
+map_metadata_size_1 = 0
+scan_size_1 = 0
+odom_size_1 = 0
+slam_entropy_size_1 = 0
+tf_size_1 = 0
+tf_static_size_1 = 0
+time_size_1 = 0
+
+imu_size_2 = 0
+cmd_vel_size_2 = 0
+joint_states_size_2 = 0
+map_size_2 = 0
+map_metadata_size_2 = 0
+scan_size_2 = 0
+odom_size_2 = 0
+slam_entropy_size_2 = 0
+tf_size_2 = 0
+tf_static_size_2 = 0
+time_size_2 = 0
 
 def main():
     #initialize node
@@ -75,10 +100,14 @@ def main():
         def imu_callback_1(msg):
             imu_data_1 = rd('sensor_msgs/Imu', msg)
             imu_publisher_1.publish(imu_data_1)
+            global imu_size_1
+            imu_size_1 += getsizeof(msg)
 
         def imu_callback_2(msg):
             imu_data_2 = rd('sensor_msgs/Imu', msg)
             imu_publisher_2.publish(imu_data_2)
+            global imu_size_2
+            imu_size_2 += getsizeof(msg)
     
     '''
     #cmd_vel
@@ -89,13 +118,16 @@ def main():
 
         cmd_publisher_1 = rospy.Publisher(f"/{bot1_name}/cmd_vel", Twist, queue_size=10)
         cmd_publisher_2 = rospy.Publisher(f"/{bot2_name}/cmd_vel", Twist, queue_size=10)
-
+        
         def cmd_callback_1(msg):
             #cmd_data_1 = Twist()
             #cmd_data_1.linear = Vector3(msg['linear']['x'],msg['linear']['y'],msg['linear']['z'])
             #md_data_1.angular = Vector3(msg['angular']['x'],msg['angular']['y'],msg['angular']['z'])
             cmd_data_1 = rd('geometry_msgs/Twist', msg)
             cmd_publisher_1.publish(cmd_data_1)
+            global cmd_vel_size_1
+            cmd_vel_size_1 += getsizeof(msg)
+
 
         def cmd_callback_2(msg):
             #cmd_data_2 = Twist()
@@ -103,6 +135,8 @@ def main():
             #cmd_data_2.angular = Vector3(msg['angular']['x'],msg['angular']['y'],msg['angular']['z'])
             cmd_data_2 = rd('geometry_msgs/Twist', msg)
             cmd_publisher_2.publish(cmd_data_2)
+            global cmd_vel_size_2
+            cmd_vel_size_2 += getsizeof(msg)
     
     '''
     #joint_states
@@ -117,10 +151,14 @@ def main():
         def js_callback_1(msg):
             js_data_1 = rd('sensor_msgs/JointState', msg)
             js_publisher_1.publish(js_data_1)
+            global joint_states_size_1
+            joint_states_size_1 += getsizeof(msg)
 
         def js_callback_2(msg):
             js_data_2 = rd('sensor_msgs/JointState', msg)
             js_publisher_2.publish(js_data_2)
+            global joint_states_size_2
+            joint_states_size_2 += getsizeof(msg)
 
     '''
     #map
@@ -135,10 +173,14 @@ def main():
         def map_callback_1(msg):
             map_data_1 = rd('nav_msgs/OccupancyGrid', msg)
             map_publisher_1.publish(map_data_1)
+            global map_size_1
+            map_size_1 += getsizeof(msg)
 
         def map_callback_2(msg):
             map_data_2 = rd('nav_msgs/OccupancyGrid', msg)
             map_publisher_2.publish(map_data_2)
+            global map_size_2
+            map_size_2 += getsizeof(msg)
 
     '''
     #map_metadata
@@ -153,11 +195,15 @@ def main():
         def map_meta_callback_1(msg):
             map_meta_data_1 = rd('nav_msgs/MapMetaData', msg)
             map_meta_publisher_1.publish(map_meta_data_1)
+            global map_metadata_size_1
+            map_metadata_size_1 += getsizeof(msg)
             
         def map_meta_callback_2(msg):
             #print(msg)
             map_meta_data_2 = rd('nav_msgs/MapMetaData', msg)
             map_meta_publisher_2.publish(map_meta_data_2)
+            global map_metadata_size_2
+            map_metadata_size_2 += getsizeof(msg)
 
     '''
     #scan
@@ -172,11 +218,15 @@ def main():
         def scan_callback_1(msg):
             scan_data_1 = rd('sensor_msgs/LaserScan', msg)
             scan_publisher_1.publish(scan_data_1)
+            global scan_size_1
+            scan_size_1 += getsizeof(msg)
             
         def scan_callback_2(msg):
             #print(msg)
             scan_data_2 = rd('sensor_msgs/LaserScan', msg)
             scan_publisher_2.publish(scan_data_2)
+            global scan_size_2
+            scan_size_2 += getsizeof(msg)
 
     '''
     #odom
@@ -191,14 +241,17 @@ def main():
         def odom_callback_1(msg):
             odom_data_1 = rd('nav_msgs/Odometry', msg)
             odom_publisher_1.publish(odom_data_1)
+            global odom_size_1
+            odom_size_1 += getsizeof(msg)
             
         def odom_callback_2(msg):
             #print(msg)
             odom_data_2 = rd('nav_msgs/Odometry', msg)
             odom_publisher_2.publish(odom_data_2)
+            global odom_size_2
+            odom_size_2 += getsizeof(msg)
 
     
-
     '''
     #TF
     '''
@@ -213,11 +266,15 @@ def main():
             
             tf_data_1 = rd('tf/tfMessage', msg)
             tf_publisher_1.publish(tf_data_1)
+            global tf_size_1
+            tf_size_1 += getsizeof(msg)
             
         def tf_callback_2(msg):
             #print(msg)
             tf_data_2 = rd('tf/tfMessage', msg)
             tf_publisher_2.publish(tf_data_2)
+            global tf_size_2
+            tf_size_2 += getsizeof(msg)
     '''
     #TF_Static
     '''
@@ -231,11 +288,51 @@ def main():
         def tf_static_callback_1(msg):
             tf_static_data_1 = rd('tf2_msgs/TFMessage', msg)
             tf_static_publisher_1.publish(tf_static_data_1)
+            global tf_static_size_1
+            tf_static_size_1 += getsizeof(msg)
             
         def tf_static_callback_2(msg):
             #print(msg)
             tf_static_data_2 = rd('tf2_msgs/TFMessage', msg)
             tf_static_publisher_2.publish(tf_static_data_2)
+            global tf_static_size_2
+            tf_static_size_2 += getsizeof(msg)
+
+    '''
+    #Time
+    '''
+    if get_time:
+        time_listener_1 = roslibpy.Topic(client_1, '/time', 'std_msgs/UInt64')
+        time_listener_2 = roslibpy.Topic(client_2, '/time', 'std_msgs/UInt64')
+
+        time_publisher_1 = rospy.Publisher(f"/{bot1_name}/time", UInt64, queue_size=10)
+        time_publisher_2 = rospy.Publisher(f"/{bot2_name}/time", UInt64, queue_size=10)
+
+        def time_callback_1(msg):
+            time_data_1 = rd('std_msgs/UInt64', msg)
+            time_publisher_1.publish(time_data_1)
+
+            global time_size_1
+            time_size_1 += getsizeof(msg)
+
+            server_time = time.time_ns()
+            agent_time = msg['data']
+            latency = (server_time - agent_time)*0.0000010
+            rospy.loginfo_throttle(4, f'{bot1_name} latency {latency} ms')
+            
+        def time_callback_2(msg):
+            #print(msg)
+            time_data_2 = rd('std_msgs/UInt64', msg)
+            time_publisher_2.publish(time_data_2)
+
+            global time_size_2
+            time_size_2 += getsizeof(msg)
+
+            server_time = time.time_ns()
+            agent_time = msg['data']
+            latency = (server_time - agent_time)*0.0000010
+            rospy.loginfo_throttle(4, f'{bot2_name} latency {latency} ms')
+
     '''
     #slam_entropy
     '''
@@ -256,38 +353,56 @@ def main():
             if get_imu:
                 imu_listener_1.subscribe(imu_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/imu')
+                rospy.loginfo_throttle(5,f'IMU Data received: {imu_size_1* 0.000001} mb from {bot1_name}')
                 
             if get_cmd_vel:
                 cmd_listener_1.subscribe(cmd_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/cmd_vel')
+                rospy.loginfo_throttle(5,f'Cmd_vel Data received: {cmd_vel_size_1* 0.000001} mb from {bot1_name}')
                 
             if get_joint_states:
                 js_listener_1.subscribe(js_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/joint_states')
+                rospy.loginfo_throttle(5,f'Joint States Data received: {joint_states_size_1* 0.000001} mb from {bot1_name}')
                 
             if get_map:
                 map_listener_1.subscribe(map_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/map')
+                rospy.loginfo_throttle(5,f'Map Data received: {map_size_1* 0.000001} mb from {bot1_name}')
                 
             if get_scan:
                 scan_listener_1.subscribe(scan_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/scan')
+                rospy.loginfo_throttle(5,f'Scan Data received: {scan_size_1* 0.000001} mb from {bot1_name}')
 
             if get_odom:
                 odom_listener_1.subscribe(odom_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/odom')
+                rospy.loginfo_throttle(5,f'Odom Data received: {odom_size_1* 0.000001} mb from {bot1_name}')
 
             if get_map_metadata:
                 map_meta_listener_1.subscribe(map_meta_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/map_metadata')
+                rospy.loginfo_throttle(5,f'Map meta Data received: {map_metadata_size_1* 0.000001} mb from {bot1_name}')
 
             if get_tf:
                 tf_listener_1.subscribe(tf_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/tf')
+                rospy.loginfo_throttle(5,f'Tf Data received: {tf_size_1* 0.000001} mb from {bot1_name}')
 
             if get_tf_static:
                 tf_static_listener_1.subscribe(tf_static_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/tf_static')
+                rospy.loginfo_throttle(5,f'Tf static Data received: {tf_static_size_1* 0.000001} mb from {bot1_name}')
+            
+            if get_time:
+                time_listener_1.subscribe(time_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/time')
+            
+            total_1 = imu_size_1 + cmd_vel_size_1 + joint_states_size_1 + map_size_1 + map_metadata_size_1 + scan_size_1 + odom_size_1 + slam_entropy_size_1 + tf_size_1 + tf_static_size_1 + time_size_1
+
+            rospy.loginfo_throttle(5,f'Total data received from {bot1_name}: {total_1* 0.000001} mb')
+
 
         else:
             rospy.logerr_once(f"{bot1_name} connection lost")
@@ -297,39 +412,56 @@ def main():
             if get_imu:
                 imu_listener_2.subscribe(imu_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/imu')
+                rospy.loginfo_throttle(5,f'IMU Data received: {imu_size_2* 0.000001} mb from {bot2_name}')
                 
             if get_cmd_vel:
                 cmd_listener_2.subscribe(cmd_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/cmd_vel')
+                rospy.loginfo_throttle(5,f'Cmd_vel Data received: {cmd_vel_size_2* 0.000001} mb from {bot2_name}')
                 
             if get_joint_states:
                 js_listener_2.subscribe(js_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/joint_states')
+                rospy.loginfo_throttle(5,f'Joint States Data received: {joint_states_size_2* 0.000001} mb from {bot2_name}')
                 
             if get_map:
                 map_listener_2.subscribe(map_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/map')
+                rospy.loginfo_throttle(5,f'Map Data received: {map_size_2* 0.000001} mb from {bot2_name}')
+                
                 
             if get_scan:
                 scan_listener_2.subscribe(scan_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/scan')
+                rospy.loginfo_throttle(5,f'Scan Data received: {scan_size_2* 0.000001} mb from {bot2_name}')
 
             if get_odom:
                 odom_listener_2.subscribe(odom_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/odom')
+                rospy.loginfo_throttle(5,f'Odom Data received: {odom_size_2* 0.000001} mb from {bot2_name}')
             
             if get_map_metadata:
                 map_meta_listener_2.subscribe(map_meta_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/map_metadata')
+                rospy.loginfo_throttle(5,f'Map meta Data received: {map_metadata_size_2* 0.000001} mb from {bot2_name}')
 
             if get_tf:
                 tf_listener_2.subscribe(tf_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/tf')
+                rospy.loginfo_throttle(5,f'Tf Data received: {tf_size_2* 0.000001} mb from {bot2_name}')
 
             if get_tf_static:
                 tf_static_listener_2.subscribe(tf_static_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/tf_static')
+                rospy.loginfo_throttle(5,f'Tf static Data received: {tf_static_size_2* 0.000001} mb from {bot2_name}')
 
+            if get_time:
+                time_listener_2.subscribe(time_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/time')
+
+            total_2 = imu_size_2 + cmd_vel_size_2 + joint_states_size_2 + map_size_2 + map_metadata_size_2 + scan_size_2 + odom_size_2 + slam_entropy_size_2 + tf_size_2 + tf_static_size_2 + time_size_2
+
+            rospy.loginfo_throttle(5,f'Total data received from {bot2_name}: {total_2* 0.000001} mb')
         else:
             rospy.logerr_once(f"{bot2_name} connection lost")
 
