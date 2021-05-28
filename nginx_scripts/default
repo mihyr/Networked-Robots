@@ -1,0 +1,39 @@
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  server_name mihy.tech;
+
+  location /.well-known {
+    alias /srv/.well-known;
+    allow all;
+    default_type "text/plain";
+    autoindex    on;
+  }
+
+  location / {
+    return 301 https://$host$request_uri;
+  }
+}
+
+# SSL configuration
+server {
+  listen 443 ssl default_server;
+  listen [::]:443 ssl default_server;
+  server_name mihy.tech;
+  ssl_certificate /etc/nginx/ssl/mihy.tech/fullchain.pem;
+  ssl_certificate_key /etc/nginx/ssl/mihy.tech/key.pem;
+  include snippets/ssl-params.conf;
+  client_max_body_size 40M;
+  server_tokens off;
+  root /srv/;
+
+  include /etc/nginx/apps/*.conf;
+
+  location ~ /\.ht {
+    deny all;
+  }
+
+  location /fancyindex {
+
+  }
+}
