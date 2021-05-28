@@ -1,0 +1,375 @@
+[rospy.client][INFO] 2021-05-21 21:15:25,862: init_node, name[/listener], pid[113990]
+[xmlrpc][INFO] 2021-05-21 21:15:25,862: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-05-21 21:15:25,862: Started XML-RPC server [http://mihixps.local:39179/]
+[rospy.init][INFO] 2021-05-21 21:15:25,863: ROS Slave URI: [http://mihixps.local:39179/]
+[rospy.impl.masterslave][INFO] 2021-05-21 21:15:25,863: _ready: http://mihixps.local:39179/
+[rospy.registration][INFO] 2021-05-21 21:15:25,863: Registering with master node http://mihixps.local:11311
+[xmlrpc][INFO] 2021-05-21 21:15:25,863: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-05-21 21:15:25,963: registered with master
+[rospy.rosout][INFO] 2021-05-21 21:15:25,963: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-05-21 21:15:25,964: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-05-21 21:15:25,965: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[roslibpy][INFO] 2021-05-21 21:15:26,150: Connection to ROS ready.
+[rospy.internal][INFO] 2021-05-21 21:15:26,209: topic[/rosout] adding connection to [/rosout], count 0
+[roslibpy][INFO] 2021-05-21 21:15:26,269: Connection to ROS ready.
+[rosout][INFO] 2021-05-21 21:15:26,275: At time: 0 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:26,277: Publishing topic /alphabot/map
+[rosout][INFO] 2021-05-21 21:15:26,279: Map Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:26,281: Publishing topic /alphabot/map_metadata
+[rosout][INFO] 2021-05-21 21:15:26,282: Map meta Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:26,284: Publishing topic /alphabot/time
+[rosout][INFO] 2021-05-21 21:15:26,285: Total data received from alphabot: 0.0 mb
+[rosout][INFO] 2021-05-21 21:15:26,287: Publishing topic /zetabot/map
+[rosout][INFO] 2021-05-21 21:15:26,288: Map Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:26,290: Publishing topic /zetabot/map_metadata
+[rosout][INFO] 2021-05-21 21:15:26,292: Map meta Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:26,294: Publishing topic /zetabot/time
+[rosout][INFO] 2021-05-21 21:15:26,296: Total data received from zetabot: 0.0 mb
+[rosout][INFO] 2021-05-21 21:15:26,497: alphabot latency 21.111573999999997 ms
+[rosout][INFO] 2021-05-21 21:15:26,512: zetabot latency 64.543977 ms
+[rosout][INFO] 2021-05-21 21:15:31,285: At time: 5 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:31,288: Map Data received: 0.000464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:31,290: Map meta Data received: 0.000464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:31,292: Total data received from alphabot: 0.08955199999999999 mb
+[rosout][INFO] 2021-05-21 21:15:31,294: Map Data received: 0.000464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:31,297: Map meta Data received: 0.000464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:31,300: Total data received from zetabot: 0.08955199999999999 mb
+[rosout][INFO] 2021-05-21 21:15:31,534: zetabot latency 111.150646 ms
+[rosout][INFO] 2021-05-21 21:15:31,542: alphabot latency 78.114233 ms
+[rosout][INFO] 2021-05-21 21:15:36,285: At time: 10 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:36,298: Map Data received: 0.000696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:36,300: Map meta Data received: 0.000696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:36,302: Total data received from alphabot: 0.182584 mb
+[rosout][INFO] 2021-05-21 21:15:36,304: Map Data received: 0.000696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:36,305: Map meta Data received: 0.000696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:36,306: Total data received from zetabot: 0.182584 mb
+[rosout][INFO] 2021-05-21 21:15:36,595: zetabot latency 108.936076 ms
+[rosout][INFO] 2021-05-21 21:15:36,599: alphabot latency 85.641733 ms
+[rosout][INFO] 2021-05-21 21:15:41,297: At time: 15 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:41,299: Map Data received: 0.000928 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:41,301: Map meta Data received: 0.000928 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:41,304: Total data received from alphabot: 0.27608 mb
+[rosout][INFO] 2021-05-21 21:15:41,306: Map Data received: 0.000928 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:41,307: Map meta Data received: 0.000928 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:41,308: Total data received from zetabot: 0.275848 mb
+[rosout][INFO] 2021-05-21 21:15:41,625: zetabot latency 112.835889 ms
+[rosout][INFO] 2021-05-21 21:15:41,629: alphabot latency 77.680795 ms
+[rosout][INFO] 2021-05-21 21:15:46,298: At time: 20 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:46,302: Map Data received: 0.00116 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:46,304: Map meta Data received: 0.00116 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:46,306: Total data received from alphabot: 0.37004 mb
+[rosout][INFO] 2021-05-21 21:15:46,308: Map Data received: 0.00116 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:46,310: Map meta Data received: 0.00116 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:46,314: Total data received from zetabot: 0.37004 mb
+[rosout][INFO] 2021-05-21 21:15:46,643: zetabot latency 107.68243899999999 ms
+[rosout][INFO] 2021-05-21 21:15:46,646: alphabot latency 82.506845 ms
+[rosout][INFO] 2021-05-21 21:15:51,310: At time: 25 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:51,312: Map Data received: 0.001392 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:51,314: Map meta Data received: 0.001392 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:51,317: Total data received from alphabot: 0.463072 mb
+[rosout][INFO] 2021-05-21 21:15:51,320: Map Data received: 0.001392 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:51,323: Map meta Data received: 0.001392 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:51,326: Total data received from zetabot: 0.463072 mb
+[rosout][INFO] 2021-05-21 21:15:51,697: zetabot latency 111.724598 ms
+[rosout][INFO] 2021-05-21 21:15:51,699: alphabot latency 73.47949799999999 ms
+[rosout][INFO] 2021-05-21 21:15:56,322: At time: 30 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:15:56,325: Map Data received: 0.001624 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:56,328: Map meta Data received: 0.001624 mb from alphabot
+[rosout][INFO] 2021-05-21 21:15:56,331: Total data received from alphabot: 0.5561039999999999 mb
+[rosout][INFO] 2021-05-21 21:15:56,333: Map Data received: 0.001624 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:56,335: Map meta Data received: 0.001624 mb from zetabot
+[rosout][INFO] 2021-05-21 21:15:56,338: Total data received from zetabot: 0.557032 mb
+[rosout][INFO] 2021-05-21 21:15:56,735: zetabot latency 99.42086599999999 ms
+[rosout][INFO] 2021-05-21 21:15:56,740: alphabot latency 76.11988099999999 ms
+[rosout][INFO] 2021-05-21 21:16:01,323: At time: 35 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:01,326: Map Data received: 0.001856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:01,330: Map meta Data received: 0.001856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:01,333: Total data received from alphabot: 0.650296 mb
+[rosout][INFO] 2021-05-21 21:16:01,335: Map Data received: 0.001856 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:01,337: Map meta Data received: 0.001856 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:01,339: Total data received from zetabot: 0.650296 mb
+[rosout][INFO] 2021-05-21 21:16:01,785: zetabot latency 112.048144 ms
+[rosout][INFO] 2021-05-21 21:16:01,790: alphabot latency 76.47345 ms
+[rosout][INFO] 2021-05-21 21:16:06,335: At time: 40 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:06,336: Map Data received: 0.002088 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:06,338: Map meta Data received: 0.002088 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:06,339: Total data received from alphabot: 0.743792 mb
+[rosout][INFO] 2021-05-21 21:16:06,341: Map Data received: 0.002088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:06,343: Map meta Data received: 0.002088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:06,344: Total data received from zetabot: 0.74356 mb
+[rosout][INFO] 2021-05-21 21:16:06,807: alphabot latency 68.257682 ms
+[rosout][INFO] 2021-05-21 21:16:06,812: zetabot latency 100.64209199999999 ms
+[rosout][INFO] 2021-05-21 21:16:11,335: At time: 45 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:11,339: Map Data received: 0.00232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:11,342: Map meta Data received: 0.00232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:11,344: Total data received from alphabot: 0.836824 mb
+[rosout][INFO] 2021-05-21 21:16:11,346: Map Data received: 0.00232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:11,349: Map meta Data received: 0.00232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:11,352: Total data received from zetabot: 0.836824 mb
+[rosout][INFO] 2021-05-21 21:16:11,831: zetabot latency 108.10551099999999 ms
+[rosout][INFO] 2021-05-21 21:16:11,836: alphabot latency 85.234059 ms
+[rosout][INFO] 2021-05-21 21:16:16,335: At time: 50 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:16,348: Map Data received: 0.002552 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:16,350: Map meta Data received: 0.002552 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:16,352: Total data received from alphabot: 0.929392 mb
+[rosout][INFO] 2021-05-21 21:16:16,355: Map Data received: 0.002552 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:16,358: Map meta Data received: 0.002552 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:16,361: Total data received from zetabot: 0.9305519999999999 mb
+[rosout][INFO] 2021-05-21 21:16:16,870: zetabot latency 96.38914799999999 ms
+[rosout][INFO] 2021-05-21 21:16:16,875: alphabot latency 73.58326699999999 ms
+[rosout][INFO] 2021-05-21 21:16:21,336: At time: 55 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:21,360: Map Data received: 0.002784 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:21,362: Map meta Data received: 0.002784 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:21,364: Total data received from alphabot: 1.023584 mb
+[rosout][INFO] 2021-05-21 21:16:21,367: Map Data received: 0.002784 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:21,369: Map meta Data received: 0.002784 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:21,371: Total data received from zetabot: 1.023352 mb
+[rosout][INFO] 2021-05-21 21:16:21,909: alphabot latency 57.449044 ms
+[rosout][INFO] 2021-05-21 21:16:21,912: zetabot latency 89.032455 ms
+[rosout][INFO] 2021-05-21 21:16:26,347: At time: 60 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:26,360: Map Data received: 0.003016 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:26,362: Map meta Data received: 0.003016 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:26,365: Total data received from alphabot: 1.1170799999999999 mb
+[rosout][INFO] 2021-05-21 21:16:26,367: Map Data received: 0.003016 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:26,370: Map meta Data received: 0.003016 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:26,372: Total data received from zetabot: 1.1168479999999998 mb
+[rosout][INFO] 2021-05-21 21:16:26,945: zetabot latency 109.14401099999999 ms
+[rosout][INFO] 2021-05-21 21:16:26,949: alphabot latency 85.358233 ms
+[rosout][INFO] 2021-05-21 21:16:31,348: At time: 65 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:31,360: Map Data received: 0.003248 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:31,363: Map meta Data received: 0.003248 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:31,367: Total data received from alphabot: 1.2105759999999999 mb
+[rosout][INFO] 2021-05-21 21:16:31,369: Map Data received: 0.003248 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:31,372: Map meta Data received: 0.003248 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:31,374: Total data received from zetabot: 1.2105759999999999 mb
+[rosout][INFO] 2021-05-21 21:16:31,974: zetabot latency 113.190924 ms
+[rosout][INFO] 2021-05-21 21:16:31,978: alphabot latency 77.074257 ms
+[rosout][INFO] 2021-05-21 21:16:36,348: At time: 70 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:36,360: Map Data received: 0.00348 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:36,373: Map meta Data received: 0.00348 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:36,375: Total data received from alphabot: 1.3033759999999999 mb
+[rosout][INFO] 2021-05-21 21:16:36,378: Map Data received: 0.00348 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:36,380: Map meta Data received: 0.00348 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:36,381: Total data received from zetabot: 1.3031439999999999 mb
+[rosout][INFO] 2021-05-21 21:16:36,989: alphabot latency 50.021783 ms
+[rosout][INFO] 2021-05-21 21:16:36,992: zetabot latency 81.49443 ms
+[rosout][INFO] 2021-05-21 21:16:41,348: At time: 75 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:41,360: Map Data received: 0.003712 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:41,373: Map meta Data received: 0.003712 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:41,376: Total data received from alphabot: 1.397336 mb
+[rosout][INFO] 2021-05-21 21:16:41,378: Map Data received: 0.003712 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:41,381: Map meta Data received: 0.003712 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:41,384: Total data received from zetabot: 1.397104 mb
+[rosout][INFO] 2021-05-21 21:16:41,995: zetabot latency 109.0676 ms
+[rosout][INFO] 2021-05-21 21:16:41,999: alphabot latency 85.05286199999999 ms
+[rosout][INFO] 2021-05-21 21:16:46,360: At time: 80 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:46,367: Map Data received: 0.003944 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:46,385: Map meta Data received: 0.003944 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:46,389: Total data received from alphabot: 1.490832 mb
+[rosout][INFO] 2021-05-21 21:16:46,392: Map Data received: 0.003944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:46,395: Map meta Data received: 0.003944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:46,397: Total data received from zetabot: 1.490832 mb
+[rosout][INFO] 2021-05-21 21:16:47,007: alphabot latency 80.995414 ms
+[rosout][INFO] 2021-05-21 21:16:47,011: zetabot latency 112.86304799999999 ms
+[rosout][INFO] 2021-05-21 21:16:51,372: At time: 85 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:51,375: Map Data received: 0.004176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:51,398: Map meta Data received: 0.004176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:51,401: Total data received from alphabot: 1.5834 mb
+[rosout][INFO] 2021-05-21 21:16:51,404: Map Data received: 0.004176 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:51,407: Map meta Data received: 0.004176 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:51,410: Total data received from zetabot: 1.5834 mb
+[rosout][INFO] 2021-05-21 21:16:52,033: zetabot latency 109.950279 ms
+[rosout][INFO] 2021-05-21 21:16:52,037: alphabot latency 86.006326 ms
+[rosout][INFO] 2021-05-21 21:16:56,385: At time: 90 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:16:56,388: Map Data received: 0.004408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:56,410: Map meta Data received: 0.004408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:16:56,413: Total data received from alphabot: 1.676664 mb
+[rosout][INFO] 2021-05-21 21:16:56,415: Map Data received: 0.004408 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:56,418: Map meta Data received: 0.004408 mb from zetabot
+[rosout][INFO] 2021-05-21 21:16:56,421: Total data received from zetabot: 1.677824 mb
+[rosout][INFO] 2021-05-21 21:16:57,071: alphabot latency 82.214334 ms
+[rosout][INFO] 2021-05-21 21:16:57,075: zetabot latency 114.471305 ms
+[rosout][INFO] 2021-05-21 21:17:01,397: At time: 95 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:01,400: Map Data received: 0.00464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:01,423: Map meta Data received: 0.00464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:01,426: Total data received from alphabot: 1.770392 mb
+[rosout][INFO] 2021-05-21 21:17:01,429: Map Data received: 0.00464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:01,433: Map meta Data received: 0.00464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:01,435: Total data received from zetabot: 1.77016 mb
+[rosout][INFO] 2021-05-21 21:17:02,108: alphabot latency 81.719312 ms
+[rosout][INFO] 2021-05-21 21:17:02,112: zetabot latency 114.244794 ms
+[rosout][INFO] 2021-05-21 21:17:06,410: At time: 100 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:06,412: Map Data received: 0.004872 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:06,423: Map meta Data received: 0.004872 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:06,435: Total data received from alphabot: 1.863656 mb
+[rosout][INFO] 2021-05-21 21:17:06,437: Map Data received: 0.004872 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:06,439: Map meta Data received: 0.004872 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:06,442: Total data received from zetabot: 1.863656 mb
+[rosout][INFO] 2021-05-21 21:17:07,125: alphabot latency 74.340087 ms
+[rosout][INFO] 2021-05-21 21:17:07,130: zetabot latency 119.85107199999999 ms
+[rosout][INFO] 2021-05-21 21:17:11,410: At time: 105 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:11,412: Map Data received: 0.005104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:11,435: Map meta Data received: 0.005104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:11,438: Total data received from alphabot: 1.957384 mb
+[rosout][INFO] 2021-05-21 21:17:11,441: Map Data received: 0.005104 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:11,443: Map meta Data received: 0.005104 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:11,445: Total data received from zetabot: 1.957152 mb
+[rosout][INFO] 2021-05-21 21:17:12,146: alphabot latency 82.18033 ms
+[rosout][INFO] 2021-05-21 21:17:12,152: zetabot latency 116.258195 ms
+[rosout][INFO] 2021-05-21 21:17:16,422: At time: 110 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:16,424: Map Data received: 0.005336 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:16,448: Map meta Data received: 0.005336 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:16,450: Total data received from alphabot: 2.050416 mb
+[rosout][INFO] 2021-05-21 21:17:16,454: Map Data received: 0.005336 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:16,456: Map meta Data received: 0.005336 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:16,458: Total data received from zetabot: 2.051576 mb
+[rosout][INFO] 2021-05-21 21:17:17,209: zetabot latency 110.83438 ms
+[rosout][INFO] 2021-05-21 21:17:17,213: alphabot latency 87.191137 ms
+[rosout][INFO] 2021-05-21 21:17:21,422: At time: 115 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:21,425: Map Data received: 0.005568 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:21,448: Map meta Data received: 0.005568 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:21,460: Total data received from alphabot: 2.14484 mb
+[rosout][INFO] 2021-05-21 21:17:21,463: Map Data received: 0.005568 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:21,466: Map meta Data received: 0.005568 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:21,468: Total data received from zetabot: 2.14484 mb
+[rosout][INFO] 2021-05-21 21:17:22,258: zetabot latency 110.25916099999999 ms
+[rosout][INFO] 2021-05-21 21:17:22,262: alphabot latency 85.487309 ms
+[rosout][INFO] 2021-05-21 21:17:26,422: At time: 120 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:26,435: Map Data received: 0.0058 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:26,460: Map meta Data received: 0.0058 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:26,462: Total data received from alphabot: 2.23764 mb
+[rosout][INFO] 2021-05-21 21:17:26,464: Map Data received: 0.0058 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:26,466: Map meta Data received: 0.0058 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:26,469: Total data received from zetabot: 2.237408 mb
+[rosout][INFO] 2021-05-21 21:17:27,271: alphabot latency 82.09883099999999 ms
+[rosout][INFO] 2021-05-21 21:17:27,275: zetabot latency 114.93381099999999 ms
+[rosout][INFO] 2021-05-21 21:17:31,435: At time: 125 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:31,437: Map Data received: 0.006032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:31,473: Map meta Data received: 0.006032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:31,475: Total data received from alphabot: 2.3316 mb
+[rosout][INFO] 2021-05-21 21:17:31,477: Map Data received: 0.006032 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:31,479: Map meta Data received: 0.006032 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:31,482: Total data received from zetabot: 2.3316 mb
+[rosout][INFO] 2021-05-21 21:17:32,285: zetabot latency 111.49802299999999 ms
+[rosout][INFO] 2021-05-21 21:17:32,288: alphabot latency 74.596623 ms
+[rosout][INFO] 2021-05-21 21:17:36,435: At time: 130 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:36,439: Map Data received: 0.006264 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:36,486: Map meta Data received: 0.006264 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:36,489: Total data received from alphabot: 2.424632 mb
+[rosout][INFO] 2021-05-21 21:17:36,491: Map Data received: 0.006264 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:36,494: Map meta Data received: 0.006264 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:36,497: Total data received from zetabot: 2.424632 mb
+[rosout][INFO] 2021-05-21 21:17:37,326: zetabot latency 115.117064 ms
+[rosout][INFO] 2021-05-21 21:17:37,330: alphabot latency 78.90392 ms
+[rosout][INFO] 2021-05-21 21:17:41,435: At time: 135 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:41,448: Map Data received: 0.006496 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:41,498: Map meta Data received: 0.006496 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:41,499: Total data received from alphabot: 2.518592 mb
+[rosout][INFO] 2021-05-21 21:17:41,501: Map Data received: 0.006496 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:41,502: Map meta Data received: 0.006496 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:41,504: Total data received from zetabot: 2.518592 mb
+[rosout][INFO] 2021-05-21 21:17:42,371: alphabot latency 69.688064 ms
+[rosout][INFO] 2021-05-21 21:17:42,376: zetabot latency 115.35407199999999 ms
+[rosout][INFO] 2021-05-21 21:17:46,447: At time: 140 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:46,450: Map Data received: 0.006728 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:46,498: Map meta Data received: 0.006728 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:46,500: Total data received from alphabot: 2.611856 mb
+[rosout][INFO] 2021-05-21 21:17:46,503: Map Data received: 0.006728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:46,506: Map meta Data received: 0.006728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:46,508: Total data received from zetabot: 2.611856 mb
+[rosout][INFO] 2021-05-21 21:17:47,375: alphabot latency 73.567706 ms
+[rosout][INFO] 2021-05-21 21:17:47,380: zetabot latency 118.756586 ms
+[rosout][INFO] 2021-05-21 21:17:51,448: At time: 145 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:51,450: Map Data received: 0.00696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:51,498: Map meta Data received: 0.00696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:51,504: Total data received from alphabot: 2.705352 mb
+[rosout][INFO] 2021-05-21 21:17:51,507: Map Data received: 0.00696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:51,509: Map meta Data received: 0.00696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:51,511: Total data received from zetabot: 2.705352 mb
+[rosout][INFO] 2021-05-21 21:17:52,396: alphabot latency 82.225371 ms
+[rosout][INFO] 2021-05-21 21:17:52,399: zetabot latency 113.48226 ms
+[rosout][INFO] 2021-05-21 21:17:56,460: At time: 150 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:17:56,466: Map Data received: 0.007192 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:56,510: Map meta Data received: 0.007192 mb from alphabot
+[rosout][INFO] 2021-05-21 21:17:56,513: Total data received from alphabot: 2.79792 mb
+[rosout][INFO] 2021-05-21 21:17:56,515: Map Data received: 0.007192 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:56,517: Map meta Data received: 0.007192 mb from zetabot
+[rosout][INFO] 2021-05-21 21:17:56,520: Total data received from zetabot: 2.79792 mb
+[rosout][INFO] 2021-05-21 21:17:57,449: alphabot latency 72.87666899999999 ms
+[rosout][INFO] 2021-05-21 21:17:57,453: zetabot latency 117.35011399999999 ms
+[rosout][INFO] 2021-05-21 21:18:01,473: At time: 155 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:01,475: Map Data received: 0.007424 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:01,523: Map meta Data received: 0.007424 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:01,526: Total data received from alphabot: 2.89188 mb
+[rosout][INFO] 2021-05-21 21:18:01,528: Map Data received: 0.007424 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:01,531: Map meta Data received: 0.007424 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:01,533: Total data received from zetabot: 2.891648 mb
+[rosout][INFO] 2021-05-21 21:18:02,458: zetabot latency 110.34674899999999 ms
+[rosout][INFO] 2021-05-21 21:18:02,462: alphabot latency 85.505561 ms
+[rosout][INFO] 2021-05-21 21:18:06,485: At time: 160 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:06,491: Map Data received: 0.007656 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:06,535: Map meta Data received: 0.007656 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:06,538: Total data received from alphabot: 2.984912 mb
+[rosout][INFO] 2021-05-21 21:18:06,540: Map Data received: 0.007656 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:06,542: Map meta Data received: 0.007656 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:06,544: Total data received from zetabot: 2.98468 mb
+[rosout][INFO] 2021-05-21 21:18:07,513: alphabot latency 74.170506 ms
+[rosout][INFO] 2021-05-21 21:18:07,515: zetabot latency 117.39249 ms
+[rosout][INFO] 2021-05-21 21:18:11,497: At time: 165 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:11,501: Map Data received: 0.007888 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:11,548: Map meta Data received: 0.007888 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:11,549: Total data received from alphabot: 3.07864 mb
+[rosout][INFO] 2021-05-21 21:18:11,551: Map Data received: 0.007888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:11,552: Map meta Data received: 0.007888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:11,553: Total data received from zetabot: 3.078408 mb
+[rosout][INFO] 2021-05-21 21:18:12,534: alphabot latency 70.174026 ms
+[rosout][INFO] 2021-05-21 21:18:12,538: zetabot latency 102.51457599999999 ms
+[rosout][INFO] 2021-05-21 21:18:16,497: At time: 170 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:16,504: Map Data received: 0.00812 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:16,548: Map meta Data received: 0.00812 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:16,551: Total data received from alphabot: 3.171904 mb
+[rosout][INFO] 2021-05-21 21:18:16,554: Map Data received: 0.00812 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:16,558: Map meta Data received: 0.00812 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:16,560: Total data received from zetabot: 3.171904 mb
+[rosout][INFO] 2021-05-21 21:18:17,588: alphabot latency 74.63085699999999 ms
+[rosout][INFO] 2021-05-21 21:18:17,592: zetabot latency 118.845631 ms
+[rosout][INFO] 2021-05-21 21:18:21,498: At time: 175 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:21,510: Map Data received: 0.008352 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:21,560: Map meta Data received: 0.008352 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:21,563: Total data received from alphabot: 3.265168 mb
+[rosout][INFO] 2021-05-21 21:18:21,565: Map Data received: 0.008352 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:21,567: Map meta Data received: 0.008352 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:21,570: Total data received from zetabot: 3.265168 mb
+[rosout][INFO] 2021-05-21 21:18:22,651: zetabot latency 115.17192299999999 ms
+[rosout][INFO] 2021-05-21 21:18:22,654: alphabot latency 77.440995 ms
+[rosout][INFO] 2021-05-21 21:18:26,510: At time: 180 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:26,512: Map Data received: 0.008584 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:26,560: Map meta Data received: 0.008584 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:26,563: Total data received from alphabot: 3.3584319999999996 mb
+[rosout][INFO] 2021-05-21 21:18:26,566: Map Data received: 0.008584 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:26,569: Map meta Data received: 0.008584 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:26,572: Total data received from zetabot: 3.3581999999999996 mb
+[rosout][INFO] 2021-05-21 21:18:27,653: zetabot latency 117.639026 ms
+[rosout][INFO] 2021-05-21 21:18:27,656: alphabot latency 79.791275 ms
+[rosout][INFO] 2021-05-21 21:18:31,510: At time: 185 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:31,513: Map Data received: 0.008816 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:31,573: Map meta Data received: 0.008816 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:31,575: Total data received from alphabot: 3.4516959999999997 mb
+[rosout][INFO] 2021-05-21 21:18:31,578: Map Data received: 0.008816 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:31,580: Map meta Data received: 0.008816 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:31,583: Total data received from zetabot: 3.4528559999999997 mb
+[rosout][INFO] 2021-05-21 21:18:32,722: alphabot latency 83.022177 ms
+[rosout][INFO] 2021-05-21 21:18:32,729: zetabot latency 118.76062499999999 ms
+[rosout][INFO] 2021-05-21 21:18:36,522: At time: 190 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:18:36,524: Map Data received: 0.009047999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:36,585: Map meta Data received: 0.009047999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:18:36,589: Total data received from alphabot: 3.5451919999999997 mb
+[rosout][INFO] 2021-05-21 21:18:36,592: Map Data received: 0.009047999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:36,596: Map meta Data received: 0.009047999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:18:36,598: Total data received from zetabot: 3.5463519999999997 mb
+[rosout][INFO] 2021-05-21 21:18:37,759: alphabot latency 82.55221499999999 ms
+[rosout][INFO] 2021-05-21 21:18:37,761: zetabot latency 113.57972699999999 ms
+[rospy.core][INFO] 2021-05-21 21:18:38,330: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2021-05-21 21:18:38,333: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2021-05-21 21:18:38,333: signal-2
+[rospy.core][INFO] 2021-05-21 21:18:38,931: signal_shutdown [atexit]

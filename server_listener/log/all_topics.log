@@ -1,0 +1,804 @@
+[rospy.client][INFO] 2021-05-21 21:03:01,850: init_node, name[/listener], pid[107503]
+[xmlrpc][INFO] 2021-05-21 21:03:01,851: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-05-21 21:03:01,851: Started XML-RPC server [http://mihixps.local:35753/]
+[rospy.init][INFO] 2021-05-21 21:03:01,851: ROS Slave URI: [http://mihixps.local:35753/]
+[rospy.impl.masterslave][INFO] 2021-05-21 21:03:01,851: _ready: http://mihixps.local:35753/
+[rospy.registration][INFO] 2021-05-21 21:03:01,852: Registering with master node http://mihixps.local:11311
+[xmlrpc][INFO] 2021-05-21 21:03:01,852: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-05-21 21:03:01,952: registered with master
+[rospy.rosout][INFO] 2021-05-21 21:03:01,952: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-05-21 21:03:01,954: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-05-21 21:03:01,955: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[roslibpy][INFO] 2021-05-21 21:03:02,250: Connection to ROS ready.
+[roslibpy][INFO] 2021-05-21 21:03:02,250: Connection to ROS ready.
+[rosout][INFO] 2021-05-21 21:03:02,279: At time: 0 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:02,281: Publishing topic /alphabot/imu
+[rosout][INFO] 2021-05-21 21:03:02,283: IMU Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,284: Publishing topic /alphabot/cmd_vel
+[rosout][INFO] 2021-05-21 21:03:02,286: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,288: Publishing topic /alphabot/joint_states
+[rosout][INFO] 2021-05-21 21:03:02,289: Joint States Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,291: Publishing topic /alphabot/map
+[rosout][INFO] 2021-05-21 21:03:02,292: Map Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,294: Publishing topic /alphabot/scan
+[rosout][INFO] 2021-05-21 21:03:02,295: Scan Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,297: Publishing topic /alphabot/odom
+[rosout][INFO] 2021-05-21 21:03:02,298: Odom Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,299: Publishing topic /alphabot/map_metadata
+[rosout][INFO] 2021-05-21 21:03:02,301: Map meta Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,302: Publishing topic /alphabot/tf
+[rosout][INFO] 2021-05-21 21:03:02,304: Tf Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,305: Publishing topic /alphabot/tf_static
+[rosout][INFO] 2021-05-21 21:03:02,307: Tf static Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:02,308: Publishing topic /alphabot/time
+[rosout][INFO] 2021-05-21 21:03:02,310: Total data received from alphabot: 0.0 mb
+[rosout][INFO] 2021-05-21 21:03:02,311: Publishing topic /zetabot/imu
+[rosout][INFO] 2021-05-21 21:03:02,312: IMU Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,314: Publishing topic /zetabot/cmd_vel
+[rosout][INFO] 2021-05-21 21:03:02,315: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,317: Publishing topic /zetabot/joint_states
+[rosout][INFO] 2021-05-21 21:03:02,318: Joint States Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,320: Publishing topic /zetabot/map
+[rosout][INFO] 2021-05-21 21:03:02,321: Map Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,323: Publishing topic /zetabot/scan
+[rosout][INFO] 2021-05-21 21:03:02,324: Scan Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,326: Publishing topic /zetabot/odom
+[rosout][INFO] 2021-05-21 21:03:02,327: Odom Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,329: Publishing topic /zetabot/map_metadata
+[rosout][INFO] 2021-05-21 21:03:02,330: Map meta Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,331: Publishing topic /zetabot/tf
+[rosout][INFO] 2021-05-21 21:03:02,333: Tf Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,334: Publishing topic /zetabot/tf_static
+[rosout][INFO] 2021-05-21 21:03:02,336: Tf static Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:02,337: Publishing topic /zetabot/time
+[rosout][INFO] 2021-05-21 21:03:02,339: Total data received from zetabot: 0.0 mb
+[rospy.internal][INFO] 2021-05-21 21:03:02,364: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2021-05-21 21:03:03,043: alphabot latency 16.957321999999998 ms
+[rosout][INFO] 2021-05-21 21:03:03,185: zetabot latency 87.40907 ms
+[rosout][INFO] 2021-05-21 21:03:07,290: At time: 5 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:07,293: IMU Data received: 0.19188 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,296: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,298: Joint States Data received: 0.02668 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,299: Map Data received: 0.000464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,301: Scan Data received: 0.00828 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,303: Odom Data received: 0.025287999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,306: Map meta Data received: 0.000464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,307: Tf Data received: 0.100224 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,309: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:07,311: Total data received from alphabot: 0.43429599999999996 mb
+[rosout][INFO] 2021-05-21 21:03:07,313: IMU Data received: 0.19296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,316: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,319: Joint States Data received: 0.025056 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,329: Map Data received: 0.000464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,331: Scan Data received: 0.00828 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,333: Odom Data received: 0.023896 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,335: Map meta Data received: 0.000464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,336: Tf Data received: 0.09627999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,338: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:07,341: Total data received from zetabot: 0.424888 mb
+[rosout][INFO] 2021-05-21 21:03:08,057: alphabot latency 18.175091 ms
+[rosout][INFO] 2021-05-21 21:03:08,186: zetabot latency 63.051292 ms
+[rosout][INFO] 2021-05-21 21:03:12,293: At time: 10 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:12,298: IMU Data received: 0.39239999999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,300: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,303: Joint States Data received: 0.053592 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,305: Map Data received: 0.000696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,307: Scan Data received: 0.01728 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,309: Odom Data received: 0.052432 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,312: Map meta Data received: 0.000696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,313: Tf Data received: 0.21228 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,315: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:12,317: Total data received from alphabot: 0.9025759999999999 mb
+[rosout][INFO] 2021-05-21 21:03:12,319: IMU Data received: 0.39276 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,323: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,325: Joint States Data received: 0.051503999999999994 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,341: Map Data received: 0.000696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,345: Scan Data received: 0.01728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,348: Odom Data received: 0.050575999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,350: Map meta Data received: 0.000696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,352: Tf Data received: 0.206944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,356: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:12,359: Total data received from zetabot: 0.892624 mb
+[rosout][INFO] 2021-05-21 21:03:13,068: alphabot latency 29.644059 ms
+[rosout][INFO] 2021-05-21 21:03:13,198: zetabot latency 75.460165 ms
+[rosout][INFO] 2021-05-21 21:03:17,304: At time: 15 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:17,306: IMU Data received: 0.58968 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,308: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,310: Joint States Data received: 0.080968 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,311: Map Data received: 0.000928 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,313: Scan Data received: 0.026279999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,315: Odom Data received: 0.07980799999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,319: Map meta Data received: 0.000928 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,321: Tf Data received: 0.325032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,323: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:17,327: Total data received from alphabot: 1.369856 mb
+[rosout][INFO] 2021-05-21 21:03:17,330: IMU Data received: 0.58968 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,333: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,336: Joint States Data received: 0.078416 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,344: Map Data received: 0.000928 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,347: Scan Data received: 0.026279999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,349: Odom Data received: 0.07725599999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,350: Map meta Data received: 0.000928 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,353: Tf Data received: 0.31923199999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,356: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:17,360: Total data received from zetabot: 1.3570959999999999 mb
+[rosout][INFO] 2021-05-21 21:03:18,073: alphabot latency 21.730567999999998 ms
+[rosout][INFO] 2021-05-21 21:03:18,213: zetabot latency 77.88425099999999 ms
+[rosout][INFO] 2021-05-21 21:03:22,315: At time: 20 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:22,320: IMU Data received: 0.78732 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,321: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,322: Joint States Data received: 0.10904 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,322: Map Data received: 0.00116 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,323: Scan Data received: 0.03528 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,325: Odom Data received: 0.107648 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,325: Map meta Data received: 0.00116 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,326: Tf Data received: 0.438944 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,327: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:22,327: Total data received from alphabot: 1.8391199999999999 mb
+[rosout][INFO] 2021-05-21 21:03:22,340: IMU Data received: 0.7876799999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,342: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,343: Joint States Data received: 0.105096 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,353: Map Data received: 0.00116 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,354: Scan Data received: 0.03528 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,357: Odom Data received: 0.103936 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,357: Map meta Data received: 0.00116 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,358: Tf Data received: 0.43012799999999995 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,359: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:22,366: Total data received from zetabot: 1.823056 mb
+[rosout][INFO] 2021-05-21 21:03:23,085: alphabot latency 21.031582999999998 ms
+[rosout][INFO] 2021-05-21 21:03:23,227: zetabot latency 79.02595699999999 ms
+[rosout][INFO] 2021-05-21 21:03:27,315: At time: 25 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:27,328: IMU Data received: 0.98676 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,332: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,334: Joint States Data received: 0.136184 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,337: Map Data received: 0.001392 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,341: Scan Data received: 0.04428 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,343: Odom Data received: 0.134792 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,344: Map meta Data received: 0.001392 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,346: Tf Data received: 0.551464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,348: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:27,350: Total data received from alphabot: 2.309536 mb
+[rosout][INFO] 2021-05-21 21:03:27,352: IMU Data received: 0.98568 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,356: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,358: Joint States Data received: 0.131776 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,361: Map Data received: 0.001392 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,365: Scan Data received: 0.04428 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,367: Odom Data received: 0.13061599999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,370: Map meta Data received: 0.001392 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,373: Tf Data received: 0.54172 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,375: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:27,377: Total data received from zetabot: 2.288504 mb
+[rosout][INFO] 2021-05-21 21:03:28,089: alphabot latency 12.758027 ms
+[rosout][INFO] 2021-05-21 21:03:28,231: zetabot latency 95.658998 ms
+[rosout][INFO] 2021-05-21 21:03:32,318: At time: 30 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:32,329: IMU Data received: 1.1865599999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,342: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,344: Joint States Data received: 0.163096 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,346: Map Data received: 0.001624 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,349: Scan Data received: 0.05328 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,353: Odom Data received: 0.161704 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,355: Map meta Data received: 0.001624 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,359: Tf Data received: 0.663752 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,360: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:32,362: Total data received from alphabot: 2.778152 mb
+[rosout][INFO] 2021-05-21 21:03:32,364: IMU Data received: 1.18224 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,365: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,367: Joint States Data received: 0.158688 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,369: Map Data received: 0.001624 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,372: Scan Data received: 0.05328 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,374: Odom Data received: 0.157528 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,377: Map meta Data received: 0.001624 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,379: Tf Data received: 0.653544 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,381: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:32,382: Total data received from zetabot: 2.7517679999999998 mb
+[rosout][INFO] 2021-05-21 21:03:33,109: alphabot latency 19.999776999999998 ms
+[rosout][INFO] 2021-05-21 21:03:33,240: zetabot latency 104.943072 ms
+[rosout][INFO] 2021-05-21 21:03:37,322: At time: 35 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:37,335: IMU Data received: 1.3788 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,347: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,350: Joint States Data received: 0.191168 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,352: Map Data received: 0.001856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,354: Scan Data received: 0.062279999999999995 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,358: Odom Data received: 0.189776 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,363: Map meta Data received: 0.001856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,365: Tf Data received: 0.7781279999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,367: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:37,369: Total data received from alphabot: 3.24212 mb
+[rosout][INFO] 2021-05-21 21:03:37,370: IMU Data received: 1.37628 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,372: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,375: Joint States Data received: 0.186528 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,377: Map Data received: 0.001856 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,379: Scan Data received: 0.062279999999999995 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,381: Odom Data received: 0.185136 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,384: Map meta Data received: 0.001856 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,386: Tf Data received: 0.76676 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,389: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:37,391: Total data received from zetabot: 3.216736 mb
+[rosout][INFO] 2021-05-21 21:03:38,117: alphabot latency 41.252784999999996 ms
+[rosout][INFO] 2021-05-21 21:03:38,246: zetabot latency 72.920153 ms
+[rosout][INFO] 2021-05-21 21:03:42,330: At time: 40 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:42,343: IMU Data received: 1.5768 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,355: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,358: Joint States Data received: 0.21831199999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,360: Map Data received: 0.002088 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,361: Scan Data received: 0.07128 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,363: Odom Data received: 0.216688 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,366: Map meta Data received: 0.002088 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,368: Tf Data received: 0.889952 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,370: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:42,372: Total data received from alphabot: 3.708856 mb
+[rosout][INFO] 2021-05-21 21:03:42,373: IMU Data received: 1.5717599999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,375: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,377: Joint States Data received: 0.21320799999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,378: Map Data received: 0.002088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,380: Scan Data received: 0.07128 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,383: Odom Data received: 0.21228 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,385: Map meta Data received: 0.002088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,387: Tf Data received: 0.87812 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,392: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:42,394: Total data received from zetabot: 3.680128 mb
+[rosout][INFO] 2021-05-21 21:03:43,125: alphabot latency 36.465374 ms
+[rosout][INFO] 2021-05-21 21:03:43,276: zetabot latency 102.137412 ms
+[rosout][INFO] 2021-05-21 21:03:47,342: At time: 45 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:47,344: IMU Data received: 1.7722799999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,368: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,369: Joint States Data received: 0.245688 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,370: Map Data received: 0.00232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,371: Scan Data received: 0.08027999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,372: Odom Data received: 0.24429599999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,375: Map meta Data received: 0.00232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,377: Tf Data received: 1.002704 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,378: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:47,379: Total data received from alphabot: 4.1755439999999995 mb
+[rosout][INFO] 2021-05-21 21:03:47,380: IMU Data received: 1.76616 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,381: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,382: Joint States Data received: 0.240584 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,383: Map Data received: 0.00232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,384: Scan Data received: 0.08027999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,384: Odom Data received: 0.239424 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,385: Map meta Data received: 0.00232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,387: Tf Data received: 0.990408 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,393: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:47,394: Total data received from zetabot: 4.1423119999999995 mb
+[rosout][INFO] 2021-05-21 21:03:48,146: alphabot latency 44.580906 ms
+[rosout][INFO] 2021-05-21 21:03:48,276: zetabot latency 90.41063899999999 ms
+[rosout][INFO] 2021-05-21 21:03:52,343: At time: 50 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:52,346: IMU Data received: 1.97136 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,369: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,371: Joint States Data received: 0.27283199999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,373: Map Data received: 0.002552 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,377: Scan Data received: 0.08928 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,379: Odom Data received: 0.27144 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,381: Map meta Data received: 0.002552 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,383: Tf Data received: 1.114992 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,384: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:52,386: Total data received from alphabot: 4.643104 mb
+[rosout][INFO] 2021-05-21 21:03:52,387: IMU Data received: 1.9616399999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,389: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,391: Joint States Data received: 0.26796 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,392: Map Data received: 0.002552 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,394: Scan Data received: 0.08928 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,396: Odom Data received: 0.26656799999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,398: Map meta Data received: 0.002552 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,401: Tf Data received: 1.10316 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,402: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:52,404: Total data received from zetabot: 4.608384 mb
+[rosout][INFO] 2021-05-21 21:03:53,164: alphabot latency 25.031554999999997 ms
+[rosout][INFO] 2021-05-21 21:03:53,286: zetabot latency 88.153813 ms
+[rosout][INFO] 2021-05-21 21:03:57,345: At time: 55 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:03:57,347: IMU Data received: 2.1672 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,370: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,382: Joint States Data received: 0.30044 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,383: Map Data received: 0.002784 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,384: Scan Data received: 0.09827999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,385: Odom Data received: 0.29881599999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,386: Map meta Data received: 0.002784 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,387: Tf Data received: 1.227744 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,388: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:03:57,389: Total data received from alphabot: 5.108455999999999 mb
+[rosout][INFO] 2021-05-21 21:03:57,389: IMU Data received: 2.16324 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,390: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,391: Joint States Data received: 0.293712 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,393: Map Data received: 0.002784 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,394: Scan Data received: 0.09827999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,396: Odom Data received: 0.29231999999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,398: Map meta Data received: 0.002784 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,408: Tf Data received: 1.2122 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,409: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:03:57,410: Total data received from zetabot: 5.074464 mb
+[rosout][INFO] 2021-05-21 21:03:58,173: alphabot latency 34.392049 ms
+[rosout][INFO] 2021-05-21 21:03:58,311: zetabot latency 100.73289299999999 ms
+[rosout][INFO] 2021-05-21 21:04:02,345: At time: 60 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:02,348: IMU Data received: 2.36268 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,370: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,384: Joint States Data received: 0.328048 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,387: Map Data received: 0.003016 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,389: Scan Data received: 0.10692 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,392: Odom Data received: 0.326656 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,394: Map meta Data received: 0.003016 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,399: Tf Data received: 1.34096 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,401: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:02,404: Total data received from alphabot: 5.5761519999999996 mb
+[rosout][INFO] 2021-05-21 21:04:02,407: IMU Data received: 2.3641199999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,410: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,411: Joint States Data received: 0.32016 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,413: Map Data received: 0.003016 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,415: Scan Data received: 0.10728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,416: Odom Data received: 0.318768 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,419: Map meta Data received: 0.003016 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,421: Tf Data received: 1.3233279999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,422: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:02,424: Total data received from zetabot: 5.541271999999999 mb
+[rosout][INFO] 2021-05-21 21:04:03,208: alphabot latency 56.882681 ms
+[rosout][INFO] 2021-05-21 21:04:03,328: zetabot latency 79.70118 ms
+[rosout][INFO] 2021-05-21 21:04:07,351: At time: 65 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:07,359: IMU Data received: 2.55888 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,376: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,389: Joint States Data received: 0.35542399999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,391: Map Data received: 0.003248 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,394: Scan Data received: 0.11592 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,396: Odom Data received: 0.35403199999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,398: Map meta Data received: 0.003248 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,400: Tf Data received: 1.4534799999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,401: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:07,405: Total data received from alphabot: 6.038927999999999 mb
+[rosout][INFO] 2021-05-21 21:04:07,416: IMU Data received: 2.56752 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,420: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,422: Joint States Data received: 0.346144 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,424: Map Data received: 0.003248 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,426: Scan Data received: 0.11628 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,430: Odom Data received: 0.34498399999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,432: Map meta Data received: 0.003248 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,433: Tf Data received: 1.433296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,435: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:07,437: Total data received from zetabot: 6.007664 mb
+[rosout][INFO] 2021-05-21 21:04:08,211: alphabot latency 47.433563 ms
+[rosout][INFO] 2021-05-21 21:04:08,328: zetabot latency 80.48818399999999 ms
+[rosout][INFO] 2021-05-21 21:04:12,364: At time: 70 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:12,366: IMU Data received: 2.7543599999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,376: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,389: Joint States Data received: 0.383496 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,392: Map Data received: 0.00348 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,395: Scan Data received: 0.12491999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,397: Odom Data received: 0.382104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,399: Map meta Data received: 0.00348 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,401: Tf Data received: 1.567624 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,405: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:12,408: Total data received from alphabot: 6.5090959999999995 mb
+[rosout][INFO] 2021-05-21 21:04:12,427: IMU Data received: 2.76624 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,431: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,435: Joint States Data received: 0.37235999999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,439: Map Data received: 0.00348 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,441: Scan Data received: 0.12528 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,445: Odom Data received: 0.371432 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,448: Map meta Data received: 0.00348 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,449: Tf Data received: 1.544656 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,450: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:12,451: Total data received from zetabot: 6.4748079999999995 mb
+[rosout][INFO] 2021-05-21 21:04:13,221: alphabot latency 32.188499 ms
+[rosout][INFO] 2021-05-21 21:04:13,332: zetabot latency 71.286727 ms
+[rosout][INFO] 2021-05-21 21:04:17,364: At time: 75 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:17,367: IMU Data received: 2.94948 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,392: Cmd_vel Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,395: Joint States Data received: 0.41087199999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,398: Map Data received: 0.003712 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,400: Scan Data received: 0.13391999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,402: Odom Data received: 0.40947999999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,406: Map meta Data received: 0.003712 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,407: Tf Data received: 1.6806079999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,409: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:17,412: Total data received from alphabot: 6.974936 mb
+[rosout][INFO] 2021-05-21 21:04:17,428: IMU Data received: 2.96208 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,440: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,442: Joint States Data received: 0.39927199999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,449: Map Data received: 0.003712 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,450: Scan Data received: 0.13427999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,451: Odom Data received: 0.39811199999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,453: Map meta Data received: 0.003712 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,456: Tf Data received: 1.656248 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,459: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:17,461: Total data received from zetabot: 6.938584 mb
+[rosout][INFO] 2021-05-21 21:04:18,240: alphabot latency 38.368828 ms
+[rosout][INFO] 2021-05-21 21:04:18,346: zetabot latency 85.111513 ms
+[rosout][INFO] 2021-05-21 21:04:22,376: At time: 80 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:22,380: IMU Data received: 3.1435199999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,401: Cmd_vel Data received: 0.012064 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,403: Joint States Data received: 0.43824799999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,407: Map Data received: 0.003944 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,413: Scan Data received: 0.14256 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,419: Odom Data received: 0.43685599999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,422: Map meta Data received: 0.003944 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,425: Tf Data received: 1.7933599999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,431: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:22,434: Total data received from alphabot: 7.450552 mb
+[rosout][INFO] 2021-05-21 21:04:22,438: IMU Data received: 3.1633199999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,442: Cmd_vel Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,445: Joint States Data received: 0.42525599999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,449: Map Data received: 0.003944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,455: Scan Data received: 0.14328 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,461: Odom Data received: 0.424096 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,465: Map meta Data received: 0.003944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,470: Tf Data received: 1.766448 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,473: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:22,480: Total data received from zetabot: 7.406368 mb
+[rosout][INFO] 2021-05-21 21:04:23,262: alphabot latency 36.38679 ms
+[rosout][INFO] 2021-05-21 21:04:23,350: zetabot latency 76.538067 ms
+[rosout][INFO] 2021-05-21 21:04:27,378: At time: 85 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:27,381: IMU Data received: 3.33864 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,410: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,413: Joint States Data received: 0.46515999999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,415: Map Data received: 0.004176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,417: Scan Data received: 0.15156 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,420: Odom Data received: 0.46376799999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,424: Map meta Data received: 0.004176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,425: Tf Data received: 1.904488 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,437: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:27,440: Total data received from alphabot: 7.918664 mb
+[rosout][INFO] 2021-05-21 21:04:27,442: IMU Data received: 3.3649199999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,444: Cmd_vel Data received: 0.003944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,449: Joint States Data received: 0.451472 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,453: Map Data received: 0.004176 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,455: Scan Data received: 0.15228 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,463: Odom Data received: 0.450312 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,469: Map meta Data received: 0.004176 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,473: Tf Data received: 1.8768799999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,479: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:27,485: Total data received from zetabot: 7.8771439999999995 mb
+[rosout][INFO] 2021-05-21 21:04:28,286: alphabot latency 47.30227 ms
+[rosout][INFO] 2021-05-21 21:04:28,353: zetabot latency 92.722208 ms
+[rosout][INFO] 2021-05-21 21:04:32,385: At time: 90 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:32,388: IMU Data received: 3.53916 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,423: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,426: Joint States Data received: 0.49207199999999995 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,428: Map Data received: 0.004408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,430: Scan Data received: 0.16055999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,433: Odom Data received: 0.49068 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,439: Map meta Data received: 0.004408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,445: Tf Data received: 2.0170079999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,447: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:32,453: Total data received from alphabot: 8.388639999999999 mb
+[rosout][INFO] 2021-05-21 21:04:32,457: IMU Data received: 3.5604 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,461: Cmd_vel Data received: 0.032944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,464: Joint States Data received: 0.477688 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,466: Map Data received: 0.004408 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,473: Scan Data received: 0.16127999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,476: Odom Data received: 0.476296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,479: Map meta Data received: 0.004408 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,481: Tf Data received: 1.986848 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,495: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:32,500: Total data received from zetabot: 8.366984 mb
+[rosout][INFO] 2021-05-21 21:04:33,314: alphabot latency 49.881797 ms
+[rosout][INFO] 2021-05-21 21:04:33,380: zetabot latency 119.48002899999999 ms
+[rosout][INFO] 2021-05-21 21:04:37,395: At time: 95 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:37,398: IMU Data received: 3.7403999999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,433: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,436: Joint States Data received: 0.518752 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,439: Map Data received: 0.00464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,442: Scan Data received: 0.16956 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,445: Odom Data received: 0.5173599999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,448: Map meta Data received: 0.00464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,452: Tf Data received: 2.128136 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,457: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:37,464: Total data received from alphabot: 8.858152 mb
+[rosout][INFO] 2021-05-21 21:04:37,466: IMU Data received: 3.7551599999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,468: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,475: Joint States Data received: 0.504832 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,478: Map Data received: 0.00464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,482: Scan Data received: 0.16992 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,485: Odom Data received: 0.503672 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,488: Map meta Data received: 0.00464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,491: Tf Data received: 2.099136 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,499: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:37,505: Total data received from zetabot: 8.83752 mb
+[rosout][INFO] 2021-05-21 21:04:38,323: alphabot latency 46.950410999999995 ms
+[rosout][INFO] 2021-05-21 21:04:38,409: zetabot latency 98.83426299999999 ms
+[rosout][INFO] 2021-05-21 21:04:42,396: At time: 100 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:42,400: IMU Data received: 3.94344 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,444: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,448: Joint States Data received: 0.544504 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,451: Map Data received: 0.004872 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,454: Scan Data received: 0.17856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,458: Odom Data received: 0.5431119999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,464: Map meta Data received: 0.004872 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,470: Tf Data received: 2.238104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,473: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:42,477: Total data received from alphabot: 9.324591999999999 mb
+[rosout][INFO] 2021-05-21 21:04:42,481: IMU Data received: 3.9509999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,488: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,493: Joint States Data received: 0.532208 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,499: Map Data received: 0.004872 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,506: Scan Data received: 0.1782 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,509: Odom Data received: 0.531048 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,512: Map meta Data received: 0.004872 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,514: Tf Data received: 2.211888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,519: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:42,525: Total data received from zetabot: 9.304184 mb
+[rosout][INFO] 2021-05-21 21:04:43,331: alphabot latency 29.959518 ms
+[rosout][INFO] 2021-05-21 21:04:43,431: zetabot latency 107.77565399999999 ms
+[rosout][INFO] 2021-05-21 21:04:47,397: At time: 105 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:47,404: IMU Data received: 4.15296 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,448: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,452: Joint States Data received: 0.56956 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,460: Map Data received: 0.005104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,464: Scan Data received: 0.18756 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,468: Odom Data received: 0.568168 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,472: Map meta Data received: 0.005104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,475: Tf Data received: 2.345752 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,478: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:47,481: Total data received from alphabot: 9.792952 mb
+[rosout][INFO] 2021-05-21 21:04:47,485: IMU Data received: 4.15188 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,492: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,497: Joint States Data received: 0.5584239999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,505: Map Data received: 0.005104 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,510: Scan Data received: 0.1872 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,513: Odom Data received: 0.557264 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,516: Map meta Data received: 0.005104 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,518: Tf Data received: 2.32232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,521: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:47,526: Total data received from zetabot: 9.765456 mb
+[rosout][INFO] 2021-05-21 21:04:48,354: alphabot latency 65.5483 ms
+[rosout][INFO] 2021-05-21 21:04:48,442: zetabot latency 131.35919099999998 ms
+[rosout][INFO] 2021-05-21 21:04:52,399: At time: 110 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:52,405: IMU Data received: 4.3574399999999995 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,449: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,452: Joint States Data received: 0.595312 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,462: Map Data received: 0.005336 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,465: Scan Data received: 0.19655999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,468: Odom Data received: 0.59392 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,482: Map meta Data received: 0.005336 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,485: Tf Data received: 2.455952 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,491: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:52,494: Total data received from alphabot: 10.263664 mb
+[rosout][INFO] 2021-05-21 21:04:52,497: IMU Data received: 4.35276 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,499: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,504: Joint States Data received: 0.584872 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,509: Map Data received: 0.005336 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,511: Scan Data received: 0.19584 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,522: Odom Data received: 0.583944 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,527: Map meta Data received: 0.005336 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,530: Tf Data received: 2.43368 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,533: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:52,542: Total data received from zetabot: 10.235896 mb
+[rosout][INFO] 2021-05-21 21:04:53,358: alphabot latency 31.450622 ms
+[rosout][INFO] 2021-05-21 21:04:53,449: zetabot latency 125.706897 ms
+[rosout][INFO] 2021-05-21 21:04:57,409: At time: 115 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:04:57,413: IMU Data received: 4.55436 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,461: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,465: Joint States Data received: 0.622456 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,469: Map Data received: 0.005568 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,473: Scan Data received: 0.20556 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,476: Odom Data received: 0.621064 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,484: Map meta Data received: 0.005568 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,493: Tf Data received: 2.567544 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,498: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:04:57,502: Total data received from alphabot: 10.730967999999999 mb
+[rosout][INFO] 2021-05-21 21:04:57,506: IMU Data received: 4.54932 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,509: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,512: Joint States Data received: 0.612248 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,515: Map Data received: 0.005568 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,523: Scan Data received: 0.2052 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,527: Odom Data received: 0.611088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,533: Map meta Data received: 0.005568 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,538: Tf Data received: 2.546664 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,543: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:04:57,547: Total data received from zetabot: 10.70176 mb
+[rosout][INFO] 2021-05-21 21:04:58,358: alphabot latency 19.630397 ms
+[rosout][INFO] 2021-05-21 21:04:58,463: zetabot latency 127.49994299999999 ms
+[rosout][INFO] 2021-05-21 21:05:02,412: At time: 120 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:02,415: IMU Data received: 4.75272 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,462: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,475: Joint States Data received: 0.650064 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,478: Map Data received: 0.0058 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,483: Scan Data received: 0.21456 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,489: Odom Data received: 0.6486719999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,492: Map meta Data received: 0.0058 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,498: Tf Data received: 2.681688 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,501: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:02,504: Total data received from alphabot: 11.199895999999999 mb
+[rosout][INFO] 2021-05-21 21:05:02,506: IMU Data received: 4.74336 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,510: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,513: Joint States Data received: 0.639856 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,515: Map Data received: 0.0058 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,533: Scan Data received: 0.21384 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,536: Odom Data received: 0.6386959999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,539: Map meta Data received: 0.0058 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,546: Tf Data received: 2.6587199999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,549: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:02,552: Total data received from zetabot: 11.165695999999999 mb
+[rosout][INFO] 2021-05-21 21:05:03,365: alphabot latency 14.203311999999999 ms
+[rosout][INFO] 2021-05-21 21:05:03,463: zetabot latency 140.139974 ms
+[rosout][INFO] 2021-05-21 21:05:07,419: At time: 125 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:07,420: IMU Data received: 4.94856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,469: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,481: Joint States Data received: 0.677904 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,483: Map Data received: 0.006032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,486: Scan Data received: 0.22355999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,495: Odom Data received: 0.676512 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,496: Map meta Data received: 0.006032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,498: Tf Data received: 2.795136 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,507: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:07,509: Total data received from alphabot: 11.666872 mb
+[rosout][INFO] 2021-05-21 21:05:07,510: IMU Data received: 4.93884 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,511: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,513: Joint States Data received: 0.667464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,520: Map Data received: 0.006032 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,544: Scan Data received: 0.22283999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,546: Odom Data received: 0.666072 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,547: Map meta Data received: 0.006032 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,549: Tf Data received: 2.7714719999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,549: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:07,558: Total data received from zetabot: 11.628216 mb
+[rosout][INFO] 2021-05-21 21:05:08,366: alphabot latency 15.365031 ms
+[rosout][INFO] 2021-05-21 21:05:08,465: zetabot latency 154.714978 ms
+[rosout][INFO] 2021-05-21 21:05:12,419: At time: 130 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:12,421: IMU Data received: 5.146199999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,469: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,484: Joint States Data received: 0.7057439999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,486: Map Data received: 0.006264 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,488: Scan Data received: 0.23256 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,496: Odom Data received: 0.704352 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,499: Map meta Data received: 0.006264 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,501: Tf Data received: 2.908352 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,508: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:12,510: Total data received from alphabot: 12.134976 mb
+[rosout][INFO] 2021-05-21 21:05:12,513: IMU Data received: 5.1372 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,520: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,523: Joint States Data received: 0.693912 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,525: Map Data received: 0.006264 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,546: Scan Data received: 0.23148 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,550: Odom Data received: 0.6927519999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,552: Map meta Data received: 0.006264 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,554: Tf Data received: 2.8826 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,557: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:12,559: Total data received from zetabot: 12.095232 mb
+[rosout][INFO] 2021-05-21 21:05:13,380: alphabot latency 16.252905 ms
+[rosout][INFO] 2021-05-21 21:05:13,466: zetabot latency 130.48360499999998 ms
+[rosout][INFO] 2021-05-21 21:05:17,421: At time: 135 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:17,424: IMU Data received: 5.34816 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,469: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,495: Joint States Data received: 0.732424 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,498: Map Data received: 0.006496 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,503: Scan Data received: 0.24156 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,508: Odom Data received: 0.731032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,510: Map meta Data received: 0.006496 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,513: Tf Data received: 3.0194799999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,515: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:17,517: Total data received from alphabot: 12.604999999999999 mb
+[rosout][INFO] 2021-05-21 21:05:17,520: IMU Data received: 5.33484 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,522: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,525: Joint States Data received: 0.72036 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,529: Map Data received: 0.006496 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,547: Scan Data received: 0.24048 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,552: Odom Data received: 0.719432 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,555: Map meta Data received: 0.006496 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,558: Tf Data received: 2.993728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,562: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:17,565: Total data received from zetabot: 12.558904 mb
+[rosout][INFO] 2021-05-21 21:05:18,386: alphabot latency 22.7925 ms
+[rosout][INFO] 2021-05-21 21:05:18,473: zetabot latency 111.485495 ms
+[rosout][INFO] 2021-05-21 21:05:22,433: At time: 140 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:22,435: IMU Data received: 5.55408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,471: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,496: Joint States Data received: 0.758408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,501: Map Data received: 0.006728 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,509: Scan Data received: 0.25056 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,514: Odom Data received: 0.7570159999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,518: Map meta Data received: 0.006728 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,521: Tf Data received: 3.129912 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,524: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:22,527: Total data received from alphabot: 13.074375999999999 mb
+[rosout][INFO] 2021-05-21 21:05:22,530: IMU Data received: 5.53104 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,534: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,537: Joint States Data received: 0.747968 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,544: Map Data received: 0.006728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,547: Scan Data received: 0.24947999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,552: Odom Data received: 0.7468079999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,558: Map meta Data received: 0.006728 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,561: Tf Data received: 3.106712 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,564: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:22,567: Total data received from zetabot: 13.026055999999999 mb
+[rosout][INFO] 2021-05-21 21:05:23,387: alphabot latency 22.847096999999998 ms
+[rosout][INFO] 2021-05-21 21:05:23,474: zetabot latency 125.63601899999999 ms
+[rosout][INFO] 2021-05-21 21:05:27,440: At time: 145 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:27,442: IMU Data received: 5.7488399999999995 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,476: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,501: Joint States Data received: 0.786248 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,502: Map Data received: 0.00696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,513: Scan Data received: 0.25956 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,515: Odom Data received: 0.784856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,528: Map meta Data received: 0.00696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,529: Tf Data received: 3.243592 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,531: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:27,534: Total data received from alphabot: 13.540144 mb
+[rosout][INFO] 2021-05-21 21:05:27,536: IMU Data received: 5.7279599999999995 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,538: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,540: Joint States Data received: 0.77488 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,545: Map Data received: 0.00696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,548: Scan Data received: 0.25848 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,553: Odom Data received: 0.773952 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,565: Map meta Data received: 0.00696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,569: Tf Data received: 3.218768 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,570: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:27,572: Total data received from zetabot: 13.492175999999999 mb
+[rosout][INFO] 2021-05-21 21:05:28,412: alphabot latency 23.030264 ms
+[rosout][INFO] 2021-05-21 21:05:28,486: zetabot latency 150.06228199999998 ms
+[rosout][INFO] 2021-05-21 21:05:32,451: At time: 150 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:32,454: IMU Data received: 5.943239999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,488: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,502: Joint States Data received: 0.8140879999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,505: Map Data received: 0.007192 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,516: Scan Data received: 0.26855999999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,520: Odom Data received: 0.812696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,540: Map meta Data received: 0.007192 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,546: Tf Data received: 3.357272 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,549: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:32,553: Total data received from alphabot: 14.008071999999999 mb
+[rosout][INFO] 2021-05-21 21:05:32,555: IMU Data received: 5.93028 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,558: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,561: Joint States Data received: 0.8015599999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,563: Map Data received: 0.007192 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,565: Scan Data received: 0.26748 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,572: Odom Data received: 0.8004 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,576: Map meta Data received: 0.007192 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,580: Tf Data received: 3.3303599999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,586: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:32,589: Total data received from zetabot: 13.961352 mb
+[rosout][INFO] 2021-05-21 21:05:33,429: alphabot latency 15.494209999999999 ms
+[rosout][INFO] 2021-05-21 21:05:33,495: zetabot latency 157.5664 ms
+[rosout][INFO] 2021-05-21 21:05:37,456: At time: 155 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:37,458: IMU Data received: 6.1398 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,493: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,506: Joint States Data received: 0.841464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,508: Map Data received: 0.007424 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,518: Scan Data received: 0.27756 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,522: Odom Data received: 0.8400719999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,544: Map meta Data received: 0.007424 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,546: Tf Data received: 3.469792 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,550: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:37,556: Total data received from alphabot: 14.474632 mb
+[rosout][INFO] 2021-05-21 21:05:37,559: IMU Data received: 6.13044 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,562: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,567: Joint States Data received: 0.828008 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,570: Map Data received: 0.007424 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,573: Scan Data received: 0.27648 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,575: Odom Data received: 0.826384 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,578: Map meta Data received: 0.007424 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,581: Tf Data received: 3.44056 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,586: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:37,598: Total data received from zetabot: 14.427104 mb
+[rosout][INFO] 2021-05-21 21:05:38,439: alphabot latency 13.290132999999999 ms
+[rosout][INFO] 2021-05-21 21:05:38,514: zetabot latency 127.91365499999999 ms
+[rosout][INFO] 2021-05-21 21:05:42,469: At time: 160 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:05:42,471: IMU Data received: 6.33636 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,506: Cmd_vel Data received: 0.017632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,509: Joint States Data received: 0.869072 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,511: Map Data received: 0.007656 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,519: Scan Data received: 0.2862 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,531: Odom Data received: 0.86768 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,550: Map meta Data received: 0.007656 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,552: Tf Data received: 3.58324 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,555: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:05:42,558: Total data received from alphabot: 14.941991999999999 mb
+[rosout][INFO] 2021-05-21 21:05:42,561: IMU Data received: 6.33096 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,566: Cmd_vel Data received: 0.041296 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,569: Joint States Data received: 0.853992 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,571: Map Data received: 0.007656 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,575: Scan Data received: 0.28548 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,582: Odom Data received: 0.8528319999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,585: Map meta Data received: 0.007656 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,588: Tf Data received: 3.55076 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,592: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:42,610: Total data received from zetabot: 14.893495999999999 mb
+[rosout][INFO] 2021-05-21 21:05:43,440: alphabot latency 13.645512 ms
+[rosout][INFO] 2021-05-21 21:05:43,519: zetabot latency 95.64382499999999 ms
+[rospy.core][INFO] 2021-05-21 21:05:47,059: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2021-05-21 21:05:47,069: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2021-05-21 21:05:47,069: signal-2
+[rosout][INFO] 2021-05-21 21:05:47,661: Map Data received: 0.007888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:47,664: Scan Data received: 0.29447999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:47,666: Odom Data received: 0.8788159999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:47,669: Map meta Data received: 0.007888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:47,672: Tf Data received: 3.661656 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:47,674: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:05:47,678: Total data received from zetabot: 15.364752 mb
+[rospy.core][INFO] 2021-05-21 21:05:47,682: signal_shutdown [atexit]

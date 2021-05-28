@@ -1,0 +1,20 @@
+<launch>
+    <!--eval gropus-->
+    <arg name="rosbridge_websockets" default="true" />
+    
+    <!--required websocket args-->
+    <arg name="local_port" default="9090" />
+    <arg name="server_port" default="9090" />
+
+    <!-- ROSbridge Server -->
+    <group if="$(arg rosbridge_websockets)">
+        <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+        <!-- set robot local and external port -->
+            <arg name="port" value="$(arg local_port)" />
+            <arg name="websocket_external_port" value="$(arg server_port)" />
+        </include>
+    </group>
+
+
+  
+</launch>

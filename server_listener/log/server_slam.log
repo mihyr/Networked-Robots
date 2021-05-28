@@ -1,0 +1,548 @@
+[rospy.client][INFO] 2021-05-21 21:10:33,708: init_node, name[/listener], pid[111137]
+[xmlrpc][INFO] 2021-05-21 21:10:33,708: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-05-21 21:10:33,708: Started XML-RPC server [http://mihixps.local:36269/]
+[rospy.init][INFO] 2021-05-21 21:10:33,708: ROS Slave URI: [http://mihixps.local:36269/]
+[rospy.impl.masterslave][INFO] 2021-05-21 21:10:33,708: _ready: http://mihixps.local:36269/
+[rospy.registration][INFO] 2021-05-21 21:10:33,709: Registering with master node http://mihixps.local:11311
+[xmlrpc][INFO] 2021-05-21 21:10:33,709: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-05-21 21:10:33,809: registered with master
+[rospy.rosout][INFO] 2021-05-21 21:10:33,809: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-05-21 21:10:33,810: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-05-21 21:10:33,811: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2021-05-21 21:10:34,230: topic[/rosout] adding connection to [/rosout], count 0
+[roslibpy][INFO] 2021-05-21 21:10:34,290: Connection to ROS ready.
+[roslibpy][INFO] 2021-05-21 21:10:34,291: Connection to ROS ready.
+[rosout][INFO] 2021-05-21 21:10:34,309: At time: 0 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:10:34,311: Publishing topic /alphabot/joint_states
+[rosout][INFO] 2021-05-21 21:10:34,313: Joint States Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:34,315: Publishing topic /alphabot/scan
+[rosout][INFO] 2021-05-21 21:10:34,317: Scan Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:34,319: Publishing topic /alphabot/tf
+[rosout][INFO] 2021-05-21 21:10:34,321: Tf Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:34,323: Publishing topic /alphabot/tf_static
+[rosout][INFO] 2021-05-21 21:10:34,325: Tf static Data received: 0.0 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:34,327: Publishing topic /alphabot/time
+[rosout][INFO] 2021-05-21 21:10:34,329: Total data received from alphabot: 0.0 mb
+[rosout][INFO] 2021-05-21 21:10:34,330: Publishing topic /zetabot/joint_states
+[rosout][INFO] 2021-05-21 21:10:34,332: Joint States Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:34,334: Publishing topic /zetabot/scan
+[rosout][INFO] 2021-05-21 21:10:34,335: Scan Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:34,337: Publishing topic /zetabot/tf
+[rosout][INFO] 2021-05-21 21:10:34,339: Tf Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:34,340: Publishing topic /zetabot/tf_static
+[rosout][INFO] 2021-05-21 21:10:34,342: Tf static Data received: 0.0 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:34,343: Publishing topic /zetabot/time
+[rosout][INFO] 2021-05-21 21:10:34,344: Total data received from zetabot: 0.0 mb
+[rosout][INFO] 2021-05-21 21:10:34,643: alphabot latency 4.380402999999999 ms
+[rosout][INFO] 2021-05-21 21:10:34,647: zetabot latency 61.191897 ms
+[rosout][INFO] 2021-05-21 21:10:39,309: At time: 5 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:10:39,315: Joint States Data received: 0.027375999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:39,319: Scan Data received: 0.009 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:39,321: Tf Data received: 0.10857599999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:39,326: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:39,330: Total data received from alphabot: 0.23357599999999998 mb
+[rosout][INFO] 2021-05-21 21:10:39,333: Joint States Data received: 0.025984 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:39,336: Scan Data received: 0.00864 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:39,347: Tf Data received: 0.10672 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:39,350: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:39,354: Total data received from zetabot: 0.229736 mb
+[rosout][INFO] 2021-05-21 21:10:39,650: zetabot latency 64.23242499999999 ms
+[rosout][INFO] 2021-05-21 21:10:39,664: alphabot latency 0.379662 ms
+[rosout][INFO] 2021-05-21 21:10:44,321: At time: 10 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:10:44,324: Joint States Data received: 0.055448 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:44,325: Scan Data received: 0.01764 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:44,327: Tf Data received: 0.223184 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:44,329: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:44,334: Total data received from alphabot: 0.47735999999999995 mb
+[rosout][INFO] 2021-05-21 21:10:44,335: Joint States Data received: 0.05336 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:44,336: Scan Data received: 0.01764 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:44,359: Tf Data received: 0.220168 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:44,361: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:44,362: Total data received from zetabot: 0.472128 mb
+[rosout][INFO] 2021-05-21 21:10:44,653: zetabot latency 67.937507 ms
+[rosout][INFO] 2021-05-21 21:10:44,685: alphabot latency 9.102546 ms
+[rosout][INFO] 2021-05-21 21:10:49,334: At time: 15 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:10:49,335: Joint States Data received: 0.084448 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:49,337: Scan Data received: 0.02664 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:49,339: Tf Data received: 0.33871999999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:49,340: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:49,342: Total data received from alphabot: 0.722872 mb
+[rosout][INFO] 2021-05-21 21:10:49,344: Joint States Data received: 0.08236 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:49,346: Scan Data received: 0.02664 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:49,359: Tf Data received: 0.335704 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:49,362: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:49,363: Total data received from zetabot: 0.718232 mb
+[rosout][INFO] 2021-05-21 21:10:49,677: zetabot latency 91.697824 ms
+[rosout][INFO] 2021-05-21 21:10:49,702: alphabot latency 13.139736 ms
+[rosout][INFO] 2021-05-21 21:10:54,334: At time: 20 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:10:54,336: Joint States Data received: 0.112984 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:54,338: Scan Data received: 0.03564 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:54,340: Tf Data received: 0.454024 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:54,342: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:54,344: Total data received from alphabot: 0.9687439999999999 mb
+[rosout][INFO] 2021-05-21 21:10:54,345: Joint States Data received: 0.110896 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:54,347: Scan Data received: 0.03564 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:54,372: Tf Data received: 0.450544 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:54,374: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:54,376: Total data received from zetabot: 0.9636399999999999 mb
+[rosout][INFO] 2021-05-21 21:10:54,685: zetabot latency 87.130937 ms
+[rosout][INFO] 2021-05-21 21:10:54,705: alphabot latency 4.320634 ms
+[rosout][INFO] 2021-05-21 21:10:59,334: At time: 25 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:10:59,337: Joint States Data received: 0.141752 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:59,339: Scan Data received: 0.04464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:59,348: Tf Data received: 0.569792 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:59,349: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:10:59,352: Total data received from alphabot: 1.215312 mb
+[rosout][INFO] 2021-05-21 21:10:59,355: Joint States Data received: 0.139896 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:59,356: Scan Data received: 0.04464 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:59,373: Tf Data received: 0.5663119999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:59,375: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:10:59,377: Total data received from zetabot: 1.210904 mb
+[rosout][INFO] 2021-05-21 21:10:59,691: zetabot latency 67.47821499999999 ms
+[rosout][INFO] 2021-05-21 21:10:59,720: alphabot latency 5.957859 ms
+[rosout][INFO] 2021-05-21 21:11:04,334: At time: 30 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:04,346: Joint States Data received: 0.170288 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:04,349: Scan Data received: 0.05364 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:04,353: Tf Data received: 0.684632 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:04,356: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:04,359: Total data received from alphabot: 1.4614159999999998 mb
+[rosout][INFO] 2021-05-21 21:11:04,361: Joint States Data received: 0.16866399999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:04,363: Scan Data received: 0.05364 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:04,385: Tf Data received: 0.6825439999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:04,388: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:04,390: Total data received from zetabot: 1.4572399999999999 mb
+[rosout][INFO] 2021-05-21 21:11:04,700: zetabot latency 64.08131 ms
+[rosout][INFO] 2021-05-21 21:11:04,736: alphabot latency 22.790864 ms
+[rosout][INFO] 2021-05-21 21:11:09,346: At time: 35 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:09,349: Joint States Data received: 0.19905599999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:09,352: Scan Data received: 0.06264 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:09,357: Tf Data received: 0.800168 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:09,360: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:09,362: Total data received from alphabot: 1.706824 mb
+[rosout][INFO] 2021-05-21 21:11:09,365: Joint States Data received: 0.197432 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:09,366: Scan Data received: 0.061919999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:09,397: Tf Data received: 0.797848 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:09,398: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:09,400: Total data received from zetabot: 1.7032159999999998 mb
+[rosout][INFO] 2021-05-21 21:11:09,725: zetabot latency 76.88936799999999 ms
+[rosout][INFO] 2021-05-21 21:11:09,741: alphabot latency 2.299549 ms
+[rosout][INFO] 2021-05-21 21:11:14,359: At time: 40 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:14,362: Joint States Data received: 0.227128 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:14,364: Scan Data received: 0.07164 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:14,366: Tf Data received: 0.913848 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:14,369: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:14,372: Total data received from alphabot: 1.9499119999999999 mb
+[rosout][INFO] 2021-05-21 21:11:14,374: Joint States Data received: 0.22619999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:14,377: Scan Data received: 0.07092 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:14,398: Tf Data received: 0.91292 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:14,401: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:14,404: Total data received from zetabot: 1.948624 mb
+[rosout][INFO] 2021-05-21 21:11:14,739: zetabot latency 65.61810299999999 ms
+[rosout][INFO] 2021-05-21 21:11:14,741: alphabot latency 2.6282509999999997 ms
+[rosout][INFO] 2021-05-21 21:11:19,360: At time: 45 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:19,363: Joint States Data received: 0.25404 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:19,365: Scan Data received: 0.08063999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:19,368: Tf Data received: 1.026368 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:19,369: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:19,373: Total data received from alphabot: 2.191608 mb
+[rosout][INFO] 2021-05-21 21:11:19,377: Joint States Data received: 0.254968 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:19,379: Scan Data received: 0.07991999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:19,409: Tf Data received: 1.027992 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:19,412: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:19,415: Total data received from zetabot: 2.194496 mb
+[rosout][INFO] 2021-05-21 21:11:19,742: alphabot latency 15.793493999999999 ms
+[rosout][INFO] 2021-05-21 21:11:19,748: zetabot latency 99.787719 ms
+[rosout][INFO] 2021-05-21 21:11:24,371: At time: 50 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:24,374: Joint States Data received: 0.280256 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:24,377: Scan Data received: 0.08964 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:24,380: Tf Data received: 1.137032 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:24,382: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:24,383: Total data received from alphabot: 2.430752 mb
+[rosout][INFO] 2021-05-21 21:11:24,385: Joint States Data received: 0.28327199999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:24,386: Scan Data received: 0.08892 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:24,410: Tf Data received: 1.142136 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:24,413: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:24,416: Total data received from zetabot: 2.43792 mb
+[rosout][INFO] 2021-05-21 21:11:24,753: alphabot latency 14.191136 ms
+[rosout][INFO] 2021-05-21 21:11:24,756: zetabot latency 83.38747 ms
+[rosout][INFO] 2021-05-21 21:11:29,372: At time: 55 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:29,375: Joint States Data received: 0.305312 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:29,384: Scan Data received: 0.09863999999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:29,388: Tf Data received: 1.244912 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:29,392: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:29,394: Total data received from alphabot: 2.666416 mb
+[rosout][INFO] 2021-05-21 21:11:29,400: Joint States Data received: 0.311808 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:29,404: Scan Data received: 0.09792 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:29,422: Tf Data received: 1.257672 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:29,424: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:29,428: Total data received from zetabot: 2.685184 mb
+[rosout][INFO] 2021-05-21 21:11:29,773: alphabot latency 7.862673999999999 ms
+[rosout][INFO] 2021-05-21 21:11:29,776: zetabot latency 77.80391399999999 ms
+[rosout][INFO] 2021-05-21 21:11:34,384: At time: 60 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:34,386: Joint States Data received: 0.331992 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:34,387: Scan Data received: 0.10764 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:34,388: Tf Data received: 1.35604 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:34,397: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:34,398: Total data received from alphabot: 2.904864 mb
+[rosout][INFO] 2021-05-21 21:11:34,401: Joint States Data received: 0.33987999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:34,409: Scan Data received: 0.10692 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:34,434: Tf Data received: 1.37228 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:34,435: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:34,437: Total data received from zetabot: 2.929432 mb
+[rosout][INFO] 2021-05-21 21:11:34,773: alphabot latency -3.3457559999999997 ms
+[rosout][INFO] 2021-05-21 21:11:34,792: zetabot latency 69.056129 ms
+[rosout][INFO] 2021-05-21 21:11:39,384: At time: 65 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:39,386: Joint States Data received: 0.357512 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:39,389: Scan Data received: 0.11664 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:39,391: Tf Data received: 1.465312 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:39,409: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:39,411: Total data received from alphabot: 3.14192 mb
+[rosout][INFO] 2021-05-21 21:11:39,414: Joint States Data received: 0.36818399999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:39,416: Scan Data received: 0.11592 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:39,436: Tf Data received: 1.486888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:39,437: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:39,438: Total data received from zetabot: 3.174144 mb
+[rosout][INFO] 2021-05-21 21:11:39,791: alphabot latency 15.125024999999999 ms
+[rosout][INFO] 2021-05-21 21:11:39,794: zetabot latency 70.59262799999999 ms
+[rosout][INFO] 2021-05-21 21:11:44,384: At time: 70 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:44,386: Joint States Data received: 0.384424 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:44,396: Scan Data received: 0.12564 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:44,399: Tf Data received: 1.5771359999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:44,410: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:44,412: Total data received from alphabot: 3.382456 mb
+[rosout][INFO] 2021-05-21 21:11:44,415: Joint States Data received: 0.396256 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:44,420: Scan Data received: 0.12491999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:44,438: Tf Data received: 1.6008 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:44,441: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:44,445: Total data received from zetabot: 3.417928 mb
+[rosout][INFO] 2021-05-21 21:11:44,792: alphabot latency 15.445065999999999 ms
+[rosout][INFO] 2021-05-21 21:11:44,806: zetabot latency 70.33148299999999 ms
+[rosout][INFO] 2021-05-21 21:11:49,396: At time: 75 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:49,402: Joint States Data received: 0.412496 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:49,405: Scan Data received: 0.13463999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:49,407: Tf Data received: 1.691512 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:49,410: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:49,412: Total data received from alphabot: 3.6267039999999997 mb
+[rosout][INFO] 2021-05-21 21:11:49,416: Joint States Data received: 0.4234 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:49,422: Scan Data received: 0.13319999999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:49,451: Tf Data received: 1.713088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:49,455: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:49,460: Total data received from zetabot: 3.6591359999999997 mb
+[rosout][INFO] 2021-05-21 21:11:49,804: alphabot latency 28.16385 ms
+[rosout][INFO] 2021-05-21 21:11:49,827: zetabot latency 66.563645 ms
+[rosout][INFO] 2021-05-21 21:11:54,396: At time: 80 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:54,402: Joint States Data received: 0.440104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:54,408: Scan Data received: 0.14364 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:54,411: Tf Data received: 1.8047279999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:54,413: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:54,415: Total data received from alphabot: 3.869328 mb
+[rosout][INFO] 2021-05-21 21:11:54,419: Joint States Data received: 0.45077599999999995 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:54,422: Scan Data received: 0.1422 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:54,461: Tf Data received: 1.82584 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:54,464: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:54,466: Total data received from zetabot: 3.9006 mb
+[rosout][INFO] 2021-05-21 21:11:54,823: alphabot latency 9.429129999999999 ms
+[rosout][INFO] 2021-05-21 21:11:54,842: zetabot latency 69.22922799999999 ms
+[rosout][INFO] 2021-05-21 21:11:59,409: At time: 85 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:11:59,414: Joint States Data received: 0.46887199999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:59,417: Scan Data received: 0.15264 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:59,419: Tf Data received: 1.9198 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:59,423: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:11:59,426: Total data received from alphabot: 4.115896 mb
+[rosout][INFO] 2021-05-21 21:11:59,428: Joint States Data received: 0.47699199999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:59,430: Scan Data received: 0.1512 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:59,473: Tf Data received: 1.936272 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:59,475: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:11:59,478: Total data received from zetabot: 4.139048 mb
+[rosout][INFO] 2021-05-21 21:11:59,842: alphabot latency 16.246817999999998 ms
+[rosout][INFO] 2021-05-21 21:11:59,848: zetabot latency 75.09575 ms
+[rosout][INFO] 2021-05-21 21:12:04,409: At time: 90 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:04,415: Joint States Data received: 0.498104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:04,418: Scan Data received: 0.16164 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:04,420: Tf Data received: 2.0358 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:04,426: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:04,429: Total data received from alphabot: 4.362928 mb
+[rosout][INFO] 2021-05-21 21:12:04,431: Joint States Data received: 0.50344 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:04,434: Scan Data received: 0.16019999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:04,484: Tf Data received: 2.047168 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:04,488: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:04,490: Total data received from zetabot: 4.3791199999999995 mb
+[rosout][INFO] 2021-05-21 21:12:04,848: zetabot latency 75.13135299999999 ms
+[rosout][INFO] 2021-05-21 21:12:04,853: alphabot latency 26.411666 ms
+[rosout][INFO] 2021-05-21 21:12:09,421: At time: 95 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:09,426: Joint States Data received: 0.527104 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:09,428: Scan Data received: 0.17064 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:09,430: Tf Data received: 2.1513359999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:09,431: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:09,433: Total data received from alphabot: 4.6083359999999995 mb
+[rosout][INFO] 2021-05-21 21:12:09,434: Joint States Data received: 0.529888 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:09,436: Scan Data received: 0.1692 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:09,484: Tf Data received: 2.158528 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:09,497: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:09,498: Total data received from zetabot: 4.6184959999999995 mb
+[rosout][INFO] 2021-05-21 21:12:09,849: zetabot latency 63.014435999999996 ms
+[rosout][INFO] 2021-05-21 21:12:09,853: alphabot latency 14.804547999999999 ms
+[rosout][INFO] 2021-05-21 21:12:14,421: At time: 100 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:14,426: Joint States Data received: 0.555408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:14,434: Scan Data received: 0.17928 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:14,435: Tf Data received: 2.2661759999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:14,436: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:14,437: Total data received from alphabot: 4.853152 mb
+[rosout][INFO] 2021-05-21 21:12:14,438: Joint States Data received: 0.5563359999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:14,440: Scan Data received: 0.17784 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:14,497: Tf Data received: 2.269192 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:14,498: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:14,500: Total data received from zetabot: 4.857279999999999 mb
+[rosout][INFO] 2021-05-21 21:12:14,866: zetabot latency 67.97699399999999 ms
+[rosout][INFO] 2021-05-21 21:12:14,872: alphabot latency 20.245736 ms
+[rosout][INFO] 2021-05-21 21:12:19,421: At time: 105 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:19,428: Joint States Data received: 0.584176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:19,434: Scan Data received: 0.18828 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:19,437: Tf Data received: 2.38148 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:19,440: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:19,443: Total data received from alphabot: 5.099256 mb
+[rosout][INFO] 2021-05-21 21:12:19,445: Joint States Data received: 0.5844079999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:19,448: Scan Data received: 0.18683999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:19,509: Tf Data received: 2.3838 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:19,511: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:19,513: Total data received from zetabot: 5.101992 mb
+[rosout][INFO] 2021-05-21 21:12:19,868: zetabot latency 57.304140999999994 ms
+[rosout][INFO] 2021-05-21 21:12:19,873: alphabot latency 8.526251 ms
+[rosout][INFO] 2021-05-21 21:12:24,434: At time: 110 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:24,436: Joint States Data received: 0.61248 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:24,438: Scan Data received: 0.19727999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:24,441: Tf Data received: 2.495856 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:24,444: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:24,448: Total data received from alphabot: 5.344664 mb
+[rosout][INFO] 2021-05-21 21:12:24,451: Joint States Data received: 0.6127119999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:24,454: Scan Data received: 0.19584 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:24,510: Tf Data received: 2.498176 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:24,513: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:24,516: Total data received from zetabot: 5.346704 mb
+[rosout][INFO] 2021-05-21 21:12:24,895: zetabot latency 72.207073 ms
+[rosout][INFO] 2021-05-21 21:12:24,901: alphabot latency 24.644336 ms
+[rosout][INFO] 2021-05-21 21:12:29,446: At time: 115 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:29,448: Joint States Data received: 0.640784 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:29,450: Scan Data received: 0.20628 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:29,451: Tf Data received: 2.610464 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:29,452: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:29,453: Total data received from alphabot: 5.58868 mb
+[rosout][INFO] 2021-05-21 21:12:29,455: Joint States Data received: 0.6412479999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:29,457: Scan Data received: 0.20484 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:29,521: Tf Data received: 2.613016 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:29,523: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:29,525: Total data received from zetabot: 5.59188 mb
+[rosout][INFO] 2021-05-21 21:12:29,911: alphabot latency 22.494908 ms
+[rosout][INFO] 2021-05-21 21:12:29,914: zetabot latency 66.089097 ms
+[rosout][INFO] 2021-05-21 21:12:34,459: At time: 120 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:34,461: Joint States Data received: 0.668624 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:34,463: Scan Data received: 0.21528 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:34,468: Tf Data received: 2.724144 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:34,470: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:34,472: Total data received from alphabot: 5.832695999999999 mb
+[rosout][INFO] 2021-05-21 21:12:34,474: Joint States Data received: 0.67048 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:34,476: Scan Data received: 0.21384 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:34,523: Tf Data received: 2.728784 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:34,526: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:34,529: Total data received from zetabot: 5.83868 mb
+[rosout][INFO] 2021-05-21 21:12:34,919: zetabot latency 58.865480999999996 ms
+[rosout][INFO] 2021-05-21 21:12:34,924: alphabot latency 22.695923999999998 ms
+[rosout][INFO] 2021-05-21 21:12:39,459: At time: 125 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:39,462: Joint States Data received: 0.696 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:39,465: Scan Data received: 0.22427999999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:39,468: Tf Data received: 2.83736 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:39,470: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:39,473: Total data received from alphabot: 6.075088 mb
+[rosout][INFO] 2021-05-21 21:12:39,475: Joint States Data received: 0.698552 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:39,480: Scan Data received: 0.22247999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:39,534: Tf Data received: 2.8431599999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:39,537: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:39,540: Total data received from zetabot: 6.0831599999999995 mb
+[rosout][INFO] 2021-05-21 21:12:39,924: zetabot latency 63.245425 ms
+[rosout][INFO] 2021-05-21 21:12:39,955: alphabot latency 29.126393 ms
+[rosout][INFO] 2021-05-21 21:12:44,471: At time: 130 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:44,474: Joint States Data received: 0.721752 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:44,477: Scan Data received: 0.23328 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:44,479: Tf Data received: 2.9461679999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:44,482: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:44,485: Total data received from alphabot: 6.310752 mb
+[rosout][INFO] 2021-05-21 21:12:44,490: Joint States Data received: 0.72732 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:44,493: Scan Data received: 0.23148 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:44,535: Tf Data received: 2.9584639999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:44,538: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:44,547: Total data received from zetabot: 6.329263999999999 mb
+[rosout][INFO] 2021-05-21 21:12:44,935: zetabot latency 87.41087499999999 ms
+[rosout][INFO] 2021-05-21 21:12:44,974: alphabot latency 35.236511 ms
+[rosout][INFO] 2021-05-21 21:12:49,472: At time: 135 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:49,474: Joint States Data received: 0.748432 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:49,484: Scan Data received: 0.24228 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:49,485: Tf Data received: 3.057296 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:49,487: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:49,488: Total data received from alphabot: 6.550592 mb
+[rosout][INFO] 2021-05-21 21:12:49,490: Joint States Data received: 0.755392 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:49,496: Scan Data received: 0.24048 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:49,549: Tf Data received: 3.0721439999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:49,553: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:49,556: Total data received from zetabot: 6.573744 mb
+[rosout][INFO] 2021-05-21 21:12:49,947: zetabot latency 73.976957 ms
+[rosout][INFO] 2021-05-21 21:12:49,979: alphabot latency 14.991719999999999 ms
+[rosout][INFO] 2021-05-21 21:12:54,484: At time: 140 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:54,487: Joint States Data received: 0.7753439999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:54,491: Scan Data received: 0.25128 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:54,493: Tf Data received: 3.16912 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:54,495: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:54,497: Total data received from alphabot: 6.791824 mb
+[rosout][INFO] 2021-05-21 21:12:54,499: Joint States Data received: 0.78416 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:54,502: Scan Data received: 0.24947999999999998 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:54,560: Tf Data received: 3.187912 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:54,563: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:54,565: Total data received from zetabot: 6.8193839999999994 mb
+[rosout][INFO] 2021-05-21 21:12:54,964: zetabot latency 91.092434 ms
+[rosout][INFO] 2021-05-21 21:12:55,007: alphabot latency 31.13327 ms
+[rosout][INFO] 2021-05-21 21:12:59,497: At time: 145 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:12:59,501: Joint States Data received: 0.80272 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:59,503: Scan Data received: 0.26028 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:59,506: Tf Data received: 3.281176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:59,509: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:12:59,511: Total data received from alphabot: 7.032824 mb
+[rosout][INFO] 2021-05-21 21:12:59,514: Joint States Data received: 0.812696 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:59,517: Scan Data received: 0.25848 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:59,573: Tf Data received: 3.302752 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:59,575: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:12:59,581: Total data received from zetabot: 7.064559999999999 mb
+[rosout][INFO] 2021-05-21 21:12:59,969: zetabot latency 58.942228 ms
+[rosout][INFO] 2021-05-21 21:13:00,012: alphabot latency 23.108798 ms
+[rosout][INFO] 2021-05-21 21:13:04,509: At time: 150 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:04,511: Joint States Data received: 0.83172 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:04,513: Scan Data received: 0.26927999999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:04,515: Tf Data received: 3.397408 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:04,517: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:04,519: Total data received from alphabot: 7.279856 mb
+[rosout][INFO] 2021-05-21 21:13:04,520: Joint States Data received: 0.841 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:04,522: Scan Data received: 0.26748 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:04,584: Tf Data received: 3.41736 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:04,587: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:04,589: Total data received from zetabot: 7.309504 mb
+[rosout][INFO] 2021-05-21 21:13:04,973: zetabot latency 62.243586 ms
+[rosout][INFO] 2021-05-21 21:13:05,014: alphabot latency 25.397786 ms
+[rosout][INFO] 2021-05-21 21:13:09,521: At time: 155 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:09,523: Joint States Data received: 0.860024 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:09,525: Scan Data received: 0.27827999999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:09,527: Tf Data received: 3.512016 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:09,528: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:09,530: Total data received from alphabot: 7.5250319999999995 mb
+[rosout][INFO] 2021-05-21 21:13:09,531: Joint States Data received: 0.869304 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:09,532: Scan Data received: 0.27648 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:09,596: Tf Data received: 3.532432 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:09,598: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:09,599: Total data received from zetabot: 7.554551999999999 mb
+[rosout][INFO] 2021-05-21 21:13:09,984: zetabot latency 73.240684 ms
+[rosout][INFO] 2021-05-21 21:13:10,030: alphabot latency 29.368759999999998 ms
+[rosout][INFO] 2021-05-21 21:13:14,534: At time: 160 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:14,539: Joint States Data received: 0.8890239999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:14,541: Scan Data received: 0.28728 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:14,543: Tf Data received: 3.6282479999999997 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:14,544: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:14,546: Total data received from alphabot: 7.772296 mb
+[rosout][INFO] 2021-05-21 21:13:14,549: Joint States Data received: 0.898072 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:14,552: Scan Data received: 0.28548 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:14,597: Tf Data received: 3.6477359999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:14,601: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:14,603: Total data received from zetabot: 7.800424 mb
+[rosout][INFO] 2021-05-21 21:13:14,986: zetabot latency 62.875 ms
+[rosout][INFO] 2021-05-21 21:13:15,041: alphabot latency 27.702406 ms
+[rosout][INFO] 2021-05-21 21:13:19,535: At time: 165 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:19,542: Joint States Data received: 0.918488 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:19,545: Scan Data received: 0.29628 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:19,549: Tf Data received: 3.744712 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:19,554: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:19,556: Total data received from alphabot: 8.020488 mb
+[rosout][INFO] 2021-05-21 21:13:19,558: Joint States Data received: 0.926144 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:19,562: Scan Data received: 0.29447999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:19,609: Tf Data received: 3.7618799999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:19,617: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:19,620: Total data received from zetabot: 8.046424 mb
+[rosout][INFO] 2021-05-21 21:13:19,999: zetabot latency 75.899575 ms
+[rosout][INFO] 2021-05-21 21:13:20,055: alphabot latency 29.079482 ms
+[rosout][INFO] 2021-05-21 21:13:24,535: At time: 170 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:24,546: Joint States Data received: 0.947488 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:24,548: Scan Data received: 0.30528 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:24,553: Tf Data received: 3.861176 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:24,556: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:24,557: Total data received from alphabot: 8.267984 mb
+[rosout][INFO] 2021-05-21 21:13:24,560: Joint States Data received: 0.9539839999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:24,562: Scan Data received: 0.30312 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:24,610: Tf Data received: 3.8748639999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:24,622: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:24,625: Total data received from zetabot: 8.287168 mb
+[rosout][INFO] 2021-05-21 21:13:25,000: zetabot latency 64.346077 ms
+[rosout][INFO] 2021-05-21 21:13:25,071: alphabot latency 32.072727 ms
+[rosout][INFO] 2021-05-21 21:13:29,546: At time: 175 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:29,549: Joint States Data received: 0.97556 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:29,551: Scan Data received: 0.31428 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:29,554: Tf Data received: 3.974392 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:29,557: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:29,560: Total data received from alphabot: 8.510608 mb
+[rosout][INFO] 2021-05-21 21:13:29,563: Joint States Data received: 0.9802 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:29,565: Scan Data received: 0.31212 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:29,623: Tf Data received: 3.986224 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:29,626: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:29,628: Total data received from zetabot: 8.526776 mb
+[rosout][INFO] 2021-05-21 21:13:30,041: zetabot latency 92.774102 ms
+[rosout][INFO] 2021-05-21 21:13:30,082: alphabot latency 30.965415999999998 ms
+[rosout][INFO] 2021-05-21 21:13:34,559: At time: 180 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:34,561: Joint States Data received: 1.0036319999999999 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:34,563: Scan Data received: 0.32328 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:34,566: Tf Data received: 4.088768 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:34,568: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:34,571: Total data received from alphabot: 8.755087999999999 mb
+[rosout][INFO] 2021-05-21 21:13:34,574: Joint States Data received: 1.006184 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:34,580: Scan Data received: 0.32111999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:34,636: Tf Data received: 4.096191999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:34,638: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:34,645: Total data received from zetabot: 8.764992 mb
+[rosout][INFO] 2021-05-21 21:13:35,052: zetabot latency 66.061611 ms
+[rosout][INFO] 2021-05-21 21:13:35,083: alphabot latency 19.396997 ms
+[rosout][INFO] 2021-05-21 21:13:39,571: At time: 185 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:39,573: Joint States Data received: 1.031936 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:39,574: Scan Data received: 0.33227999999999996 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:39,576: Tf Data received: 4.20268 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:39,579: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:39,581: Total data received from alphabot: 9.000727999999999 mb
+[rosout][INFO] 2021-05-21 21:13:39,582: Joint States Data received: 1.032632 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:39,584: Scan Data received: 0.33011999999999997 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:39,647: Tf Data received: 4.207088 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:39,650: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:39,652: Total data received from zetabot: 9.004135999999999 mb
+[rosout][INFO] 2021-05-21 21:13:40,073: zetabot latency 87.15256099999999 ms
+[rosout][INFO] 2021-05-21 21:13:40,100: alphabot latency 23.722343 ms
+[rosout][INFO] 2021-05-21 21:13:44,571: At time: 190 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:44,573: Joint States Data received: 1.0602399999999998 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:44,575: Scan Data received: 0.34128 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:44,576: Tf Data received: 4.317288 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:44,584: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:44,587: Total data received from alphabot: 9.243815999999999 mb
+[rosout][INFO] 2021-05-21 21:13:44,589: Joint States Data received: 1.059544 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:44,595: Scan Data received: 0.33876 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:44,660: Tf Data received: 4.318448 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:44,663: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:44,665: Total data received from zetabot: 9.24408 mb
+[rosout][INFO] 2021-05-21 21:13:45,088: zetabot latency 64.664508 ms
+[rosout][INFO] 2021-05-21 21:13:45,116: alphabot latency 27.244075 ms
+[rosout][INFO] 2021-05-21 21:13:49,571: At time: 195 secs --------------------------------------------------------------------
+[rosout][INFO] 2021-05-21 21:13:49,574: Joint States Data received: 1.088544 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:49,576: Scan Data received: 0.34992 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:49,579: Tf Data received: 4.431896 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:49,584: Tf static Data received: 0.000232 mb from alphabot
+[rosout][INFO] 2021-05-21 21:13:49,587: Total data received from alphabot: 9.487936 mb
+[rosout][INFO] 2021-05-21 21:13:49,590: Joint States Data received: 1.0869199999999999 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:49,596: Scan Data received: 0.34775999999999996 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:49,660: Tf Data received: 4.431896 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:49,672: Tf static Data received: 0.000232 mb from zetabot
+[rosout][INFO] 2021-05-21 21:13:49,674: Total data received from zetabot: 9.486936 mb
+[rosout][INFO] 2021-05-21 21:13:50,114: zetabot latency 78.50006499999999 ms
+[rosout][INFO] 2021-05-21 21:13:50,150: alphabot latency 36.423731 ms
+[rospy.core][INFO] 2021-05-21 21:13:54,266: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2021-05-21 21:13:54,273: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2021-05-21 21:13:54,274: signal-2
+[rospy.core][INFO] 2021-05-21 21:13:54,870: signal_shutdown [atexit]

@@ -4,16 +4,16 @@
   <arg name="listener" default="true" />  
 
   <!--required listener args-->
-  <arg name="imu" default="false" />
-  <arg name="cmd_vel" default="false" />
-  <arg name="joint_states" default="false" />
-  <arg name="map" default="false" />
-  <arg name="map_metadata" default="false" />
-  <arg name="scan" default="false" />
-  <arg name="odom" default="false" />
-  <arg name="slam_entropy" default="false" />
-  <arg name="tf" default="false" />
-  <arg name="tf_static" default="false" />
+  <arg name="imu" default="true" />
+  <arg name="cmd_vel" default="true" />
+  <arg name="joint_states" default="true" />
+  <arg name="map" default="true" />
+  <arg name="map_metadata" default="true" />
+  <arg name="scan" default="true" />
+  <arg name="odom" default="true" />
+  <arg name="slam_entropy" default="true" />
+  <arg name="tf" default="true" />
+  <arg name="tf_static" default="true" />
   <arg name="time" default="true" />
   <arg name="pub_frequency" default="80" />
   

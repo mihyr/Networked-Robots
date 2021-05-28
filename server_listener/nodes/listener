@@ -68,6 +68,8 @@ def main():
 
     #define ros frequency
     hz = rospy.Rate(freq)
+
+    init_time = rospy.get_rostime()
     
     client_1 = roslibpy.Ros(host=bot1_ip, port=bot1_port)
     client_2 = roslibpy.Ros(host=bot2_ip, port=bot2_port)
@@ -175,6 +177,7 @@ def main():
             map_publisher_1.publish(map_data_1)
             global map_size_1
             map_size_1 += getsizeof(msg)
+            #rospy.logerr(map_size_1)
 
         def map_callback_2(msg):
             map_data_2 = rd('nav_msgs/OccupancyGrid', msg)
@@ -307,7 +310,7 @@ def main():
 
         time_publisher_1 = rospy.Publisher(f"/{bot1_name}/time", UInt64, queue_size=10)
         time_publisher_2 = rospy.Publisher(f"/{bot2_name}/time", UInt64, queue_size=10)
-
+        
         def time_callback_1(msg):
             time_data_1 = rd('std_msgs/UInt64', msg)
             time_publisher_1.publish(time_data_1)
@@ -318,7 +321,7 @@ def main():
             server_time = time.time_ns()
             agent_time = msg['data']
             latency = (server_time - agent_time)*0.0000010
-            rospy.loginfo_throttle(4, f'{bot1_name} latency {latency} ms')
+            rospy.loginfo_throttle(5, f'{bot1_name} latency {latency} ms')
             
         def time_callback_2(msg):
             #print(msg)
@@ -331,7 +334,7 @@ def main():
             server_time = time.time_ns()
             agent_time = msg['data']
             latency = (server_time - agent_time)*0.0000010
-            rospy.loginfo_throttle(4, f'{bot2_name} latency {latency} ms')
+            rospy.loginfo_throttle(5, f'{bot2_name} latency {latency} ms')
 
     '''
     #slam_entropy
@@ -348,7 +351,11 @@ def main():
         #print(bot2_ip, bot2_name, type(bot2_ip))
         #print(get_imu)
         #print(get_imu,get_cmd_vel,get_joint_states,get_map,get_map_metadata,get_odom,get_slam_entropy)
+        current_time = rospy.get_rostime() - init_time
+        rospy.loginfo_throttle(5,f'At time: {current_time.secs} secs --------------------------------------------------------------------')
+
         if  client_1.is_connected:
+            
             
             if get_imu:
                 imu_listener_1.subscribe(imu_callback_1)
