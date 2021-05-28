@@ -10,7 +10,7 @@
         <include file="$(find server_listener)/launch/listener_bringup.launch">
             <arg name="joint_states" value="true" />
             <arg name="tf" value="true" />
-            <arg name="tf_static" value="true" />
+            <arg name="tf_static" value="false" />
             <arg name="scan" value="true" />
         </include>
     </group>

@@ -1,6 +1,9 @@
 <launch>
     <!--eval gropus-->
     <arg name="rosbridge_websockets" default="true" />
+    <arg name="map_merge" default="true" />
+    <arg name="onboard_slam" default="false" />
+    <arg name="server_slam" default="false" />
     
     <!--required websocket args-->
     <arg name="local_port" default="9090" />
@@ -15,6 +18,22 @@
         </include>
     </group>
 
+    <group if="$(arg map_merge)">
+        <include file="$(find multirobot_map_merge)/launch/map_merge.launch">
+        <!-- set robot local and external port -->
+        </include>
+    </group>
 
+    <group if="$(arg server_slam)">
+        <include file="$(find server_slam)/launch/server_slam.launch">
+        <!-- set robot local and external port -->
+        </include>
+    </group>
+
+    <group if="$(arg onboard_slam)">
+        <include file="$(find server_slam)/launch/onboard_slam.launch">
+        <!-- set robot local and external port -->
+        </include>
+    </group>
   
 </launch>

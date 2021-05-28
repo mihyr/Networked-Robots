@@ -1,3 +1,6 @@
 [submodule "webviz"]
 	path = webviz
 	url = git@github.com:cruise-automation/webviz.git
+[submodule "m-explore"]
+	path = m-explore
+	url = git@github.com:hrnr/m-explore.git

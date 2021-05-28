@@ -59,6 +59,8 @@
   <build_export_depend>std_msgs</build_export_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>rosbridge_server</exec_depend>
+  <exec_depend>multirobot_map_merge</exec_depend>
+  <exec_depend>server_slam</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

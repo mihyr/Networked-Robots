@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <group>
+        <include file="$(find server_listener)/launch/listener_bringup.launch">
+            <arg name="map" value="true" />
+            <arg name="map_metadata" value="true" />
+        </include>
+    </group>
+</launch>
