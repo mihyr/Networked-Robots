@@ -1,0 +1,27 @@
+<launch>
+    <!--eval gropus-->
+    <arg name="save_merged_map" default="false" />
+
+    <!--required args-->
+    <arg name="map_name" default="no_name"/>
+    <arg name="robot_name" default="alphabot"/>
+
+    <arg name="robot1_name" default="alphabot" />
+    <arg name="robot2_name" default="zetabot" />
+    
+
+    <!-- Robot Map Server -->
+    <group unless="$(arg save_merged_map)">
+        <node pkg="map_server" type="map_saver" name="map_saver" args="-f $(find server_slam)/maps/$(arg robot_name)_maps/$(arg map_name)">
+            <param name="map" value="$(arg robot_name)/map"/>
+        </node>
+    </group>
+
+    <!-- Merged Map Server -->
+    <group if="$(arg save_merged_map)">
+        <node pkg="map_server" type="map_saver" name="map_saver" args="-f $(find server_slam)/maps/merged_maps/$(arg map_name)" output="screen">
+            <param name="map" value="/map"/>
+        </node>
+    </group>
+  
+</launch>
