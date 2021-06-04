@@ -2,5 +2,5 @@
 Fr  : 80   #Define listening and local publishing frequency
 
 #Define robot names and its IP below, using syntax {robot_name: [robot_ip, port, 'robot_name']}
-robots: {robot1:[10.8.0.4, 10101, 'alphabot'], robot2:[10.8.0.5, 10102, 'zetabot']}
+robots: {robot1:[10.8.0.4, 10401, 'alphabot'], robot2:[10.8.0.5, 10402, 'zetabot']}
 
