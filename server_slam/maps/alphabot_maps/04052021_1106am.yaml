@@ -1,0 +1,7 @@
+image: /home/mihir/ros_ws/4g_project/src/server_slam/maps/alphabot_maps/04052021_1106am.pgm
+resolution: 0.050000
+origin: [-2.300000, -1.950000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
