@@ -20,7 +20,7 @@
     <!-- Merged Map Server -->
     <group if="$(arg save_merged_map)">
         <node pkg="map_server" type="map_saver" name="map_saver" args="-f $(find server_slam)/maps/merged_maps/$(arg map_name)" output="screen">
-            <param name="map" value="/map"/>
+            <param name="map" value="/map_merge/map"/>
         </node>
     </group>
   
