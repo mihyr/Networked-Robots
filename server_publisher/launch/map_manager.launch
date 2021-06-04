@@ -13,7 +13,7 @@
     <!-- Robot Map Server -->
     <group unless="$(arg save_merged_map)">
         <node pkg="map_server" type="map_saver" name="map_saver" args="-f $(find server_slam)/maps/$(arg robot_name)_maps/$(arg map_name)">
-            <param name="map" value="$(arg robot_name)/map"/>
+            <param name="map" value="/$(arg robot_name)/map"/>
         </node>
     </group>
 
