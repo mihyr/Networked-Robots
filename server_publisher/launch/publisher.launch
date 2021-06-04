@@ -19,40 +19,10 @@
     </group>
 
     <group if="$(arg map_merge)">
-        <include file="$(find multirobot_map_merge)/launch/map_merge.launch">
+        <include file="$(find server_slam)/launch/map_merge.launch">
         <!-- set robot local and external port -->
         </include>
-        
-        <arg name="first_tb3"  default="alphabot"/>
-        <arg name="second_tb3" default="zetabot"/>
-
-        <arg name="first_tb3_x_pos" default="0.0"/>
-        <arg name="first_tb3_y_pos" default="0.0"/>
-        <arg name="first_tb3_z_pos" default=" 0.0"/>
-        <arg name="first_tb3_yaw"   default=" 0.0"/>
-
-        <arg name="second_tb3_x_pos" default=" 0.0"/>
-        <arg name="second_tb3_y_pos" default="-1.0"/>
-        <arg name="second_tb3_z_pos" default=" 0.0"/>
-        <arg name="second_tb3_yaw"   default=" 0.0"/>
-
-
-        <group ns="$(arg first_tb3)/map_merge">
-            <param name="init_pose_x"   value="$(arg first_tb3_x_pos)"/>
-            <param name="init_pose_y"   value="$(arg first_tb3_y_pos)"/>
-            <param name="init_pose_z"   value="$(arg first_tb3_z_pos)"/>
-            <param name="init_pose_yaw" value="$(arg first_tb3_yaw)"  />
-        </group>
-
-        <group ns="$(arg second_tb3)/map_merge">
-            <param name="init_pose_x"   value="$(arg second_tb3_x_pos)"/>
-            <param name="init_pose_y"   value="$(arg second_tb3_y_pos)"/>
-            <param name="init_pose_z"   value="$(arg second_tb3_z_pos)"/>
-            <param name="init_pose_yaw" value="$(arg second_tb3_yaw)"  />
-        </group>
-
-        <node pkg="tf" type="static_transform_publisher" name="world_to_$(arg first_tb3)_tf_broadcaster"  args="0 0 0 0 0 0 /map /$(arg first_tb3)/map 100"/>
-        <node pkg="tf" type="static_transform_publisher" name="world_to_$(arg second_tb3)_tf_broadcaster" args="0 0 0 0 0 0 /map /$(arg second_tb3)/map 100"/>
+    
     </group>
 
     <group if="$(arg server_slam)">
