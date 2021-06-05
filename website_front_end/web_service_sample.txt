@@ -1,0 +1,15 @@
+[Unit]
+Description=web_front_end
+After=nginx.service
+
+[Service]
+Type=simple
+User=mihir
+
+ExecStart=/usr/bin/python3 -m http.server 1234
+WorkingDirectory=/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/website_front_end
+Restart=on-failure
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
