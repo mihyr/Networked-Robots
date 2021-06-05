@@ -14,6 +14,7 @@
   <arg name="slam_entropy" default="false" />
   <arg name="tf" default="false" />
   <arg name="tf_static" default="false" />
+  <arg name="gps" default="false" />
   <arg name="time" default="true" />
   <arg name="pub_frequency" default="80" />
   
@@ -37,6 +38,7 @@
         <param name="get_slam_entropy" value="$(arg slam_entropy)"/> 
         <param name="get_tf" value="$(arg tf)"/> 
         <param name="get_tf_static" value="$(arg tf_static)"/>
+        <param name="get_gps" value="$(arg gps)"/>
         <param name="get_time" value="$(arg time)"/> 
         <param name="pub_frequency" value="$(arg pub_frequency)"/> 
         <!--Freq and robot Parameter included in server_params.yaml-->

@@ -2,12 +2,9 @@
 from __future__ import print_function
 from sys import path, getsizeof
 import time
-from autobahn.util import public
-from yaml import scan
 import rospy
 import roslibpy
-from rospy.client import get_param
-from sensor_msgs.msg import Imu, JointState, LaserScan
+from sensor_msgs.msg import Imu, JointState, LaserScan,NavSatFix,NavSatStatus
 from geometry_msgs.msg import TwistStamped, Twist, Vector3
 from std_msgs.msg import Float64, Float32,  Header, UInt64
 from nav_msgs.msg import OccupancyGrid, Odometry, MapMetaData
@@ -26,6 +23,7 @@ get_odom = rospy.get_param('/listener/get_odom')
 get_slam_entropy = rospy.get_param('/listener/get_slam_entropy')
 get_tf = rospy.get_param('/listener/get_tf')
 get_tf_static = rospy.get_param('/listener/get_tf_static')
+get_gps = rospy.get_param('/listener/get_gps')
 get_time = rospy.get_param('/listener/get_time')
 freq = rospy.get_param("/listener/pub_frequency") 
 
@@ -47,6 +45,7 @@ scan_size_1 = 0
 odom_size_1 = 0
 slam_entropy_size_1 = 0
 tf_size_1 = 0
+gps_size_1 = 0
 tf_static_size_1 = 0
 time_size_1 = 0
 
@@ -59,6 +58,7 @@ scan_size_2 = 0
 odom_size_2 = 0
 slam_entropy_size_2 = 0
 tf_size_2 = 0
+gps_size_2 = 0
 tf_static_size_2 = 0
 time_size_2 = 0
 
@@ -337,6 +337,28 @@ def main():
             rospy.loginfo_throttle(5, f'{bot2_name} latency {latency} ms')
 
     '''
+    #GPS
+    '''
+    if get_gps:
+        gps_listener_1 = roslibpy.Topic(client_1, '/gps', 'sensor_msgs/NavSatFix')
+        gps_listener_2 = roslibpy.Topic(client_2, '/gps', 'sensor_msgs/NavSatFix')
+
+        gps_publisher_1 = rospy.Publisher(f"/{bot1_name}/gps", NavSatFix, queue_size=10)
+        gps_publisher_2 = rospy.Publisher(f"/{bot2_name}/gps", NavSatFix, queue_size=10)
+
+        def gps_callback_1(msg):
+            gps_data_1 = rd('sensor_msgs/NavSatFix', msg)
+            gps_publisher_1.publish(gps_data_1)
+            global gps_size_1
+            gps_size_1 += getsizeof(msg)
+            
+        def gps_callback_2(msg):
+            gps_data_2 = rd('sensor_msgs/NavSatFix', msg)
+            gps_publisher_2.publish(gps_data_2)
+            global gps_size_2
+            gps_size_2 += getsizeof(msg)
+
+    '''
     #slam_entropy
     '''
 
@@ -402,11 +424,16 @@ def main():
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/tf_static')
                 rospy.loginfo_throttle(5,f'Tf static Data received: {tf_static_size_1* 0.000001} mb from {bot1_name}')
             
+            if get_gps:
+                gps_listener_1.subscribe(gps_callback_1)
+                rospy.loginfo_once(f'Publishing topic /{bot1_name}/gps')
+                rospy.loginfo_throttle(5,f'Tf static Data received: {gps_size_1* 0.000001} mb from {bot1_name}')
+            
             if get_time:
                 time_listener_1.subscribe(time_callback_1)
                 rospy.loginfo_once(f'Publishing topic /{bot1_name}/time')
             
-            total_1 = imu_size_1 + cmd_vel_size_1 + joint_states_size_1 + map_size_1 + map_metadata_size_1 + scan_size_1 + odom_size_1 + slam_entropy_size_1 + tf_size_1 + tf_static_size_1 + time_size_1
+            total_1 = imu_size_1 + cmd_vel_size_1 + joint_states_size_1 + map_size_1 + map_metadata_size_1 + scan_size_1 + odom_size_1 + slam_entropy_size_1 + tf_size_1 + tf_static_size_1 + time_size_1 + gps_size_2
 
             rospy.loginfo_throttle(5,f'Total data received from {bot1_name}: {total_1* 0.000001} mb')
 
@@ -462,11 +489,16 @@ def main():
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/tf_static')
                 rospy.loginfo_throttle(5,f'Tf static Data received: {tf_static_size_2* 0.000001} mb from {bot2_name}')
 
+            if get_gps:
+                gps_listener_2.subscribe(gps_callback_2)
+                rospy.loginfo_once(f'Publishing topic /{bot2_name}/gps')
+                rospy.loginfo_throttle(5,f'Tf static Data received: {gps_size_2* 0.000001} mb from {bot2_name}')
+
             if get_time:
                 time_listener_2.subscribe(time_callback_2)
                 rospy.loginfo_once(f'Publishing topic /{bot2_name}/time')
 
-            total_2 = imu_size_2 + cmd_vel_size_2 + joint_states_size_2 + map_size_2 + map_metadata_size_2 + scan_size_2 + odom_size_2 + slam_entropy_size_2 + tf_size_2 + tf_static_size_2 + time_size_2
+            total_2 = imu_size_2 + cmd_vel_size_2 + joint_states_size_2 + map_size_2 + map_metadata_size_2 + scan_size_2 + odom_size_2 + slam_entropy_size_2 + tf_size_2 + tf_static_size_2 + time_size_2 + gps_size_2
 
             rospy.loginfo_throttle(5,f'Total data received from {bot2_name}: {total_2* 0.000001} mb')
         else:
