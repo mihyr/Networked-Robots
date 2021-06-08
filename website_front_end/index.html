@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
     <meta charset="utf-8">
     <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
     <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   </head>
 
 
   <body>
-    <canvas id="scene"></canvas>
+    <!-- Form -->
+    <div class="back"></div>
+    <div class="registration-form">
+      <header>
+        <h3>Mihy.Tech</h3>
+        <p>Connect your Robot to our Network</p>
+      </header>
+      <form>
+        <div class="input-section email-section">
+          <input class="email" type="email" placeholder="Enter your Robot's IP here" autocomplete="off"/>
+          <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+        </div>
+        <div class="input-section password-section folded">
+          <input class="password" type="email" placeholder="Enter your robot's port here"/>
+          <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
+        </div>
+        <div class="input-section repeat-password-section folded">
+          <input class="repeat-password" type="password" placeholder="Enter your password here"/>
+          <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+        </div>
+        <div class="success"> 
+          <p>Connection Established</p>
+        </div>
+        
+      </form>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
-    <script src="sketch.js"></script>
-    <p id="demo"> log </p>
+        
+    <!-- Twitter Link -->
+    <a href="https://github.com/whomihirpatel/4G-Networked_Robots" target="_blank" class="twitterLink">
+        <img src="https://img.icons8.com/material-rounded/48/000000/github.png"/>
+           </a>
+        <!-- Map Database Link -->
+    <a href="https://mihy.tech/maps" class="credit" target="_blank">Map Database</a>
+    <a href="https://mihy.tech/viz/?rosbridge-websocket-url=ws://mihy.tech:9090" class="credit1" target="_blank">Visualize</a>
+    <a href="https://mihy.tech/netdata" class="credit2" target="_blank">Server Stats</a>
+
+     <!-- Log Text-->
+    <p id="demo" class="demo"> log </p>
     <!--<p id="demo2" style="margin-top:100px" > log2 </p>-->
+    
+    <!-- Typed Text-->
+    
+    <div class="type-js headline">
+        <h1 class="text-js">Welcome to the Robo Network!
+    </div>
+
+
+    <!-- Main Script-->
     <script type="text/javascript" type="text/javascript">
+
+    
+    function autoType(elementClass, typingSpeed){
+        $(".cursor").css({ 'width' : '0' });
+        
+        var thhis = $(elementClass);
+        thhis.css({
+        "position": "relative",
+        "display": "inline-block"
+        });
+        
+        thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+        $(".cursor").css({ 'width' : '0' });
+        thhis = thhis.find(".text-js");
+        var text = thhis.text().trim().split('');
+        var amntOfChars = text.length;
+        var newString = "";
+        thhis.text("|");
+        setTimeout(function(){
+        thhis.css("opacity",1);
+        thhis.prev().removeAttr("style");
+        thhis.text("");
+        
+        for(var i = 0; i < amntOfChars; i++){
+            
+            (function(i,char){
+            setTimeout(function() {        
+                newString += char;
+                thhis.text(newString);
+            },i*typingSpeed);
+            })(i+1,text[i]);
+        }
+        
+        },1500);
+    }
+
+    function repeat(){
+
+    $(document).ready(function(){autoType(".type-js",50);});
+    }
+    //var t=setInterval(repeat,2000);
+    repeat()
+    
+    
         // Connecting to ROS
         // -----------------
 
@@ -112,7 +204,8 @@
             
             });
             current_robot.publish(twist);
-            document.getElementById("demo").innerHTML = "linear.x = 0.2";
+            x = document.getElementsByClassName("text-js")[0].innerHTML = "linear.x = 0.2";
+            repeat()
         }
         if (event.key == "a"){
                 console.log(event.code );

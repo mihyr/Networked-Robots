@@ -1,39 +1,282 @@
-html,
-  body{
-    margin:0;
-    overflow: hidden;
-    font-size:0;
-  }
-  canvas{
-    background: black;
-    width: 100vw;
-    height: 100vh;
-  }
-  input{
-    width: 250px;
-    height: 40px;
-    line-height: 40px;
-    position: absolute;
-    bottom: 35px;
-    left: calc(50% - 125px);
-    background: none;
-    color: white;
-    font-size: 30px;
-    font-family: arial;
-    text-align: center;
-    border: 1px solid white;
-    background: rgba(255,255,255,0.2);
-  }
-p{
-position: fixed;
-left: 0;
-bottom:5px;
-color: #fff;
-z-index:10;
-font-size:16px;
-font-family: Helvetica, Verdana, sans-serif;
-opacity:0.5;
-width: 100%;
-text-align: center;
-margin: 0;
+body {
+  font-family: "Roboto";
 }
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.registration-form {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 15%;
+  background: transparent;
+}
+.registration-form header {
+  position: relative;
+  z-index: 4;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 15px 15px 0 0;
+}
+.registration-form header h1 {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #333;
+  font-size: 23px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.registration-form header p {
+  word-spacing: 0px;
+  color: #9facb6;
+  font-size: 17px;
+  margin: 0;
+  margin-top: 5px;
+}
+.registration-form form {
+  position: relative;
+}
+.registration-form .input-section {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 75px;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+}
+.registration-form .input-section.folded {
+  width: 95%;
+  margin-top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+.registration-form .input-section.folded input {
+  background-color: #e9e2c0;
+}
+.registration-form .input-section.folded span {
+  background-color: #e9e2c0;
+}
+.registration-form .input-section.folded + .folded {
+  width: 90%;
+  margin-top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
+}
+.registration-form .input-section.folded + .folded input {
+  background-color: #e1bcef;
+}
+.registration-form .input-section.folded + .folded span {
+  background-color: #e1bcef;
+}
+.registration-form .input-section.fold-up {
+  margin-top: -75px;
+}
+.registration-form form input {
+  background: white;
+  color: #8f8fd6;
+  width: 80%;
+  border: 0;
+  padding: 20px 40px;
+  margin: 0;
+}
+.registration-form form input:focus {
+  outline: none;
+}
+.registration-form form input::-moz-placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+.registration-form form input:-ms-input-placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+.registration-form form input::placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+
+.animated-button {
+  width: 20%;
+  background-color: #d4d4ff;
+}
+.animated-button span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 75px;
+  text-align: center;
+  height: 75px;
+  transition: all 0.2s ease-in;
+}
+.animated-button span i {
+  font-size: 25px;
+  color: #9999f8;
+}
+.animated-button .next-button {
+  background: transparent;
+  color: #9999f8;
+  font-weight: 100;
+  width: 100%;
+  border: 0;
+}
+
+.next {
+  margin-top: -75px;
+}
+
+.success {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 75px;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+  background: limegreen;
+  margin-top: -75px;
+}
+.success p {
+  color: white;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.demo {
+	font-family: "Roboto";
+	color: #000000;
+	position: absolute;
+	top: 80%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	font-size: 25px;
+
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+.text-js {
+  opacity: 0;
+}
+
+.cursor {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  -webkit-animation: flash 0.5s none infinite alternate;
+          animation: flash 0.5s none infinite alternate;
+	 opacity: 2s ease-in-out;
+	 
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  boz-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #00C4FF, #9D1BB2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline {
+  margin: 20px;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+.headline h1 {
+  letter-spacing: 1.6px;
+  font-weight: 300;
+}
+
+.twitterLink {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px 15px;
+  z-index: 3;
+}
+.twitterLink svg {
+  width: 25px;
+}
+
+.credit {
+  position: fixed;
+  bottom: 20px;
+  left: 40%;
+  font-size: 18px;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+  
+}
+
+.credit1 {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	font-size: 18px;
+	transform: translateX(-50%);
+	color: white;
+	text-decoration: none;
+	
+  }
+
+  .credit2 {
+	position: fixed;
+	bottom: 20px;
+	left: 60%;
+	font-size: 18px;
+	transform: translateX(-50%);
+	color: white;
+	text-decoration: none;
+	
+  }
