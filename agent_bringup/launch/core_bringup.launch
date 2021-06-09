@@ -16,8 +16,8 @@
     
 
     <!--required websocket args-->
-    <arg name="local_port" default="9090" />
-    <arg name="server_port" default="10101" />
+    <arg name="local_port" default="10401" />
+    <arg name="server_port" default="10401" />
     
     <!-- Onboard Slam  -->
     <group if="$(arg onboard_slam)">
