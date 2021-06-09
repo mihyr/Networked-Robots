@@ -65,3 +65,5 @@ $('.next-button.repeat-password').click(
     $('.success').css("marginTop", 0);
   }
 );
+
+

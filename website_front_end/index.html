@@ -34,9 +34,10 @@
         <div class="input-section repeat-password-section folded">
           <input id = "robo_name" class="repeat-password" type="text" placeholder="Enter your Robot's Name"/>
           <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+          
         </div>
         <div class="success">
-          <p>Let's Begin</p>
+          <p id= success>Press ' shift + Q ' to Disconnect</p>
         </div>
         
       </form>
@@ -54,13 +55,13 @@
     <a href="https://mihy.tech/netdata" class="credit2" target="_blank">Server Stats</a>
 
      <!-- Log Text-->
-    <p id="demo" class="demo"> log </p>
+    <p style="text-align:center;" id="demo" class="demo"> log </p>
     <!--<p id="demo2" style="margin-top:100px" > log2 </p>-->
     
     <!-- Typed Text-->
     
     <div class="type-js headline">
-        <h1 class="text-js">Welcome to the Robo Network!
+        <h1 class="text-js">Welcome to the Robo Network! </h1>
     </div>
 
 
@@ -130,17 +131,18 @@
             console.log('Connected to websocket server.');
             x = document.getElementsByClassName("text-js")[0].innerHTML = 'Connection Established!';
             repeat()
+            
         });
 
         ros.on('error', function(error) {
             console.log('Error connecting to websocket server: ', error);
-            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Error connecting to websocket server';
+            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Error connecting to robot websocket!';
             repeat()
         });
 
         ros.on('close', function() {
             console.log('Connection to websocket server closed.');
-            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Connection to websocket server closed';
+            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Connection to robot websocket closed!';
             repeat()
         });
 
@@ -192,8 +194,7 @@
             
             });
             cmdVel.publish(twist);
-            x = document.getElementById("demo")[0].innerHTML = "linear.x = 0.2";
-            repeat()
+            x = document.getElementById("demo").innerHTML = "linear.x = 0.2";
         }
         if (event.key == "a"){
                 console.log(event.code );
@@ -249,6 +250,15 @@
             cmdVel.publish(twist);
             document.getElementById("demo").innerHTML = "angular.z = - 2.0";
         }
+        if ( event.key == 'q'|| event.key == 'Q' ){
+            //console.log("hello" );
+            document.getElementById("success").innerHTML = "Disconnected";
+            $('.success').css("background", "rgb(41, 39, 39");
+            //document.getElementById("success").style.background="black";
+            ros.close()
+            ros_server.close()
+            document.getElementById("demo").innerHTML =  "Client Disconnected, Map Saved";
+        }
         }
         );
 
@@ -264,10 +274,20 @@
         });
 
         listener.subscribe(function(message) {
-            console.log(`log: ${message.header.stamp.secs} secs ${message.msg}`);
-            document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
+            console.log(`Client log: ${message.header.stamp.secs} secs ${message.msg}`);
+            //document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
         });
         
+        var listener = new ROSLIB.Topic({
+            ros : ros_server,
+            name : '/rosout',
+            messageType : 'rosgraph_msgs/Log'
+        });
+
+        listener.subscribe(function(message) {
+            console.log(`Server log: ${message.header.stamp.secs} secs ${message.msg}`);
+            document.getElementById("demo").innerHTML =`Server log: ${message.header.stamp.secs} s | ${message.msg}`;
+        });
 
 
 
