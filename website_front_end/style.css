@@ -23,12 +23,12 @@ body {
   padding: 20px 40px;
   border-radius: 15px 15px 0 0;
 }
-.registration-form header h1 {
+.registration-form header h3 {
   font-weight: 900;
   letter-spacing: 1.5px;
-  color: #333;
-  font-size: 23px;
-  text-transform: uppercase;
+  color: rgb(77, 77, 77);
+  font-size: 20px;
+  text-transform: capitalize;
   margin: 0;
 }
 .registration-form header p {
