@@ -6,6 +6,7 @@
     <arg name="rosbridge_websockets" default="true" />
     <arg name="multi_robot_name" default="" />
     <arg name="publish_time" default="true" />
+    <arg name="GPS" default="false" />
 
 
     <!--required onboard_slam args-->
@@ -47,6 +48,13 @@
             <arg name="set_lidar_frame_id" value="$(arg multi_robot_name)/base_scan" />
             -->
         </include>
+    </group>
+
+    <!-- GPS Node -->
+    <group if="$(arg GPS)">
+        <node pkg="agent_bringup" type="gps" name="gps">
+            
+        </node>
     </group>
 
     <!-- rebot state publisher bringup (only for debugging)-->
