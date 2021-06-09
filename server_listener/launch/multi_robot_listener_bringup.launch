@@ -1,0 +1,34 @@
+<launch>
+  
+  <!--eval gropus-->
+  <arg name="listener" default="true" />  
+  
+  <!--load Robots IP, Port to ROS Parameter Server for listener node in yaml file-->
+  <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
+    
+  <!--groups-->
+
+  <group if="$(arg listener)">
+  <!-- stuff that will only be evaluated if listener is true -->
+    
+    <include file="$(find server_listener)/launch/listener_bringup.launch">
+      <arg name="robot_name" default="alphabot"/>  
+      <arg name="ip" default="mihy.tech"/>  
+      <arg name="port" default="10401"/>  
+    </include>
+
+  </group>
+
+  <group if="$(arg listener)">
+  <!-- stuff that will only be evaluated if listener is true -->
+    
+    <include file="$(find server_listener)/launch/listener_bringup.launch">
+      <arg name="robot_name" default="zetabot"/>  
+      <arg name="ip" default="localhost"/>  
+      <arg name="port" default="9090"/>  
+    </include>
+
+  </group>
+
+  
+</launch>

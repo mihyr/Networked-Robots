@@ -3,6 +3,13 @@
   <!--eval gropus-->
   <arg name="listener" default="true" />  
 
+  <!--Robot Params-->
+  <arg name="robot_name" />  
+  <arg name="ip" />  
+  <arg name="port" />  
+  
+
+
   <!--required listener args-->
   <arg name="imu" default="false" />
   <arg name="cmd_vel" default="false" />
@@ -26,8 +33,11 @@
   <group if="$(arg listener)">
   <!-- stuff that will only be evaluated if listener is true -->
 
-    <node name="listener" pkg="server_listener" type="listener" output="screen">
+    <node ns="$(arg robot_name)" name="listener" pkg="server_listener" type="listener" output="screen">
         <!--private params-->
+        <param name="robot_name" value="$(arg robot_name)"/>
+        <param name="ip" value="$(arg ip)"/>
+        <param name="port" value="$(arg port)"/>
         <param name="get_imu" value="$(arg imu)"/> 
         <param name="get_cmd_vel" value="$(arg cmd_vel)"/> 
         <param name="get_joint_states" value="$(arg joint_states)"/> 
