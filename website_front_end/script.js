@@ -58,7 +58,9 @@ $('.repeat-password').on("change keyup paste",
 
 $('.next-button.repeat-password').click(
   function(){
-    console.log("Something");
+    console.log("done");
+    $( "#myForm" ).submit();
+    connect_server()
     $('.repeat-password-section').addClass("fold-up");
     $('.success').css("marginTop", 0);
   }

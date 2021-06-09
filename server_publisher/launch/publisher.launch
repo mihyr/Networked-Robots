@@ -25,6 +25,14 @@
     
     </group>
 
+    <group if="$(arg map_merge)">
+
+        <node pkg="server_slam" type="front_end_service" name="front_end_service">
+            
+        </node>
+    
+    </group>
+
     <!--
     <arg name="onboard_slam" default="false" />
     <arg name="server_slam" default="false" />

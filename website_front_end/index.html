@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
+    <title>Mihy Server</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
     <meta charset="utf-8">
     <script type="text/javascript" src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
@@ -21,21 +22,21 @@
         <h3>Mihy.Tech</h3>
         <p>Connect your Robot to our Network</p>
       </header>
-      <form>
+      <form id = "myForm" onsubmit="return false">
         <div class="input-section email-section">
-          <input class="email" type="text" placeholder="Enter your Robot's Public IP here" autocomplete="off"/>
+          <input id="robo_ip" class="email" type="text" placeholder="Enter your Robot's Public IP here" autocomplete="off"/>
           <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-lock"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
         </div>
         <div class="input-section password-section folded">
-          <input class="password" type="text" placeholder="Enter your robot's port here"/>
+          <input id="robo_port" class="password" type="text" placeholder="Enter your robot's port here"/>
           <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
         </div>
         <div class="input-section repeat-password-section folded">
-          <input class="repeat-password" type="text" placeholder="Enter your Robot's Name"/>
+          <input id = "robo_name" class="repeat-password" type="text" placeholder="Enter your Robot's Name"/>
           <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
         </div>
-        <div class="success"> 
-          <p>Connection Established</p>
+        <div class="success">
+          <p>Let's Begin</p>
         </div>
         
       </form>
@@ -108,55 +109,62 @@
     //var t=setInterval(repeat,2000);
     repeat()
     
-    
+   
+
         // Connecting to ROS
         // -----------------
-
+    function connect_server(){
+        console.log($('myForm').serialize())
+        let ip = document.getElementById("robo_ip").value;
+        let port = document.getElementById("robo_port").value;
+        let robot_name = document.getElementById("robo_name").value;
+        console.log(ip,port,robot_name)
+        
         var ros = new ROSLIB.Ros({
-            url : 'ws://mihy.tech:10401'
+            url : 'ws://'+ip+":"+port
         });
+
+        
 
         ros.on('connection', function() {
             console.log('Connected to websocket server.');
+            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Connection Established!';
+            repeat()
         });
 
         ros.on('error', function(error) {
             console.log('Error connecting to websocket server: ', error);
+            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Error connecting to websocket server';
+            repeat()
         });
 
         ros.on('close', function() {
             console.log('Connection to websocket server closed.');
+            x = document.getElementsByClassName("text-js")[0].innerHTML = 'Connection to websocket server closed';
+            repeat()
         });
 
 
-        var ros2 = new ROSLIB.Ros({
-            url : 'ws://mihy.tech:10402'
+        var ros_server = new ROSLIB.Ros({
+            url : 'ws://mihy.tech:9090'
+            //url : 'ws://localhost:9090'
         });
 
-        ros2.on('connection', function() {
-            console.log('Connected to websocket server.');
+
+        ros_server.on('connection', function() {
+            console.log('Connected to server');
         });
 
-        ros2.on('error', function(error) {
-            console.log('Error connecting to websocket server: ', error);
+        ros_server.on('error', function(error) {
+            console.log('Error connecting to server ', error);
         });
 
-        ros2.on('close', function() {
-            console.log('Connection to websocket server closed.');
+        ros_server.on('close', function() {
+            console.log('Connection to server closed.');
         });
-
-        // Publishing a Topic
-        // ------------------
         
-
         
         const demo = document
-        
-
-        //demo.addEventListener("keypress", cmd_vel_publish)
-        
-        
-        
 
         
             
@@ -166,26 +174,6 @@
             messageType : 'geometry_msgs/Twist'
         });
 
-        var cmdVel2 = new ROSLIB.Topic({
-            ros : ros2,
-            name : '/cmd_vel',
-            messageType : 'geometry_msgs/Twist'
-        });
-        var current_robot = cmdVel
-
-        demo.addEventListener("keypress", function(event) {
-        if (event.key == "q"){
-            if (current_robot == cmdVel){
-                current_robot = cmdVel2
-                console.log('zetabot');
-            }
-            else {
-                current_robot = cmdVel
-                console.log('alphabot');
-            }
-            
-        }
-        });
 
         demo.addEventListener("keypress", function(event) {
         if (event.key == "w"){
@@ -203,8 +191,8 @@
                 }
             
             });
-            current_robot.publish(twist);
-            x = document.getElementsByClassName("text-js")[0].innerHTML = "linear.x = 0.2";
+            cmdVel.publish(twist);
+            x = document.getElementById("demo")[0].innerHTML = "linear.x = 0.2";
             repeat()
         }
         if (event.key == "a"){
@@ -222,7 +210,7 @@
                 }
             
             });
-            current_robot.publish(twist);
+            cmdVel.publish(twist);
             document.getElementById("demo").innerHTML = "angular.x = 2.0";
         }
         if (event.key == "s"){
@@ -240,7 +228,7 @@
                 }
             
             });
-            current_robot.publish(twist);
+            cmdVel.publish(twist);
             document.getElementById("demo").innerHTML = "linear.x = -0.2";
         }
         if (event.key == "d"){
@@ -258,56 +246,63 @@
                 }
             
             });
-            current_robot.publish(twist);
+            cmdVel.publish(twist);
             document.getElementById("demo").innerHTML = "angular.z = - 2.0";
         }
         }
         );
 
 
-           
-            
-        
-            
 
         // Subscribing to a Topic
         // ----------------------
 
         var listener = new ROSLIB.Topic({
             ros : ros,
-            name : '/listener',
-            messageType : 'std_msgs/String'
+            name : '/rosout',
+            messageType : 'rosgraph_msgs/Log'
         });
 
         listener.subscribe(function(message) {
-            console.log('Received message on ' + listener.name + ': ' + message.data);
-            listener.unsubscribe();
+            console.log(`log: ${message.header.stamp.secs} secs ${message.msg}`);
+            document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
         });
+        
+
+
+
+
+
+
+
 
         // Calling a service
         // -----------------
-        /*
-        var addTwoIntsClient = new ROSLIB.Service({
-            ros : ros,
-            name : '/add_two_ints',
-            serviceType : 'rospy_tutorials/AddTwoInts'
+        
+        var server_slam = new ROSLIB.Service({
+            ros : ros_server,
+            name : '/server_slam',
+            serviceType : 'server_slam/server_slam'
         });
 
         var request = new ROSLIB.ServiceRequest({
-            a : 1,
-            b : 2
+            robot_name : robot_name,
+            ip : ip,
+            port: port
         });
 
-        addTwoIntsClient.callService(request, function(result) {
+
+
+        server_slam.callService(request, function(result) {
             console.log('Result for service call on '
-            + addTwoIntsClient.name
+            + server_slam.name
             + ': '
             + result.sum);
         });
 
         // Getting and setting a param value
         // ---------------------------------
-
+        /*
         ros.getParams(function(params) {
             console.log(params);
         });
@@ -322,6 +317,7 @@
             console.log('MAX VAL: ' + value);
         });
         */
+        }
     </script>
     <!--
          <script src="ros.js">
