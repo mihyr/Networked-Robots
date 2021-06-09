@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
     <meta charset="utf-8">
-    <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-    <script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   </head>
@@ -23,15 +23,15 @@
       </header>
       <form>
         <div class="input-section email-section">
-          <input class="email" type="email" placeholder="Enter your Robot's IP here" autocomplete="off"/>
-          <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+          <input class="email" type="text" placeholder="Enter your Robot's Public IP here" autocomplete="off"/>
+          <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-lock"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
         </div>
         <div class="input-section password-section folded">
-          <input class="password" type="email" placeholder="Enter your robot's port here"/>
+          <input class="password" type="text" placeholder="Enter your robot's port here"/>
           <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
         </div>
         <div class="input-section repeat-password-section folded">
-          <input class="repeat-password" type="password" placeholder="Enter your password here"/>
+          <input class="repeat-password" type="text" placeholder="Enter your Robot's Name"/>
           <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
         </div>
         <div class="success"> 
