@@ -1,0 +1,93 @@
+#!/usr/bin/env python
+import rospy 
+import roslaunch
+from server_slam.srv import server_slam, onboard_slam, server_slamRequest, onboard_slamResponse
+
+
+freq = 10
+
+flag = False
+onboard_flag = False
+robot_name = 'Robot'
+ip = 'mihy.tech'
+port = '10401'
+
+def main():
+    #initialize node
+    rospy.init_node('server_slam')
+    hz = rospy.Rate(freq)
+    
+
+    
+    
+    def call_me(robot_name_,ip_,port_):
+        global flag
+        
+        uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
+        roslaunch.configure_logging(uuid)
+        cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_slam/launch/server_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
+        roslaunch_args = cli_args[1:]
+        roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
+        
+        parent = roslaunch.parent.ROSLaunchParent(uuid, roslaunch_file)
+        parent.start()
+        
+        flag = False
+
+    def call_me_onboard(robot_name_,ip_,port_):
+        global onboard_flag
+        
+        uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
+        roslaunch.configure_logging(uuid)
+        cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_slam/launch/onboard_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
+        roslaunch_args = cli_args[1:]
+        roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
+        
+        parent = roslaunch.parent.ROSLaunchParent(uuid, roslaunch_file)
+        parent.start()
+        
+        onboard_flag = False
+
+    #call_me()
+
+    def server_slam_callback(msg):
+        global flag, robot_name, ip, port
+        
+        flag = True
+
+        robot_name = msg.robot_name
+        ip = msg.ip
+        port = msg.port
+
+        return 'Launched'
+
+    def onboard_slam_callback(msg):
+        global onboard_flag, robot_name, ip, port
+        
+        onboard_flag = True
+        robot_name = msg.robot_name
+        ip = msg.ip
+        port = msg.port
+        return 'Launched'
+
+    server_slam_srv = rospy.Service("server_slam", server_slam, server_slam_callback)
+    onboard_slam_srv = rospy.Service("onboard_slam", onboard_slam, onboard_slam_callback)
+    while not rospy.is_shutdown():
+        #print('hello')
+        #go to sleep!
+        #print(flag)
+        global flag, onboard_flag
+
+        if flag:
+            print(f'robot_name: {robot_name},ip: {ip},port: {port}')
+            call_me(robot_name,ip,port)
+        
+        if onboard_flag:
+            print(f'robot_name: {robot_name},ip: {ip},port: {port}')
+            call_me_onboard(robot_name,ip,port)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass 

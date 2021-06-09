@@ -33,7 +33,7 @@
   <group if="$(arg listener)">
   <!-- stuff that will only be evaluated if listener is true -->
 
-    <node ns="$(arg robot_name)" name="listener" pkg="server_listener" type="listener" output="screen">
+    <node name="listener" pkg="server_listener" type="listener" output="screen">
         <!--private params-->
         <param name="robot_name" value="$(arg robot_name)"/>
         <param name="ip" value="$(arg ip)"/>

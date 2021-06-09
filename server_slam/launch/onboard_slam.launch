@@ -1,9 +1,19 @@
 <?xml version="1.0"?>
 <launch>
-    <group>
+    <!--Robot Params-->
+    <arg name="robot_name" />  
+    <arg name="ip" />  
+    <arg name="port" /> 
+
+    <group ns="$(arg robot_name)">
         <include file="$(find server_listener)/launch/listener_bringup.launch">
+            <arg name="robot_name" value="$(arg robot_name)"/>  
+            <arg name="ip" value="$(arg ip)"/>  
+            <arg name="port" value="$(arg port)"/>  
+
             <arg name="map" value="true" />
             <arg name="map_metadata" value="true" />
         </include>
     </group>
+
 </launch>
