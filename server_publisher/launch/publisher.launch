@@ -1,7 +1,8 @@
 <launch>
     <!--eval gropus-->
     <arg name="rosbridge_websockets" default="true" />
-    <arg name="map_merge" default="true" />
+    <arg name="map_merge" default="false" />
+    <arg name="front_end_listener" default="true" />
 
 
     <!--required websocket args-->
@@ -25,9 +26,9 @@
     
     </group>
 
-    <group if="$(arg map_merge)">
+    <group if="$(arg front_end_listener)">
 
-        <node pkg="server_slam" type="front_end_service" name="front_end_service">
+        <node pkg="server_slam" type="front_end_service" name="front_end_service" respawn="true" respawn_delay="30">
             
         </node>
     

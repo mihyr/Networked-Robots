@@ -1,16 +1,23 @@
 #!/usr/bin/env python
 import rospy 
 import roslaunch
-from server_slam.srv import server_slam, onboard_slam, server_slamRequest, onboard_slamResponse
+import os
+from server_slam.srv import server_slam, onboard_slam, map_saver, server_slamRequest, onboard_slamResponse, map_saverResponse
 
 
 freq = 10
 
 flag = False
 onboard_flag = False
+map_flag = False
 robot_name = 'Robot'
 ip = 'mihy.tech'
 port = '10401'
+
+path_to_package = '/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/'
+latitude = None
+longitude = None
+
 
 def main():
     #initialize node
@@ -25,6 +32,7 @@ def main():
         
         uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
         roslaunch.configure_logging(uuid)
+        #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_slam/launch/server_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
         cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_slam/launch/server_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
         roslaunch_args = cli_args[1:]
         roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
@@ -39,6 +47,7 @@ def main():
         
         uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
         roslaunch.configure_logging(uuid)
+        #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_slam/launch/onboard_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
         cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_slam/launch/onboard_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
         roslaunch_args = cli_args[1:]
         roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
@@ -47,6 +56,26 @@ def main():
         parent.start()
         
         onboard_flag = False
+
+    def call_me_map_saver(robot_name_,ip_,port_,latitude_, longitude_):
+        global map_flag
+        #folder
+        #latitude
+        #longitude
+        
+        #if not os.path.exists(directory):
+        #    os.makedirs(directory)
+        uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
+        roslaunch.configure_logging(uuid)
+        #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True']
+        cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True']
+        roslaunch_args = cli_args[1:]
+        roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
+        
+        parent = roslaunch.parent.ROSLaunchParent(uuid, roslaunch_file)
+        parent.start()
+        
+        map_flag = False
 
     #call_me()
 
@@ -70,13 +99,25 @@ def main():
         port = msg.port
         return 'Launched'
 
+    def map_saver_callback(msg):
+        global map_flag, robot_name, ip, port, latitude, longitude
+
+        map_flag = True
+        robot_name = msg.robot_name
+        ip = msg.ip
+        port = msg.port
+        latitude = msg.latitude
+        longitude = msg.longitude
+        return 'map_saved'
+
     server_slam_srv = rospy.Service("server_slam", server_slam, server_slam_callback)
     onboard_slam_srv = rospy.Service("onboard_slam", onboard_slam, onboard_slam_callback)
+    map_saver_srv = rospy.Service("map_saver", map_saver, map_saver_callback)
     while not rospy.is_shutdown():
         #print('hello')
         #go to sleep!
         #print(flag)
-        global flag, onboard_flag
+        global flag, onboard_flag, map_flag
 
         if flag:
             print(f'robot_name: {robot_name},ip: {ip},port: {port}')
@@ -85,6 +126,10 @@ def main():
         if onboard_flag:
             print(f'robot_name: {robot_name},ip: {ip},port: {port}')
             call_me_onboard(robot_name,ip,port)
+        
+        if map_flag:
+            print(f'robot_name: {robot_name},ip: {ip},port: {port}, latitude: {latitude}, longitude: {longitude}')
+            call_me_map_saver(robot_name,ip,port,latitude, longitude)
 
 if __name__ == "__main__":
     try:

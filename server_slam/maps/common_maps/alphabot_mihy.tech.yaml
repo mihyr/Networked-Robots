@@ -1,0 +1,7 @@
+image: /home/mihir/ros_ws/4g_project/src/server_slam/maps/common_maps/alphabot_mihy.tech.pgm
+resolution: 0.050000
+origin: [-3.108938, -1.441383, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

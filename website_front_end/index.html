@@ -119,6 +119,8 @@
         let ip = document.getElementById("robo_ip").value;
         let port = document.getElementById("robo_port").value;
         let robot_name = document.getElementById("robo_name").value;
+        let latitude = 0
+        let longitude = 0
         console.log(ip,port,robot_name)
         
         var ros = new ROSLIB.Ros({
@@ -148,8 +150,8 @@
 
 
         var ros_server = new ROSLIB.Ros({
-            url : 'ws://mihy.tech:9090'
-            //url : 'ws://localhost:9090'
+            //url : 'ws://mihy.tech:9090'
+            url : 'ws://localhost:9090'
         });
 
 
@@ -252,12 +254,48 @@
         }
         if ( event.key == 'q'|| event.key == 'Q' ){
             //console.log("hello" );
+            
+
+
+            // Calling a service
+            // -----------------
+            
+            var server_map = new ROSLIB.Service({
+                ros : ros_server,
+                name : '/map_saver',
+                serviceType : 'server_slam/map_saver'
+            });
+
+            var request_1 = new ROSLIB.ServiceRequest({
+                robot_name : robot_name,
+                ip : ip,
+                port: port,
+                latitude : String(latitude),
+                longitude : String(longitude),
+
+            });
+
+
+
+            server_map.callService(request_1, function(result) {
+                console.log('Map Server: '
+                + server_map.name
+                + ': '
+                + result.sum);
+            });
+
             document.getElementById("success").innerHTML = "Disconnected";
             $('.success').css("background", "rgb(41, 39, 39");
             //document.getElementById("success").style.background="black";
-            ros.close()
-            ros_server.close()
-            document.getElementById("demo").innerHTML =  "Client Disconnected, Map Saved";
+
+            setTimeout(function(){
+                ros.close()
+                ros_server.close()
+                document.getElementById("demo").innerHTML =  "Client Disconnected!";
+            },3000);
+
+
+            
         }
         }
         );
@@ -275,7 +313,7 @@
 
         listener.subscribe(function(message) {
             console.log(`Client log: ${message.header.stamp.secs} secs ${message.msg}`);
-            //document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
+            document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
         });
         
         var listener = new ROSLIB.Topic({
@@ -286,7 +324,7 @@
 
         listener.subscribe(function(message) {
             console.log(`Server log: ${message.header.stamp.secs} secs ${message.msg}`);
-            document.getElementById("demo").innerHTML =`Server log: ${message.header.stamp.secs} s | ${message.msg}`;
+            //document.getElementById("demo").innerHTML =`Server log: ${message.header.stamp.secs} s | ${message.msg}`;
         });
 
 

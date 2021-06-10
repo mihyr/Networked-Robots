@@ -57,8 +57,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  server_slam.srv
+  map_saver.srv
   onboard_slam.srv
+  ${PROJECT_NAME}.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -69,11 +70,11 @@ add_service_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   geometry_msgs
-   std_msgs  # Or other packages containing msgs
- )
+generate_messages(
+  DEPENDENCIES
+  geometry_msgs
+  std_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -107,7 +108,7 @@ add_service_files(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES server_slam
-  CATKIN_DEPENDS geometry_msgs rospy std_msgs
+  CATKIN_DEPENDS geometry_msgs message_runtime rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -161,10 +162,10 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
- catkin_install_python(PROGRAMS
-    nodes/front_end_service
-    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- )
+catkin_install_python(PROGRAMS
+  nodes/front_end_service
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html

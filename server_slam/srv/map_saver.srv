@@ -1,0 +1,7 @@
+string robot_name
+string ip
+string port
+string latitude
+string longitude
+---
+string response
