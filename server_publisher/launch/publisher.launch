@@ -28,7 +28,7 @@
 
     <group if="$(arg front_end_listener)">
 
-        <node pkg="server_slam" type="front_end_service" name="front_end_service" respawn="true" respawn_delay="30">
+        <node pkg="server_slam" type="front_end_service" name="front_end_service" respawn="true" respawn_delay="30" output="screen">
             
         </node>
     

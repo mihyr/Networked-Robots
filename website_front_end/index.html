@@ -67,8 +67,8 @@
 
     <!-- Main Script-->
     <script type="text/javascript" type="text/javascript">
-
-    
+    let latitude = 0
+    let longitude = 0
     function autoType(elementClass, typingSpeed){
         $(".cursor").css({ 'width' : '0' });
         
@@ -102,6 +102,21 @@
         
         },1500);
     }
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            console.log("Geolocation is not supported by this browser.")
+        }
+        }
+
+    function showPosition(position) {
+        
+        latitude=  position.coords.latitude
+        longitude = position.coords.longitude;
+        console.log(latitude,longitude)
+        }
+    getLocation()
 
     function repeat(){
 
@@ -119,8 +134,7 @@
         let ip = document.getElementById("robo_ip").value;
         let port = document.getElementById("robo_port").value;
         let robot_name = document.getElementById("robo_name").value;
-        let latitude = 0
-        let longitude = 0
+        
         console.log(ip,port,robot_name)
         
         var ros = new ROSLIB.Ros({
@@ -133,6 +147,7 @@
             console.log('Connected to websocket server.');
             x = document.getElementsByClassName("text-js")[0].innerHTML = 'Connection Established!';
             repeat()
+            
             
         });
 
