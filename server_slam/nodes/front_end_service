@@ -14,7 +14,8 @@ robot_name = 'Robot'
 ip = 'mihy.tech'
 port = '10401'
 
-path_to_package = '/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/'
+#path_to_package = '/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/'
+path_to_package = '/home/mihir/ros_ws/4g_project/src/'
 latitude = None
 longitude = None
 
@@ -33,7 +34,7 @@ def main():
         uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
         roslaunch.configure_logging(uuid)
         #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_slam/launch/server_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
-        cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_slam/launch/server_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
+        cli_args = [f'{path_to_package}server_slam/launch/server_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
         roslaunch_args = cli_args[1:]
         roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
         
@@ -48,7 +49,7 @@ def main():
         uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
         roslaunch.configure_logging(uuid)
         #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_slam/launch/onboard_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
-        cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_slam/launch/onboard_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
+        cli_args = [f'{path_to_package}server_slam/launch/onboard_slam.launch',f'robot_name:={robot_name_}', f'ip:={ip_}', f'port:={port_}']
         roslaunch_args = cli_args[1:]
         roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
         
@@ -62,13 +63,23 @@ def main():
         #folder
         #latitude
         #longitude
-        
-        #if not os.path.exists(directory):
-        #    os.makedirs(directory)
         uuid = roslaunch.rlutil.get_or_generate_uuid(None, False)
         roslaunch.configure_logging(uuid)
-        #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True']
-        cli_args = [f'/home/mihir/ros_ws/4g_project/src/server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True']
+        
+        if latitude == 0:
+            cli_args = [f'{path_to_package}server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True']
+        else:
+            
+            lat_folder = str(round(float(latitude_), 2))
+            lon_folder = str(round(float(longitude_), 2))
+
+            directory = f"{path_to_package}server_slam/maps/{lat_folder}_{lon_folder}"
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+
+            #cli_args = [f'/home/mihir/ros_ws/4g_project/src/4G-Networked_Robots/server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True']
+            cli_args = [f'{path_to_package}server_publisher/launch/map_manager.launch',f'robot_name:={robot_name_}', f'map_name:={robot_name_}_{ip_}',f'save_merged_map:=False',f'save_robot_map:=True', f'folder:={lat_folder}_{lon_folder}']
+            
         roslaunch_args = cli_args[1:]
         roslaunch_file = [(roslaunch.rlutil.resolve_launch_arguments(cli_args)[0], roslaunch_args)]
         

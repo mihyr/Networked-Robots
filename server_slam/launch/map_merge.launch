@@ -1,15 +1,14 @@
-
 <launch>
   <arg name="first_tb3"  default="alphabot"/>
   <arg name="second_tb3" default="zetabot"/>
 
-  <arg name="first_tb3_x_pos" default="0.0"/>
-  <arg name="first_tb3_y_pos" default="0.0"/>
+  <arg name="first_tb3_x_pos" default="40.805373"/>
+  <arg name="first_tb3_y_pos" default="-74.024137"/>
   <arg name="first_tb3_z_pos" default=" 0.0"/>
   <arg name="first_tb3_yaw"   default=" 0.0"/>
 
-  <arg name="second_tb3_x_pos" default=" 0.0"/>
-  <arg name="second_tb3_y_pos" default="-1.0"/>
+  <arg name="second_tb3_x_pos" default="40.805390"/>
+  <arg name="second_tb3_y_pos" default="-70.024137"/>
   <arg name="second_tb3_z_pos" default=" 0.0"/>
   <arg name="second_tb3_yaw"   default=" 0.0"/>
 
@@ -33,7 +32,7 @@
     <param name="robot_namespace" value=""/>
     <param name="merged_map_topic" value="map"/>
     <param name="world_frame" value="map"/>
-    <param name="known_init_poses" value="false"/>
+    <param name="known_init_poses" value="true"/>
     <param name="merging_rate" value="0.5"/>
     <param name="discovery_rate" value="0.05"/>
     <param name="estimation_rate" value="0.1"/>

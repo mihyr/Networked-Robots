@@ -55,7 +55,7 @@
     <a href="https://mihy.tech/netdata" class="credit2" target="_blank">Server Stats</a>
 
      <!-- Log Text-->
-    <p style="text-align:center;" id="demo" class="demo"> log </p>
+    <p style="text-align:center;" id="demo" class="demo"> You may use W A S D to control your robot! </p>
     <!--<p id="demo2" style="margin-top:100px" > log2 </p>-->
     
     <!-- Typed Text-->
@@ -304,8 +304,8 @@
             //document.getElementById("success").style.background="black";
 
             setTimeout(function(){
-                ros.close()
-                ros_server.close()
+                //ros.close()
+                //ros_server.close()
                 document.getElementById("demo").innerHTML =  "Client Disconnected!";
             },3000);
 
@@ -328,7 +328,7 @@
 
         listener.subscribe(function(message) {
             console.log(`Client log: ${message.header.stamp.secs} secs ${message.msg}`);
-            document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
+            //document.getElementById("demo").innerHTML =`client log: ${message.header.stamp.secs} s | ${message.msg}`;
         });
         
         var listener = new ROSLIB.Topic({
@@ -339,7 +339,7 @@
 
         listener.subscribe(function(message) {
             console.log(`Server log: ${message.header.stamp.secs} secs ${message.msg}`);
-            //document.getElementById("demo").innerHTML =`Server log: ${message.header.stamp.secs} s | ${message.msg}`;
+            document.getElementById("demo").innerHTML =`Server log: ${message.header.stamp.secs} s | ${message.msg}`;
         });
 
 
