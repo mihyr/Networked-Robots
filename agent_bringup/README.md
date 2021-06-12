@@ -53,7 +53,7 @@ server_latency_test| takes server ip, port args and calculates network roundtrip
     `server_port:=10401` |`false`| server port
     `test_frequency:=80`|`true`| test frequency
 
-## Package Dependencies
+## External Package Dependencies
 Title | Link
 ------------ | -------------
 turtlebot3_bringup | [ROS Wiki](http://wiki.ros.org/turtlebot3_bringup)
