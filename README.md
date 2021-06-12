@@ -1,4 +1,4 @@
-# 4G-Networked_Robots
+# Cloud based 4G Networked Robots
 ## Overview
 The goal of this project was to develop a cloud infrastructure where remote robots whether on wifi or cellular, can connect, store and share information as well as perform computationally intensive tasks offboard, i.e. on the server.
 
