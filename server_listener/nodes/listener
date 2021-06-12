@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+"""
+
+**Info**: This *listener* node connects to remote robot using package roslibpy, converts json message back to ros messsage using rospy_message_converter and publishes messages under local namespace topics
+    
+**Publishers**:
+    Imu, JointState, LaserScan,NavSatFix,NavSatStatus,Odometry, MapMetaData, tfMessage
+**Note**: -
+"""
 from __future__ import print_function
 from sys import path, getsizeof
 import time
@@ -238,6 +246,15 @@ def main():
 
     '''
     #Tempelate
+    if get_data:
+        data_listener = roslibpy.Topic(client_robot, '/topic', 'msg_type/msg')
+        data_publisher = rospy.Publisher(f"/{robot_name}/topic", msg, queue_size=10)
+
+        def data_callback(msg):
+            data = rd('msg_type/msg', msg)
+            data_publisher.publish(gps_data)
+            global data_size
+            data_size += getsizeof(msg)
     '''
 
     #Iteration Loop
@@ -306,7 +323,13 @@ def main():
             if get_time:
                 time_listener.subscribe(time_callback)
                 rospy.loginfo_once(f'Publishing topic /{robot_name}/time')
-            
+            '''
+            #Tempelate
+            if get_data:
+                data_listener.subscribe(data_callback)
+                rospy.loginfo_once(f'Publishing topic /{robot_name}/topic')
+            '''
+
             total = imu_size + cmd_vel_size + joint_states_size + map_size + map_metadata_size + scan_size + odom_size + slam_entropy_size + tf_size + tf_static_size + time_size + gps_size
 
             rospy.loginfo_throttle(5,f'Total data received from {robot_name}: {total* 0.000001} mb')
