@@ -1,4 +1,17 @@
 #!/usr/bin/env python
+"""
+
+**Info**: This *gps* node publishes gps data from ttyUSB0 as navsatfix messages
+
+**Publishers**:
+    gps - Publish latitute, longitude NavSatFix type message
+
+**Parameters**:
+    port: /dev/ttyUSB1 listening port
+    portwrite: /dev/ttyUSB2 write port
+   
+**Note**: -
+"""
 from math import fabs
 import rospy
 import serial
@@ -39,7 +52,7 @@ def main():
     
 
 
-
+    #Function from sixfab repo
     def parseGPS(data):
         print(data, end='') #prints raw data
         if data[0:6] == "$GPRMC":
