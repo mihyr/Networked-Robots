@@ -25,5 +25,5 @@ eventemitter2 |[ROS Wiki](http://wiki.ros.org/roslibjs)
 react |[Website](https://reactjs.org/)
 jquery |[Website](https://jquery.com/)
 
-## Website screenshot
+## Front-End screenshot
 ![Screenshot_20210612_131427](Screenshot_20210612_131427.png)

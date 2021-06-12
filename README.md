@@ -6,10 +6,21 @@ I used turtlebots with Sim/GPS modules for testing and development. The robots w
 
 Please check my live project website [mihy.tech](http://mihy.tech/) and details of my implementation in my [portfolio_post](http://www.whomihirpatel.com/). Below are the instructions for using this package to deploy your own server.
 
-## ROS Dependencies
+## Package Description
+This repository consists of several packages as listed below:
+Packages | Description
+------------ | -------------
+agent_bringup| ROS package which helps robot to connect to the server. This package is to be deloyed on turtlebot.
+server_listener | ROS package used for connecting to remote robots, subscribe to desired topics as 'json' message and republish it as ros message under `/robot_name/topic` on the server.
+server_slam | ROS package used to perform slam offboard i.e. on the server
+server_publisher | ROS package that uses `server_slam` and `server_listener` package and completes entire workflow pipeline to fetch, compute and publish data back to the robot.
+website_front_end | This folder contains website files which help user to connect their robot to the server
+nginx_scripts | This folder contains NGINX scripts I wrote for my server. It can be used as a tempelate.
+
+
+## Submodule Dependencies
 Title | Link
 ------------ | -------------
-slam_toolbox| [Github](https://github.com/SteveMacenski/slam_toolbox)
 m-explore | [Github](https://github.com/hrnr/m-explore)
 webviz | [Github](https://github.com/cruise-automation/webviz)
 
@@ -26,6 +37,8 @@ You may use any cloud platform like [DigitalOcean](https://www.digitalocean.com/
 * Clone the repo into `catkin_ws/src`
     ```
     git clone https://github.com/whomihirpatel/4G-Networked_Robots.git
+    cd 4G-Networked_Robots
+    git submodule update --init
     ```
     - Install other required packages using 
     ```
