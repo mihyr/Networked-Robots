@@ -22,8 +22,8 @@ server_latency_test| takes server ip, port args and calculates network roundtrip
 
     Args | Default | Description
     ------------ | ------------- | -------------
-    `local_port:=10401`|`true`| Local rosbridge websocket port
-    `server_port:=9090` |`true`| external port, as configured in server's IP route table
+    `local_port:=10401`|**required**| Local rosbridge websocket port
+    `server_port:=9090` |**required**| external port, as configured in server's IP route table
     `publish_time:=true` |`false`| publish NTP time locally (used by server to calculate latency)
     `GPS:=true`|`true`| publish GPS messages locally
     `onboard_slam:=true`|`false`| Optionally run Slam_tolbox onboard and send only `/map` topic
@@ -49,9 +49,9 @@ server_latency_test| takes server ip, port args and calculates network roundtrip
 
     Args | Default | Description
     ------------ | ------------- | -------------
-    `server_ip:=64.85.45.54`|`false`| server's IP address
-    `server_port:=10401` |`false`| server port
-    `test_frequency:=80`|`true`| test frequency
+    `server_ip:=64.85.45.54`|**required**| server's IP address
+    `server_port:=10401` |**required**| server port
+    `test_frequency:=80`|80| test frequency
 
 ## External Package Dependencies
 Title | Link

@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+"""
+
+**Info**: This *agent_latency_test* node connects to agent/robot and publishes time message and subscribes it back to calculate network round trip time
+    
+**Note**: -
+"""
 import logging
 import time
 import roslibpy

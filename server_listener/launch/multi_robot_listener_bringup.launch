@@ -2,11 +2,27 @@
   
   <!--eval gropus-->
   <arg name="listener" default="true" />  
-  
+
   <!--load Robots IP, Port to ROS Parameter Server for listener node in yaml file-->
   <rosparam command="load" file="$(find server_listener)/config/server_params.yaml" />
     
+  <!--required listener args-->
+  <arg name="imu" default="false" />
+  <arg name="cmd_vel" default="false" />
+  <arg name="joint_states" default="false" />
+  <arg name="map" default="false" />
+  <arg name="map_metadata" default="false" />
+  <arg name="scan" default="false" />
+  <arg name="odom" default="false" />
+  <arg name="slam_entropy" default="false" />
+  <arg name="tf" default="false" />
+  <arg name="tf_static" default="false" />
+  <arg name="gps" default="false" />
+  <arg name="time" default="true" />
+  <arg name="pub_frequency" default="80" />
+
   <!--groups-->
+  
 
   <group if="$(arg listener)">
   <!-- stuff that will only be evaluated if listener is true -->
@@ -15,6 +31,20 @@
       <arg name="robot_name" default="alphabot"/>  
       <arg name="ip" default="mihy.tech"/>  
       <arg name="port" default="10401"/>  
+
+      <arg name="imu" value="$(arg imu)"/> 
+      <arg name="cmd_vel" value="$(arg cmd_vel)"/> 
+      <arg name="joint_states" value="$(arg joint_states)"/> 
+      <arg name="map" value="$(arg map)"/> 
+      <arg name="map_metadata" value="$(arg map_metadata)"/>
+      <arg name="scan" value="$(arg scan)"/>
+      <arg name="odom" value="$(arg odom)"/> 
+      <arg name="slam_entropy" value="$(arg slam_entropy)"/> 
+      <arg name="tf" value="$(arg tf)"/> 
+      <arg name="tf_static" value="$(arg tf_static)"/>
+      <arg name="gps" value="$(arg gps)"/>
+      <arg name="time" value="$(arg time)"/> 
+      <arg name="pub_frequency" value="$(arg pub_frequency)"/> 
     </include>
 
   </group>
@@ -25,7 +55,21 @@
     <include file="$(find server_listener)/launch/listener_bringup.launch">
       <arg name="robot_name" default="zetabot"/>  
       <arg name="ip" default="localhost"/>  
-      <arg name="port" default="9090"/>  
+      <arg name="port" default="9090"/> 
+
+      <arg name="imu" value="$(arg imu)"/> 
+      <arg name="cmd_vel" value="$(arg cmd_vel)"/> 
+      <arg name="joint_states" value="$(arg joint_states)"/> 
+      <arg name="map" value="$(arg map)"/> 
+      <arg name="map_metadata" value="$(arg map_metadata)"/>
+      <arg name="scan" value="$(arg scan)"/>
+      <arg name="odom" value="$(arg odom)"/> 
+      <arg name="slam_entropy" value="$(arg slam_entropy)"/> 
+      <arg name="tf" value="$(arg tf)"/> 
+      <arg name="tf_static" value="$(arg tf_static)"/>
+      <arg name="gps" value="$(arg gps)"/>
+      <arg name="time" value="$(arg time)"/> 
+      <arg name="pub_frequency" value="$(arg pub_frequency)"/> 
     </include>
 
   </group>

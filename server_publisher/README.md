@@ -1,4 +1,4 @@
-# server_publisher Package
+# Server Publisher Package
 
 ## Overview
 This package uses `server_slam` and `server_listener` package and completes entire workflow pipeline to fetch, compute and publish data back to the robot.

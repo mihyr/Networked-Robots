@@ -1,4 +1,4 @@
-# server_slam Package
+# Server Slam Package
 
 ## Overview
 This package is used to perform slam offboard i.e. on the server
