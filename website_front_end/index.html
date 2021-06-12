@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
     <title>Mihy Server</title>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
-    <meta charset="utf-8">
     <script type="text/javascript" src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
     <script type="text/javascript" src="https://static.robotwebtools.org/roslibjs/current/roslib.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   </head>
 
 
   <body>
-    <!-- Form -->
+    <!-- User Input Form -->
     <div class="back"></div>
     <div class="registration-form">
       <header>
@@ -42,33 +43,38 @@
         
       </form>
     </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="./script.js"></script>
 
         
-    <!-- Twitter Link -->
+    <!-- Github Link -->
     <a href="https://github.com/whomihirpatel/4G-Networked_Robots" target="_blank" class="twitterLink">
         <img src="https://img.icons8.com/material-rounded/48/000000/github.png"/>
-           </a>
-        <!-- Map Database Link -->
+    </a>
+    <!-- Map Database Link -->
     <a href="https://mihy.tech/maps" class="credit" target="_blank">Map Database</a>
+    <!-- Webviz Link -->
     <a href="https://mihy.tech/viz/?rosbridge-websocket-url=ws://mihy.tech:9090" class="credit1" target="_blank">Visualize</a>
+    <!-- Netdata Link -->
     <a href="https://mihy.tech/netdata" class="credit2" target="_blank">Server Stats</a>
 
-     <!-- Log Text-->
+
+    <!-- Log Text-->
     <p style="text-align:center;" id="demo" class="demo"> You may use W A S D to control your robot! </p>
     <!--<p id="demo2" style="margin-top:100px" > log2 </p>-->
     
     <!-- Typed Text-->
-    
     <div class="type-js headline">
         <h1 class="text-js">Welcome to the Robo Network! </h1>
     </div>
 
 
     <!-- Main Script-->
+    
     <script type="text/javascript" type="text/javascript">
-    let latitude = 0
-    let longitude = 0
+
+
+    //Typed Welcome UI
     function autoType(elementClass, typingSpeed){
         $(".cursor").css({ 'width' : '0' });
         
@@ -102,6 +108,19 @@
         
         },1500);
     }
+    //Typed text update function
+    function repeat(){
+
+    $(document).ready(function(){autoType(".type-js",50);});
+    }
+    //var t=setInterval(repeat,2000);
+    repeat()
+
+
+    //Geolocation 
+    let latitude = 0
+    let longitude = 0
+
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -117,18 +136,10 @@
         console.log(latitude,longitude)
         }
     getLocation()
-
-    function repeat(){
-
-    $(document).ready(function(){autoType(".type-js",50);});
-    }
-    //var t=setInterval(repeat,2000);
-    repeat()
     
-   
 
-        // Connecting to ROS
-        // -----------------
+    // ROS script
+    // -----------------
     function connect_server(){
         console.log($('myForm').serialize())
         let ip = document.getElementById("robo_ip").value;
@@ -137,11 +148,10 @@
         
         console.log(ip,port,robot_name)
         
+        //client robot
         var ros = new ROSLIB.Ros({
             url : 'ws://'+ip+":"+port
         });
-
-        
 
         ros.on('connection', function() {
             console.log('Connected to websocket server.');
@@ -163,7 +173,7 @@
             repeat()
         });
 
-
+        //Server ROS
         var ros_server = new ROSLIB.Ros({
             //url : 'ws://mihy.tech:9090'
             url : 'ws://localhost:9090'
@@ -182,18 +192,17 @@
             console.log('Connection to server closed.');
         });
         
-        
+        //Init document variable for jquery        
         const demo = document
 
-        
-            
+        //cmd_vel topic
         var cmdVel = new ROSLIB.Topic({
             ros : ros,
             name : '/cmd_vel',
             messageType : 'geometry_msgs/Twist'
         });
 
-
+        //key event listeners
         demo.addEventListener("keypress", function(event) {
         if (event.key == "w"){
                 console.log(event.code );
@@ -267,12 +276,14 @@
             cmdVel.publish(twist);
             document.getElementById("demo").innerHTML = "angular.z = - 2.0";
         }
+
+        //Disconnect
         if ( event.key == 'q'|| event.key == 'Q' ){
             //console.log("hello" );
             
 
 
-            // Calling a service
+            // Calling Map Saver service
             // -----------------
             
             var server_map = new ROSLIB.Service({
@@ -289,8 +300,6 @@
                 longitude : String(longitude),
 
             });
-
-
 
             server_map.callService(request_1, function(result) {
                 console.log('Map Server: '
@@ -315,9 +324,7 @@
         }
         );
 
-
-
-        // Subscribing to a Topic
+        // Subscribing to rosout Topic
         // ----------------------
 
         var listener = new ROSLIB.Topic({
@@ -343,13 +350,7 @@
         });
 
 
-
-
-
-
-
-
-        // Calling a service
+        // Calling server slam service
         // -----------------
         
         var server_slam = new ROSLIB.Service({
@@ -363,8 +364,6 @@
             ip : ip,
             port: port
         });
-
-
 
         server_slam.callService(request, function(result) {
             console.log('Result for service call on '
@@ -393,15 +392,9 @@
         }
     </script>
     <!--
-         <script src="ros.js">
+    <script src="ros.js">
         
     </script>
-    <form id="frm1"">
-        First name: <input type="text" name="fname" value="Donald"><br>
-        Last name: <input type="text" name="lname" value="Duck"><br><br>
-        
-    </form> 
-    <input type="button" value="publish onclick= "cmd_vel_publish()" />
     -->
     
     
