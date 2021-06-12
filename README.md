@@ -121,6 +121,11 @@ roslaunch rosbridge_server rosbridge_websocket.launch port:=9090 websocket_exter
 - If you want to use server for other application, you may use server_listener, and server_publisher package along with your own package.
 - Detailed instructions on using [server_listener](https://github.com/whomihirpatel/4G-Networked_Robots/tree/master/server_listener) and [server_publisher](https://github.com/whomihirpatel/4G-Networked_Robots/tree/master/server_publisher) package are given in their respective folders
 
+# Demo: 
+Click on the image below to view video
+
+[![Watch the video](https://img.youtube.com/vi/S1td_pxeWcE/maxresdefault.jpg )](https://youtu.be/S1td_pxeWcE)
+
 ## Network Architecture
 ![network](network.png)
 ## Server workflow
