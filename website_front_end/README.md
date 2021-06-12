@@ -1,4 +1,4 @@
-# website_front_end
+# Front-End
 
 ## Overview
 This folder contains website files which help user to connect their robot to the server
@@ -18,8 +18,9 @@ This folder contains website files which help user to connect their robot to the
 - Everytime you update your front-end file, you can restart this service. You dont need to restart entire nginx as this is a python localhost server. Nginx is just reverse proxying to your port.
 
 ## Javascript Libraries used:
-roslibjs
-eventemitter2
-react
-jquery
-
+Libraries | Link
+------------ | -------------
+roslibjs | [ROS Wiki](http://wiki.ros.org/roslibjs)
+eventemitter2 |[ROS Wiki](http://wiki.ros.org/roslibjs)
+react |[Website](https://reactjs.org/)
+jquery |[Website](https://jquery.com/)
