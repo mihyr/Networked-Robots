@@ -5,6 +5,7 @@ WORKDIR /ros_ws
 #RUN /bin/bash -c '. /opt/ros/noetic/setup.bash'
 
 EXPOSE 80
+EXPOSE 443
 EXPOSE 11311
 EXPOSE 8080
 EXPOSE 9090
@@ -24,7 +25,7 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && rosdep install --from-paths src --ignore-
 RUN cp src/website_front_end/* /var/www/html && mv src/nginx_scripts/default.conf /etc/nginx/conf.d/default.conf && rm /etc/nginx/sites-enabled/default
 RUN apt-get install -y openssl && \
     openssl req -x509 -nodes -days 365 \
-    -subj  "/C=CA/ST=QC/O=Company Inc/CN=example.com" \
+    -subj  "/C=CA/ST=QC/O=Company Inc/CN=mihy.tech" \
      -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key \
      -out /etc/ssl/certs/nginx-selfsigned.crt;
 
