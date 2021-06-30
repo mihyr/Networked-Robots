@@ -25,7 +25,7 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && rosdep install --from-paths src --ignore-
 RUN cp src/website_front_end/* /var/www/html && mv src/nginx_scripts/default.conf /etc/nginx/conf.d/default.conf && rm /etc/nginx/sites-enabled/default
 RUN apt-get install -y openssl && \
     openssl req -x509 -nodes -days 365 \
-    -subj  "/C=CA/ST=QC/O=Company Inc/CN=mihy.tech" \
+    -subj  "/C=US /ST=IL /O=mihy.tech /CN=mihy.tech" \
      -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key \
      -out /etc/ssl/certs/nginx-selfsigned.crt;
 
