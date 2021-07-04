@@ -1,0 +1,31 @@
+version: "3.9"  # optional since v1.27.0
+services: 
+    
+    webviz:
+        image: "cruise/webviz:latest" 
+        ports:
+            - "8080:8080"
+        networks: 
+            netbots:
+                ipv4_address: "172.18.0.2"
+    ros:
+        build: .
+        ports: 
+            - "80:80"
+        depends_on: 
+            - webviz
+        links: 
+            - "webviz"
+
+        image: "net-bots:latest"
+
+        networks: 
+            netbots:
+                ipv4_address: "172.18.0.3"
+        
+networks: 
+    netbots:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.18.0.0/16
