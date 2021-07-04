@@ -1,27 +1,66 @@
 version: "3.9"  # optional since v1.27.0
 services: 
     
-    webviz:
+    netbots-webviz:
         image: "cruise/webviz:latest" 
         ports:
             - "8080:8080"
         networks: 
             netbots:
                 ipv4_address: "172.18.0.2"
-    ros:
-        build: .
+    netbots-ros:
+        build:
+            context: .
+            dockerfile: ./netbots-ros/Dockerfile
         ports: 
-            - "80:80"
-        depends_on: 
-            - webviz
-        links: 
-            - "webviz"
-
+            - "11311:11311"
+        
         image: "net-bots:latest"
 
         networks: 
             netbots:
                 ipv4_address: "172.18.0.3"
+    
+    openvpn-udp:
+        cap_add:
+            - NET_ADMIN
+        image: kylemanna/openvpn
+        container_name: openvpn-udp
+        ports:
+            - "1194:1194/udp"
+        restart: always
+        volumes:
+            - ovpn-data:/etc/openvpn
+    
+    # openvpn-tcp:
+    #     cap_add:
+    #         - NET_ADMIN
+    #     image: kylemanna/openvpn
+    #     container_name: openvpn-tcp
+    #     ports:
+    #         - "1194:1194/tcp"
+    #     restart: always
+    #     volumes:
+    #         - ./openvpn-data:/etc/openvpn
+    #     command: 'ovpn_run --proto tcp'
+
+        networks: 
+            netbots:
+                ipv4_address: "172.18.0.4"
+
+    netbots-nginx:
+        build: 
+            context: .
+            dockerfile: ./netbots-nginx/Dockerfile
+        ports: 
+            - "80:80"
+        depends_on: 
+            - netbots-webviz
+        links: 
+            - "netbots-webviz"
+        networks: 
+            netbots:
+                ipv4_address: "172.18.0.5"
         
 networks: 
     netbots:
@@ -29,3 +68,8 @@ networks:
             driver: default
             config:
                 - subnet: 172.18.0.0/16
+
+volumes:
+    ovpn-data:
+        external: true
+        name: ovpn-data
