@@ -6,8 +6,9 @@ WORKDIR /ros_ws
 
 EXPOSE 11311
 EXPOSE 9090
+EXPOSE 1194
 
-RUN apt-get -y update &&  apt-get -y install git pip
+RUN apt-get -y update &&  apt-get -y install git pip openvpn net-tools
 
 
 RUN mkdir src && git clone -b master https://github.com/whomihirpatel/4G-Networked_Robots.git src && cd src && pip install -r requirements.txt
@@ -18,5 +19,6 @@ RUN /ros_entrypoint.sh
 #RUN . /opt/ros/$ROS_DISTRO/setup.sh && catkin_make
 
 RUN apt-get -y install iputils-ping
-EXPOSE 1194
-CMD ["roscore"]
+
+#CMD ["roscore"]
+CMD ["openvpn","--config", "/vpn_ws/ros_admin.ovpn"]

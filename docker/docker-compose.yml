@@ -13,14 +13,20 @@ services:
         build:
             context: .
             dockerfile: ./netbots-ros/Dockerfile
+        cap_add:
+            - NET_ADMIN
         container_name: netbots-ros
         ports: 
             - "11411:11311"
             - "9090:9090"
         image: "net-bots:latest"
-        
+
         volumes:
-            - ovpn-data:/etc/openvpn
+            - ovpn-data:/vpn_ws/
+        depends_on: 
+            - openvpn-udp
+        links: 
+            - "openvpn-udp"
         networks: 
             netbots:
                 ipv4_address: "172.18.0.3"
@@ -72,7 +78,7 @@ networks:
     netbots:
         name: netbots-network
         ipam:
-            driver: bridge
+            driver: default
             config:
                 - subnet: 172.18.0.0/16
 
