@@ -15,8 +15,8 @@ services:
             dockerfile: ./netbots-ros/Dockerfile
         cap_add:
             - NET_ADMIN
-        device:
-            - /dev/net/tun
+        devices:
+            - /dev/net/tun:/dev/net/tun
         container_name: netbots-ros
         ports: 
             - "11411:11311"
@@ -32,6 +32,7 @@ services:
         networks: 
             netbots:
                 ipv4_address: "172.18.0.3"
+        command: roscore
     
     openvpn-udp:
         cap_add:
